@@ -1,0 +1,12 @@
+{
+  "schema": "operator-plan/v1", "name": "FNaF · primeiro consumidor", "entry": "inspect",
+  "maxSteps": 5, "timeoutMs": 60000,
+  "nodes": [
+    { "id": "inspect", "kind": "check", "label": "Verificar integração FNaF", "deadlineMs": 10000,
+      "condition": { "fact": "integrationReady", "equals": true }, "next": { "PASS": "preview" } },
+    { "id": "preview", "kind": "routine", "routine": "fnaf2-night1-preview", "label": "Compilar e validar Night 1", "deadlineMs": 30000,
+      "next": { "PASS": "confirm" } },
+    { "id": "confirm", "kind": "check", "label": "Confirmar campanha em dry-run", "deadlineMs": 10000,
+      "condition": { "fact": "campaignDryRun", "equals": true }, "next": {} }
+  ]
+}

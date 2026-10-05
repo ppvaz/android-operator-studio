@@ -1,0 +1,13 @@
+{
+  "schema": "operator-plan/v1", "name": "Primeiro contato verificado", "entry": "observe",
+  "maxSteps": 12, "timeoutMs": 10000,
+  "nodes": [
+    { "id": "observe", "kind": "observe", "label": "Observar o alvo", "deadlineMs": 1000, "next": { "PASS": "tap" } },
+    { "id": "tap", "kind": "tap", "label": "Ativar o botão", "deadlineMs": 1000,
+      "x": 180, "y": 320, "holdMs": 120,
+      "before": { "fact": "screen", "equals": "ready" }, "after": { "fact": "screen", "equals": "active" },
+      "next": { "PASS": "check" } },
+    { "id": "check", "kind": "check", "label": "Confirmar resultado", "deadlineMs": 1000,
+      "condition": { "fact": "screen", "equals": "active" }, "next": {} }
+  ]
+}

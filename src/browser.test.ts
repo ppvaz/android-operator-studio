@@ -1,0 +1,39 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { chromium } from '@playwright/test';
+import { mkdtemp, rm, mkdir } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createStudioServer } from './server.js';
+import { Operator } from './operator.js';
+
+test('the visual editor executes, edits and exports the shared plan without browser errors', async () => {
+  const directory = await mkdtemp(join(tmpdir(), 'operator-browser-'));
+  const server = createStudioServer(new Operator(directory)); server.listen(0, '127.0.0.1');
+  await new Promise<void>(resolve => server.once('listening', resolve));
+  const address = server.address(); assert.ok(address && typeof address !== 'string');
+  const executablePath = process.env['OPERATOR_BROWSER_EXECUTABLE'];
+  const browser = await chromium.launch(executablePath ? { executablePath } : {});
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1050 } });
+    const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
+    await page.goto(`http://127.0.0.1:${address.port}`);
+    await page.locator('#notice').filter({ hasText: 'Workspace pronto' }).waitFor();
+    assert.equal(await page.locator('.node').count(), 3);
+    await page.locator('#run').click(); await page.locator('#run-summary').filter({ hasText: 'FIXTURE · PASS' }).waitFor();
+    assert.equal(await page.locator('#fixture-state').textContent(), 'active'); assert.equal(await page.locator('.trace-row').count(), 3);
+    await page.locator('#save').click(); await page.locator('#notice').filter({ hasText: 'Plano salvo' }).waitFor();
+    await page.locator('button[data-add="wait"]').click(); assert.equal(await page.locator('.node').count(), 4);
+    await page.locator('#json-toggle').click(); assert.match(await page.locator('#json').inputValue(), /"kind": "wait"/);
+    await page.locator('#json').fill('{}'); await page.locator('#apply-json').click(); await page.locator('#notice.error').waitFor();
+    assert.equal(await page.locator('.node').count(), 4);
+    await page.locator('#fnaf-example').click(); await page.locator('#notice').filter({ hasText: 'Plano FNaF carregado' }).waitFor();
+    assert.equal(await page.locator('#target').inputValue(), 'fnaf-preview');
+    await mkdir('.operator/previews', { recursive: true });
+    await page.screenshot({ path: '.operator/previews/studio-desktop.png', fullPage: true });
+    await page.setViewportSize({ width: 390, height: 844 });
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+    await page.screenshot({ path: '.operator/previews/studio-mobile.png', fullPage: true });
+    assert.deepEqual(errors, []);
+  } finally { await browser.close(); await new Promise<void>(resolve => server.close(() => resolve())); await rm(directory, { recursive: true, force: true }); }
+});

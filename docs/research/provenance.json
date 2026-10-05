@@ -1,0 +1,14 @@
+{
+  "schema": "operator-origin/v1",
+  "repository": "https://github.com/ppvaz/fnaf2-1020",
+  "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+  "sources": {
+    "docs/research/ANDROID-AI-OPERATOR-VISUAL-STUDIO-20261005.md": "e96883df1a5c680b1a773c416d1a004efb0e90e1607bf1c0492d73cf5718225c",
+    "docs/research/ANDROID-EXECUTION-DECISION-LIMITS-20261005.md": "4588ba87cdd9ef2aa853a9f3cab604094e18d90bb1d7991a694d71cbee13d115",
+    "tools/commit-identity.ts": "83242ffcf83e3617404c9810825815bbdc5a96c4d398fbaa31eb91a33f8ed9cb"
+  },
+  "notes": [
+    "Research snapshots include locally uncommitted source bytes; hashes identify actual inputs.",
+    "Commit gate reused with empty legacy exception map; MIT notice retained."
+  ]
+}

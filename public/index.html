@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Android Operator Studio</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <header><a class="brand" href="/"><span class="mark">ao</span><span>ANDROID OPERATOR <strong>STUDIO</strong></span></a><span class="version">PROTÓTIPO 0.1</span><span class="local"><i></i> Workspace local</span></header>
+  <div class="workspace">
+    <aside class="sidebar"><div class="eyebrow">WORKSPACE</div><h1>Primeiro contato.</h1><p>Observe. Execute.<br>Confirme o resultado.</p><div class="rule"></div><div class="eyebrow">BLOCOS</div>
+      <button data-add="observe"><span class="block-icon">◎</span> Observar <small>Capturar o estado</small></button>
+      <button data-add="tap"><span class="block-icon">↗</span> Tocar <small>Agir e verificar</small></button>
+      <button data-add="check"><span class="block-icon">◇</span> Condição <small>Avaliar uma observação</small></button>
+      <button data-add="wait"><span class="block-icon">◷</span> Esperar <small>Pausa com prazo</small></button>
+      <button data-add="routine"><span class="block-icon">⤴</span> Rotina FNaF <small>Consumir o runner existente</small></button>
+      <button id="fnaf-example" class="text-button">Carregar demonstração FNaF ↗</button>
+      <div class="sidebar-note"><span class="eyebrow">UM ARTEFATO COMUM</span><p>Este plano pode ser editado aqui ou por um agente via MCP.</p><button id="json-toggle" class="text-button">Ver artefato JSON ↗</button></div>
+    </aside>
+    <main>
+      <div class="toolbar"><div><span class="eyebrow">PLANO / V1</span><input id="plan-name" aria-label="Nome do plano"><div id="identity" class="mono">Plano ainda não validado</div></div><div class="actions"><button id="save">Salvar</button><button id="validate">Validar</button><button id="run" class="primary">▶ Executar</button><button id="cancel" class="danger" disabled>■ Parar</button></div></div>
+      <div id="notice" role="status">Carregando workspace…</div>
+      <section class="editor"><div class="canvas"><div class="canvas-heading"><span>Fluxo de execução</span><span class="mono" id="node-count"></span></div><div id="nodes"></div><div class="canvas-footer">Selecione um bloco para editar condições, prazos e saídas.</div></div>
+        <section class="inspector"><div class="eyebrow">PROPRIEDADES</div><div id="inspector"></div></section></section>
+      <section id="json-panel" hidden><div class="panel-title">Artefato compartilhado <button id="apply-json">Aplicar JSON</button><button id="export">Exportar</button><label class="import-label">Importar<input id="import" type="file" accept="application/json,.json"></label></div><textarea id="json" aria-label="Plano JSON" spellcheck="false"></textarea></section>
+      <section class="execution"><div class="panel-title"><span>Rastro da execução</span><span id="run-summary" class="mono">Aguardando execução</span></div><div id="trace"><p class="empty">Cada etapa retém sua observação, ação e resultado.</p></div></section>
+    </main>
+    <aside class="device-panel"><div class="eyebrow">ALVO</div><h2>Uma janela para o estado.</h2><select id="target" aria-label="Alvo"><option value="fixture">Fixture · botão simulado</option><option value="fnaf-preview">FNaF · campanha dry-run</option></select><div class="device-actions"><button id="refresh-devices">Buscar celular</button><button id="snapshot">Observar</button></div><div class="phone"><div class="phone-top"></div><div id="fixture-screen"><span class="phone-kicker">ALVO SIMULADO</span><span class="fixture-state" id="fixture-state">ready</span><div class="fixture-button">Botão de teste</div><span class="phone-caption">360 × 640 · FIXTURE</span></div><img id="device-image" alt="Snapshot do celular conectado" hidden></div><div id="device-facts" class="mono">A fixture inicia em ready a cada execução.</div><div class="device-note"><span class="badge">FIXTURE</span><p>A demonstração verifica uma transição simulada. No celular, este primeiro backend observa a tela e o aplicativo aberto.</p></div></aside>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body></html>

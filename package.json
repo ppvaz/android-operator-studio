@@ -1,0 +1,36 @@
+{
+  "name": "android-operator-studio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Autoria humana e por agente de planos Android observáveis.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && esbuild src/studio/app.ts --bundle --platform=browser --format=esm --outfile=dist/studio/app.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "test:browser": "node --test dist/browser.test.js",
+    "test:fnaf": "node dist/verify-fnaf.js",
+    "start": "npm run build && node dist/server.js",
+    "mcp": "node dist/mcp.js",
+    "setup": "node tools/install-hooks.ts",
+    "test:identity": "node tools/commit-identity.ts --history",
+    "demo:fnaf": "npm run build && node dist/verify-fnaf.js",
+    "demo": "npm run build && node dist/cli.js run examples/fixture-toggle.json",
+    "validate": "node dist/cli.js validate",
+    "verify": "npm run test && node dist/verify.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.3.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@playwright/test": "1.63.0",
+    "@types/node": "22.10.2",
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3"
+  }
+}

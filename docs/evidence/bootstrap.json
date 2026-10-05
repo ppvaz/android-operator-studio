@@ -1,0 +1,107 @@
+{
+  "schema": "operator-bootstrap/v1",
+  "evidenceId": "bootstrap-f5dbfab7b84da007",
+  "level": "FIXTURE",
+  "sources": {
+    "src/core/plan.ts": "21d5c62fc9c980ad91cf97a3db33273a042eda2696bd2015065c32c8893cd8b4",
+    "src/core/runtime.ts": "ef738b3795d4263f679d33663b4761fbbc1f395fb3efc47ca164168955cfb469",
+    "src/core/port.ts": "7b1b39abb42c1d885b2cf74bf03149c682c15d52457bb3eec1fafe9b2481e07e",
+    "src/device/fixture.ts": "0389e6679e69cb00c13ab704a02965ed92b20afcffe7bd4e64140153a4367fb5",
+    "src/operator.ts": "544bf9cd3c5b342b3cc2d4327d70e1ced6483a3049e1dd508e014b60e9a6f408",
+    "package-lock.json": "c61547847bbb6f7a5c4fde71cbf430e307a96220a7b7404f07196c0f3bd67cd0"
+  },
+  "result": {
+    "schema": "operator-run/v1",
+    "id": "ec7cf835-4c02-4571-8140-cca1e541c8b0",
+    "planHash": "f6753a1a183b0c1515de806ca35d90d90b1076b3bd1bb0dfa7dffb13236da25f",
+    "target": "fixture-toggle",
+    "level": "FIXTURE",
+    "verdict": "PASS",
+    "startedAt": "2026-10-05T19:38:05.495Z",
+    "steps": [
+      {
+        "nodeId": "observe",
+        "kind": "observe",
+        "verdict": "PASS",
+        "startedAtMs": 67.538542,
+        "endedAtMs": 67.754417,
+        "clock": "host-monotonic",
+        "observations": [
+          {
+            "id": "fixture-1",
+            "clock": "host-monotonic",
+            "receivedAtMs": 67.629833,
+            "facts": {
+              "screen": "ready",
+              "width": 360,
+              "height": 640
+            }
+          }
+        ],
+        "dispatched": false,
+        "detail": ""
+      },
+      {
+        "nodeId": "tap",
+        "kind": "tap",
+        "verdict": "PASS",
+        "startedAtMs": 67.790583,
+        "endedAtMs": 67.847083,
+        "clock": "host-monotonic",
+        "observations": [
+          {
+            "id": "fixture-2",
+            "clock": "host-monotonic",
+            "receivedAtMs": 67.79525,
+            "facts": {
+              "screen": "ready",
+              "width": 360,
+              "height": 640
+            }
+          },
+          {
+            "id": "fixture-3",
+            "clock": "host-monotonic",
+            "receivedAtMs": 67.837917,
+            "facts": {
+              "screen": "active",
+              "width": 360,
+              "height": 640
+            }
+          }
+        ],
+        "dispatched": true,
+        "detail": ""
+      },
+      {
+        "nodeId": "check",
+        "kind": "check",
+        "verdict": "PASS",
+        "startedAtMs": 67.967792,
+        "endedAtMs": 67.9865,
+        "clock": "host-monotonic",
+        "observations": [
+          {
+            "id": "fixture-4",
+            "clock": "host-monotonic",
+            "receivedAtMs": 67.970792,
+            "facts": {
+              "screen": "active",
+              "width": 360,
+              "height": 640
+            }
+          }
+        ],
+        "dispatched": false,
+        "detail": ""
+      }
+    ]
+  },
+  "open": [
+    "Android live input adapter qualification",
+    "ROI / OCR verification adapter",
+    "Local temporal execution",
+    "Supplier comparison",
+    "Branding"
+  ]
+}
