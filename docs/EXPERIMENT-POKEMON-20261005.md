@@ -80,6 +80,10 @@ ou calibração retida. Um sucesso não demonstra robustez.
 
 ## Fragilidades do operador improvisado
 
+Os itens abaixo descrevem **esta sessão Pokémon**, não um inventário de
+capacidades ausentes no FNaF. O cruzamento com a implementação e a evidência
+existentes está na seção seguinte.
+
 1. **Toques rápidos sem efeito confirmado.** Houve repetição e mudança para
    contatos mantidos. A ferramenta deve representar duração e expectativa de
    efeito, conservando cada tentativa.
@@ -99,6 +103,44 @@ ou calibração retida. Um sucesso não demonstra robustez.
    não deve virar a arquitetura de operação FNaF.
 7. **Verificação final visual, feita pelo agente.** O jogo exibiu a condição
    terminal; ainda faltava um verificador independente dessa conversa.
+
+## O que o FNaF já explorou
+
+**Sim: os sete temas já têm tratamento no FNaF**, em graus e escopos
+diferentes. Há código, ensaios físicos, resultados negativos e mecanismos de
+verificação. Isso não significa que todos estejam resolvidos para qualquer
+aplicativo Android. As referências abaixo fixam o checkout consultado em
+`7604358518114a039faed78344b7da167e7b7fcb` do repositório `ppvaz/fnaf-solver`
+(diretório local `fnaf2-1020`).
+
+| Fragilidade vista no Pokémon | Tratamento existente no FNaF | O que cabe ao novo projeto |
+|---|---|---|
+| 1. Input enviado sem efeito confirmado | [Gate de aceitação](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/docs/device/accessibility-game-acceptance-20260906.json): callbacks Accessibility aceitos/concluídos sem transição; controle UHID produziu a transição. O backend Accessibility não foi promovido. | Preservar a distinção entre despacho e efeito; qualificar cada backend/alvo. |
+| 2. Sequência e duração dos contatos | [Exploração por passos](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/bin/phone/explore-step.ts) oferece tap, double e hold limitados, liberação e SNAP; [scheduler HID](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/src/campaign/hid-schedule.ts) executa a programação temporal local. | Consumir esses mecanismos; tornar condições e contatos editáveis. Não transportar coordenadas/durações de FNaF para Pokémon por suposição. |
+| 3. Frames em transição e timing desconhecido | [Instrumento de regiões sob trace](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/docs/evidence/companion16-region-under-trace-20261001.json), [RegionStream](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/bin/phone/night-kit.ts) e [mapa de relógio](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/docs/evidence/clock-map-20260905-moto-g56-helper.json). A medição de regiões no menu não qualifica uma noite nem a aceitação de input. | Expor timestamps, frescor, orçamento e UNKNOWN; estabilidade visual depende do alvo. |
+| 4. Estratégia confundida com percepção | [Contrato de camadas](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/CLAUDE.md): Source possui mecânicas, Propose políticas, Play observação/execução e Review prova. [Busca de timing por contato](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/docs/evidence/phone-input-bracket-20260928.json) conserva limites da hipótese e mantém a divergência modelo/aparelho aberta. | Generalizar a separação para adaptadores e planos, sem embutir estratégia de um jogo no runtime comum. |
+| 5. Rastro sobrescrito e não reproduzível | [Run packs](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/review/src/evidence-pack.ts) retêm resultados, eventos, manifestos, hashes e custódia; perdas da recuperação permanecem nomeadas. O explorador também registra cada passo e usa arquivos de captura distintos. | Consumir os formatos e tornar a evidência navegável por etapa; a conversa Pokémon não pode ganhar retroativamente a evidência que não reteve. |
+| 6. Acesso ad hoc ao aparelho | [Lease exclusivo](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/src/safety/device-lock-exec.py), [vínculo de identidade ao perfil/preflight](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/src/campaign/venue.ts) e [cleanup em interrupção](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/play/src/campaign/campaign-signal.ts). | Preservar esses gates nos adaptadores. O bootstrap já usa o lease original na captura Companion. |
+| 7. Conclusão dependente da conversa | O [packer e a promoção](https://github.com/ppvaz/fnaf-solver/blob/7604358518114a039faed78344b7da167e7b7fcb/packages/review/src/evidence-pack.ts) verificam resultado terminal, manifesto, winner commitado e atestação a partir dos registros. | Permitir revisão fora da sessão. Os verificadores FNaF são específicos do alvo; a porta do ginásio ainda precisa do seu próprio critério observável. |
+
+O caso mais próximo do desafio é `explore-step.ts`: ele já representa a
+operação “observe, toque/mantenha, observe novamente, registre”. A sessão
+Pokémon fez uma versão improvisada desse ciclo sem aproveitar a ferramenta.
+Seu CLI atual restringe geometria e operações de lançamento/parada aos alvos
+FNaF; consumi-lo em Pokémon exige um adaptador explícito, não apenas trocar
+o nome do jogo.
+
+Há três estados que precisam permanecer separados: **existir no FNaF**,
+**estar integrado ao Studio** e **estar qualificado em outro alvo**. Hoje o
+Studio consome o compilador/runner em dry-run e o CLI de SNAP sob lease;
+scheduler, exploração, regiões e run packs são fontes para as próximas
+integrações, não funcionalidades já transplantadas. A captura física desse
+adaptador ainda não foi verificada nesta sessão.
+
+A contribuição nova concentra-se na autoria visual e por agente do mesmo
+artefato, na conversão de exploração em plano reutilizável e na integração
+de capacidades entre alvos. O experimento evidencia a utilidade de levar
+essa infraestrutura para uma operação geral; não justifica reconstruí-la.
 
 ## O que isso pede ao produto
 

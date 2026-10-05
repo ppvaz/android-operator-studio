@@ -22,6 +22,12 @@ primeiro consumidor demonstrado. Pedro o definiu como nossa “mina de ouro”:
 o trabalho existente já atingiu muitos de seus objetivos específicos e não
 deve ser substituído por uma reconstrução indiscriminada.
 
+A [anatomia do Pokémon](docs/EXPERIMENT-POKEMON-20261005.md#o-que-o-fnaf-já-explorou)
+cruza as sete fragilidades da operação improvisada com interfaces e evidências
+já existentes no FNaF. Elas orientam o consumo e a generalização; não são
+sete problemas inéditos a reimplementar. Existência na origem, integração
+no Studio e qualificação em outro alvo são estados distintos.
+
 Sua ambição cobre as noites dos **quatro jogos**, reconstrução das mecânicas,
 comparação com o aparelho, estratégia, execução, caminho humano e prova.
 O novo projeto generaliza a infraestrutura e a autoria. Mecânicas,
