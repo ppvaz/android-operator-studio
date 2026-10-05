@@ -1,0 +1,11 @@
+{
+  "schema":"operator-research-amendment/v1",
+  "trigger":"User reports the phone reconnected. The previous 12-contact phase is complete; start a separate bounded cursor challenge, after freezing v4.",
+  "limits":{"menuContacts":6,"semanticRomSelectionTaps":1,"homeCycles":0,"contactMs":150},
+  "flow":"Verify same device/build and physical controls; Start from map; HID Up in menu only; cursor must leave Pokemon; attempted A via common executor must be refused before input; HID Down restores Pokemon; shared party/back flow closes the menu.",
+  "newControls":{"Up":{"x":222,"y":1700},"Down":{"x":222,"y":1940}},
+  "derivation":"Centers of visible directional pads in the retained physical geometry. Exploratory qualification by observed menu-cursor effects. Direction contacts are forbidden on the overworld.",
+  "stop":"Unknown foreground/build/geometry, unexpected result, or budget limit. Never press A while another menu item is selected.",
+  "coldResumeAmendment":"Before ROM selection: reconnection brought COLD RomListActivity and the overworld gate refused contact. Permit one fresh XML-named Pokemon Red row tap, as in the first experiment. No manual load-state action or game save.",
+  "qualification":"Device experiment in research target only; no production UI/MCP input admission. Retain refusals, failures and cleanup."
+}

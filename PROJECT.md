@@ -34,9 +34,11 @@ O novo projeto generaliza a infraestrutura e a autoria. Mecânicas,
 estratégias, calibragens e critérios de vitória continuam pertencendo aos
 alvos; um resultado de um jogo não qualifica os outros.
 
-A primeira integração invoca o compilador/runner de Night 1 em dry-run e
-oferece o SNAP original sob o lease original. Extração para pacotes e consumo
-direto pelo checkout FNaF são próximos passos, com comparação de contratos.
+A integração opcional invoca o compilador/runner de Night 1 em dry-run.
+Captura, HID e lease foram extraídos para o pacote privado independente
+`@android-operator/device`, com origem rastreada. Seu artefato npm instalado
+isoladamente capturou o aparelho sem importar o checkout FNaF. Consumo desse
+pacote pelo FNaF, estabilidade entre sessões e extração do APK seguem abertos.
 
 ## Estratégia técnica
 
@@ -81,7 +83,7 @@ tempo real, multitoque ou validação. Medir o comportamento observável.
 |---|---|---|
 | Contrato comum | UI/CLI/MCP concordam em schema e hash; fixture cobre resultado e interrupções | Implementado e testado |
 | Primeiro consumidor FNaF | Rotina existente invocada, gates preservados, relatório retido | Dry-run integrado; SNAP original exercitado no Pokémon; geometria e estabilidade abertas |
-| Fluxo físico curto | Estado final observado, pacote de evidência e falhas retidas | Aberto |
+| Fluxo físico curto | Estado final observado, pacote de evidência e falhas retidas | Menu/equipe/retorno Pokémon passou no executor comum com adaptador de pesquisa; UI/MCP físicos ainda abertos |
 | Backend comparado | Mesmo alvo/protocolo em bases candidatas; decisão ligada ao resultado | Aberto |
 | Autoria de operação real | Exploração/gravação resulta em plano revisável e repetível | Aberto |
 | Execução temporal | Deadline e contatos confirmados em alvo/carga declarados | Aberto; usar infraestrutura FNaF existente |
@@ -116,15 +118,40 @@ Não se declara nesta entrega uma nova vitória no aparelho, confiabilidade
 geral, superioridade de fornecedor ou controlador temporal qualificado.
 O celular tornou-se indisponível durante o bootstrap e foi reconectado para
 os [experimentos Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
-A captura física e os gates do plano foram exercitados; transferência de
-coordenadas e estabilidade permanecem sem qualificação. Os resultados
-medidos estão nos registros gerados.
+A [segunda rodada](docs/EXPERIMENT-POKEMON-ROUND2-20261005.md) mediu a relação
+entre imagens, reutilizou o HID original em retrato e executou um fluxo curto
+no runtime comum com estados reconhecidos. É um resultado de pesquisa nesta
+sessão; admissão pela UI/MCP e qualificação entre sessões permanecem abertas.
+Os resultados medidos estão nos registros gerados.
 
 ## Documentos de apoio
 
 - [Anatomia do desafio Pokémon](docs/EXPERIMENT-POKEMON-20261005.md).
 - [Experimentos de capacidades e limites no Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
+- [Segunda rodada: captura, reconhecimento e execução física](docs/EXPERIMENT-POKEMON-ROUND2-20261005.md).
+- [Missão Gold: Slowqueen, controlador situacional e limites](docs/EXPERIMENT-POKEMON-GOLD-20261005.md).
 - [Arquitetura e interfaces consumidas](docs/ARCHITECTURE.md).
 - [Produto](docs/PRODUCT.md) e [roadmap operacional](docs/ROADMAP.md).
 - [Pesquisa e proveniência](docs/research/README.md).
+- [Experimentos futuros: Don’t Starve e Minecraft](docs/EXPERIMENT-FRONTIERS.md).
+- [Geometria pela configuração do emulador](docs/EMULATOR-LAYOUT-GEOMETRY.md).
 - [Evidência gerada](docs/evidence).
+
+## Percepção adaptada à tarefa
+
+Escolher entre detector, parecer da LLM e combinação pelos custos de autoria e
+repetição, prazo e consequência do erro. Roteiros situacionais podem usar a LLM
+sem construir um detector para cada tela. Decisões inferidas ficam identificadas,
+e critérios críticos continuam exigindo evidência. A mesma escolha considera
+velocidade de execução/fast forward e a capacidade de observar o próximo limite.
+A [política de percepção e velocidade](docs/PERCEPTION-AND-SPEED-POLICY.md)
+especifica os dados e critérios; sua seleção automática ainda é uma entrega futura.
+
+## Fronteiras de generalização
+
+Don’t Starve e Minecraft são alvos propostos para testar recursos e reação em
+um mundo em movimento, e câmera/navegação em 3D. O
+[plano de experimentos](docs/EXPERIMENT-FRONTIERS.md) define missões pequenas,
+critérios observáveis e separação entre operação visual e informação auxiliar.
+Essas capacidades ainda não foram demonstradas; concluir a missão Gold precede
+abrir outra frente de execução.

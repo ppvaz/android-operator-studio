@@ -1,0 +1,4584 @@
+{
+  "evidenceId": "pokemon-round2-c8ee4e36dd61dec6",
+  "schema": "operator-pokemon-round2-evidence/v1",
+  "deviceId": "f88a35e75d347b6b",
+  "level": "DEVICE_MEASURED",
+  "source": {
+    "revision": "d80f053035fefb170529a4cc1852fc79df2624af",
+    "sources": {
+      "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+      "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+      "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+      "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+      "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+      "packages/play/games/fnaf3/fnaf3-detectors.ts": "88d8461fd7d16445501815a7ff7cbc29bbb02ada9b0b9710564296bc10481559",
+      "packages/play/bin/companion/companion-setup.py": "a9be8da0e07683c8b10818a284946de6c1f5c30f36b98e45aba61a192d0b52f8",
+      "packages/play/src/venues/phone/hid.ts": "2008bcf4854b110666d81d47145320a6eb2f7d21ff48055dac4121e3b3529896",
+      "packages/play/src/campaign/physical-ports.ts": "a3c944e0f515fa75276c05713ed95c5ae3e7491d448aa286e3c57ed730443cd6"
+    }
+  },
+  "reportInstrumentSha256": "aec5c9f18c401f0f7d55b6ad73131d9b41ae6479da0a5e109c9258670cfa2b7a",
+  "inputs": [
+    {
+      "file": "001-prepare-operation.json",
+      "sha256": "815e511b9ceb47c2fa57a617386a0694ebd2dfd9dd6ad9e2a1661d9af70f346b",
+      "label": "001-prepare",
+      "verb": "prepare",
+      "startedAt": "2026-10-05T20:48:26.238Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "002-resume-operation.json",
+      "sha256": "90be89eeabe4b44cf638ee384d54d490e99799c12377e2871ffd2ad88be3a4ff",
+      "label": "002-resume",
+      "verb": "resume",
+      "startedAt": "2026-10-05T20:48:34.795Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "003-baseline-operation.json",
+      "sha256": "6d327e36d71cad55997553f168254c4ad495a72dfc8e30f9c91998aa378fd812",
+      "label": "003-baseline",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:48:35.854Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "004-home-a-operation.json",
+      "sha256": "69d274c94929df245bfcdbc923d01353265dbd6ae86192227d60594d27a4c8f8",
+      "label": "004-home-a",
+      "verb": "home",
+      "startedAt": "2026-10-05T20:48:50.061Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "005-resume-a-operation.json",
+      "sha256": "ffe868bffc26819a9cfeb1ec1f6c93206bb8c8a18b4016fc95a3eeb2677411c9",
+      "label": "005-resume-a",
+      "verb": "resume",
+      "startedAt": "2026-10-05T20:48:51.484Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "006-return-a-operation.json",
+      "sha256": "97df2be9ecc6bf9f06d2c632f14421bd31f647d611e4fbf7e29ad368a97d83a4",
+      "label": "006-return-a",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:48:52.438Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "007-settled-a-operation.json",
+      "sha256": "92cabbb041a6c2fbbee93c58562235c1dcf8e2f7145504e20b47cb4626731d39",
+      "label": "007-settled-a",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:48:54.795Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "008-home-b-operation.json",
+      "sha256": "3a275127d3522e25efeee27690988aabe75042b01dcbc9058462ba79109bb147",
+      "label": "008-home-b",
+      "verb": "home",
+      "startedAt": "2026-10-05T20:48:57.518Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "009-resume-b-operation.json",
+      "sha256": "73e44e42e05684fa70f93b138291bb565d365650c25b1a7c8d2f0518752220a7",
+      "label": "009-resume-b",
+      "verb": "resume",
+      "startedAt": "2026-10-05T20:48:58.885Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "010-return-b-operation.json",
+      "sha256": "4fec6ce5c0eb07073e2dd66a5da0b0078ceed63668df557d2aa8172ca11fc1cb",
+      "label": "010-return-b",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:48:59.920Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "011-settled-b-operation.json",
+      "sha256": "06624216feba8cc4aadd0cc7a72c3960cc077ed1c4ac43e172d01f404c3283fb",
+      "label": "011-settled-b",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:49:02.406Z",
+      "instrumentManifestSha256": "ab5699f085987d913b3025145cb314ca351878f8618097593fb199fc8938045e",
+      "archivedFiles": 50
+    },
+    {
+      "file": "012-holdout-map-operation.json",
+      "sha256": "44c3de687ea5a18183837e4a489ddd741b97b3b10938d38631ae37ac272407e5",
+      "label": "012-holdout-map",
+      "verb": "recognize",
+      "startedAt": "2026-10-05T20:50:20.070Z",
+      "instrumentManifestSha256": "cc421f157b039150bfa28622f80e7ea54041ff0aa02dda3cc19deb21af79946c",
+      "archivedFiles": 54
+    },
+    {
+      "file": "013-holdout-menu-operation.json",
+      "sha256": "1218abb5b9319d1a5d20179e5538164b0b4fc9a841e5fc9dac825a78fd86c7b8",
+      "label": "013-holdout-menu",
+      "verb": "open-menu",
+      "startedAt": "2026-10-05T20:50:21.625Z",
+      "instrumentManifestSha256": "cc421f157b039150bfa28622f80e7ea54041ff0aa02dda3cc19deb21af79946c",
+      "archivedFiles": 54
+    },
+    {
+      "file": "014-v2-menu-operation.json",
+      "sha256": "3f08208e83d1c4eb345e5939880eaea1ed70b9fa8a171d65d4b9745f0be218a4",
+      "label": "014-v2-menu",
+      "verb": "recognize",
+      "startedAt": "2026-10-05T20:52:53.809Z",
+      "instrumentManifestSha256": "020b01d0a8734f723c981212e95a0359c0de326d0f4d87aecd9294d1c153a2c7",
+      "archivedFiles": 56
+    },
+    {
+      "file": "016-party-calibration-operation.json",
+      "sha256": "078eaeadb104e50d71634b9be2046502e5ec386ecc67048331c7b6acbf955083",
+      "label": "016-party-calibration",
+      "verb": "party-calibrate",
+      "startedAt": "2026-10-05T20:52:55.012Z",
+      "instrumentManifestSha256": "020b01d0a8734f723c981212e95a0359c0de326d0f4d87aecd9294d1c153a2c7",
+      "archivedFiles": 56
+    },
+    {
+      "file": "017-party-settled-operation.json",
+      "sha256": "9d3171ad9327de8fdcc0880bf042f7a40f765b006a44f2ce7345b0b61a86e7b2",
+      "label": "017-party-settled",
+      "verb": "bracket",
+      "startedAt": "2026-10-05T20:53:34.803Z",
+      "instrumentManifestSha256": "020b01d0a8734f723c981212e95a0359c0de326d0f4d87aecd9294d1c153a2c7",
+      "archivedFiles": 56
+    },
+    {
+      "file": "018-runtime-cleanup-operation.json",
+      "sha256": "a446165b71dad140fd1ec7a4fb85d8b0446e2eb2a87d5383029b18ad5825c022",
+      "label": "018-runtime-cleanup",
+      "verb": "cleanup",
+      "startedAt": "2026-10-05T20:54:35.404Z",
+      "instrumentManifestSha256": "f7abad9a9c76eb479fca945122dddff05f967ef2ca62951b5775d48c867cf021",
+      "archivedFiles": 58
+    },
+    {
+      "file": "019-runtime-from-map-operation.json",
+      "sha256": "ba358f973c593a66d65598a337111cb052e4a3437f3f3bde6b2bdd8cb1b49bdd",
+      "label": "019-runtime-from-map",
+      "verb": "runtime",
+      "startedAt": "2026-10-05T20:55:32.458Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "020-prepare-open-menu-operation.json",
+      "sha256": "5991cc97cb799640a441d38da5a508eaf611cabd5710acbf7106ca3b860f183e",
+      "label": "020-prepare-open-menu",
+      "verb": "open-menu",
+      "startedAt": "2026-10-05T20:56:16.133Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "021-runtime-from-menu-operation.json",
+      "sha256": "35488a20da397af669422614ef8d7d6bebfb3b8382a066e8cad27ce188ecdd52",
+      "label": "021-runtime-from-menu",
+      "verb": "runtime",
+      "startedAt": "2026-10-05T20:56:19.361Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "022-home-runtime-operation.json",
+      "sha256": "a91d7d7ff5fcc1a22d1c7901a1081d8cecbe1c0868b6bd60f072ac113ff53f41",
+      "label": "022-home-runtime",
+      "verb": "home",
+      "startedAt": "2026-10-05T20:56:38.711Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "023-runtime-on-home-operation.json",
+      "sha256": "5ebfcf57cdf287423b7028a223f5d61893a6a288f276b3c2f5560d243724be18",
+      "label": "023-runtime-on-home",
+      "verb": "runtime",
+      "startedAt": "2026-10-05T20:56:40.161Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "024-final-resume-operation.json",
+      "sha256": "91a1201109783ecbff01db80fb770ada3a05d5676d62fcc694a45a623bed9e5a",
+      "label": "024-final-resume",
+      "verb": "resume",
+      "startedAt": "2026-10-05T20:56:42.841Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "025-final-cleanup-operation.json",
+      "sha256": "f2811ea639d7bdec41ba718fc2b872e84cc7a22b2b055283d358d7b7592474f3",
+      "label": "025-final-cleanup",
+      "verb": "stop",
+      "startedAt": "2026-10-05T20:56:43.829Z",
+      "instrumentManifestSha256": "87c3362a01acf5f53be47ae829197a04f9f40e7b2fdaa149530cc4bd666d04e4",
+      "archivedFiles": 63
+    },
+    {
+      "file": "026-final-inspection-operation.json",
+      "sha256": "b1d1ffe258da8a53250326bf5e4e97d030a8830094ddd6f15aa2656022003e97",
+      "label": "026-final-inspection",
+      "verb": "inspect",
+      "startedAt": "2026-10-05T20:58:32.873Z",
+      "instrumentManifestSha256": "cca150ef1ab8581bb3085dca9dcdf517c7402c98371d994585a0385f06eba3ba",
+      "archivedFiles": 65
+    },
+    {
+      "file": "p3-001-reconnected-operation.json",
+      "sha256": "bbe5d9e2eac948a9e29461bfd360e1e6645a203ca51f02ed35b2473718066c3a",
+      "label": "p3-001-reconnected",
+      "verb": "physical",
+      "startedAt": "2026-10-05T21:28:18.006Z",
+      "instrumentManifestSha256": "f78949e498ed90b2a912d450b417c4060b906a0ed50b8c17b9be1f6084f81512",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-002-prepare-operation.json",
+      "sha256": "929f21822927e695af002939cc38ce44ea0e279e678c68ba4762eede825ae19e",
+      "label": "p3-002-prepare",
+      "verb": "prepare",
+      "startedAt": "2026-10-05T21:28:46.513Z",
+      "instrumentManifestSha256": "f78949e498ed90b2a912d450b417c4060b906a0ed50b8c17b9be1f6084f81512",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      },
+      "error": "Command failed: python3 -c import importlib.util,sys; spec=importlib.util.spec_from_file_location(\"original_setup\",sys.argv[1]); m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m); m.start_capture(\"\") <workspace>/fnaf2-1020/packages/play/bin/companion/companion-setup.py\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<workspace>/fnaf2-1020/packages/play/bin/companion/companion-setup.py\", line 189, in start_capture\n    raise SetupError(\"helper capture button was not found\")\noriginal_setup.SetupError: helper capture button was not found\n"
+    },
+    {
+      "file": "p3-002b-collapse-operation.json",
+      "sha256": "badeca73e4d1af9d5fd5049e493e81b76ea001ca3e9acbfb424d035231e84d95",
+      "label": "p3-002b-collapse",
+      "verb": "collapse-shade",
+      "startedAt": "2026-10-05T21:29:43.880Z",
+      "instrumentManifestSha256": "1d6259dd6b685c198080642d2e526a19d28667efa21f7e7647b88285b1dfebfa",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-002c-prepare-operation.json",
+      "sha256": "a6f67cccc1548c3a6e141c29120446a43a0be29407c3d956e9762cbd36675456",
+      "label": "p3-002c-prepare",
+      "verb": "prepare",
+      "startedAt": "2026-10-05T21:29:45.105Z",
+      "instrumentManifestSha256": "1d6259dd6b685c198080642d2e526a19d28667efa21f7e7647b88285b1dfebfa",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-003-resume-operation.json",
+      "sha256": "29cd45a86b8f6a4f362fed83c8c870a3190510c48d61382534fc0970ed093ea6",
+      "label": "p3-003-resume",
+      "verb": "resume",
+      "startedAt": "2026-10-05T21:29:56.478Z",
+      "instrumentManifestSha256": "1d6259dd6b685c198080642d2e526a19d28667efa21f7e7647b88285b1dfebfa",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-003b-select-red-operation.json",
+      "sha256": "4cdf45405fd1eec6a02f912dfa83379a0f4ae1894b1ee7bb1e91af0ad521b043",
+      "label": "p3-003b-select-red",
+      "verb": "select-rom",
+      "startedAt": "2026-10-05T21:31:12.633Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-003c-state-operation.json",
+      "sha256": "d42cfd48ab503bbb20f1cf0f05a81073010b95814688ed632bd5ae4331b49273",
+      "label": "p3-003c-state",
+      "verb": "recognize",
+      "startedAt": "2026-10-05T21:31:16.505Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-003d-delayed-operation.json",
+      "sha256": "656298982bfefe67cd083b2f7ad04dae90f52de044714bed941aa2dbc64b5107",
+      "label": "p3-003d-delayed",
+      "verb": "physical",
+      "startedAt": "2026-10-05T21:32:08.066Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-004-menu-operation.json",
+      "sha256": "fe2e0271bac13e5b7e4baddb6b4ee9b4e3b807248322b3fb83ad81400638ca59",
+      "label": "p3-004-menu",
+      "verb": "open-menu",
+      "startedAt": "2026-10-05T21:29:57.628Z",
+      "instrumentManifestSha256": "1d6259dd6b685c198080642d2e526a19d28667efa21f7e7647b88285b1dfebfa",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      },
+      "error": "Refused contact: expected overworld, observed UNKNOWN"
+    },
+    {
+      "file": "p3-004b-menu-operation.json",
+      "sha256": "4eb4d48f545ecb53eff376fbd96ba6f743b27e9d59a1015f8f026c325ea57dc5",
+      "label": "p3-004b-menu",
+      "verb": "open-menu",
+      "startedAt": "2026-10-05T21:32:28.440Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-005-cursor-up-operation.json",
+      "sha256": "571006f19b8256a52ad23bfffc68a7aabf545f905f53642abe52bbca59a86551",
+      "label": "p3-005-cursor-up",
+      "verb": "cursor-up",
+      "startedAt": "2026-10-05T21:32:31.766Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-006-refuse-a-operation.json",
+      "sha256": "29ec81e9c6bf4abcb2215c657dbb262530812dc44cdbfe0f17ccec94b73b490f",
+      "label": "p3-006-refuse-a",
+      "verb": "cursor-refusal",
+      "startedAt": "2026-10-05T21:32:34.923Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-007-cursor-down-operation.json",
+      "sha256": "ef4f4d7d064f555c5a1694d6625332c64a547b993749084d90712bfb392c7885",
+      "label": "p3-007-cursor-down",
+      "verb": "cursor-down",
+      "startedAt": "2026-10-05T21:32:36.864Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-008-runtime-operation.json",
+      "sha256": "8b57636c4ea14ca6064613a18f4710e7b91fa6aef7532449c3a15c424eb161df",
+      "label": "p3-008-runtime",
+      "verb": "runtime",
+      "startedAt": "2026-10-05T21:32:40.064Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-009-cleanup-operation.json",
+      "sha256": "7ef90e057687f522775a336aae776c3841a71ecc333efedee3871a394f805e72",
+      "label": "p3-009-cleanup",
+      "verb": "stop",
+      "startedAt": "2026-10-05T21:32:57.209Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    },
+    {
+      "file": "p3-010-final-operation.json",
+      "sha256": "9776e627fb55d6da135aa3622bf5f17ff9df9de1c68a82f6eb2b625bbbee4136",
+      "label": "p3-010-final",
+      "verb": "inspect",
+      "startedAt": "2026-10-05T21:32:58.218Z",
+      "instrumentManifestSha256": "93a6acff2797882a2e0a935dfa304f4bfe737fc1f51b23827a9f529167e88a06",
+      "archivedFiles": 69,
+      "build": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "model": "moto_g56_5G"
+      }
+    }
+  ],
+  "brackets": [
+    {
+      "label": "003-baseline",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+        "clock": "host-monotonic",
+        "receivedAtMs": 538.906417,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 162.717,
+        "completedAtMs": 614.672959,
+        "file": "003-baseline-before.png"
+      },
+      "native": {
+        "id": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1443.024209,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+          "deviceImageNs": "39973150186997",
+          "deviceSnapshotNs": "39973387411997",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 615.196959,
+        "completedAtMs": 1446.690792,
+        "file": "003-baseline-native.png"
+      },
+      "after": {
+        "id": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1842.374625,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1447.301625,
+        "completedAtMs": 1937.923959,
+        "file": "003-baseline-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    },
+    {
+      "label": "006-return-a",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "ecf0ee3e486906bbbb51b0550160ab2ce98a6a3e89595e9bf0d58e869fca579a",
+        "clock": "host-monotonic",
+        "receivedAtMs": 507.644458,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "ecf0ee3e486906bbbb51b0550160ab2ce98a6a3e89595e9bf0d58e869fca579a",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 120.350958,
+        "completedAtMs": 590.682833,
+        "file": "006-return-a-before.png"
+      },
+      "native": {
+        "id": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1373.985791,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+          "deviceImageNs": "39989720673229",
+          "deviceSnapshotNs": "39989961729460",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 590.972833,
+        "completedAtMs": 1377.559291,
+        "file": "006-return-a-native.png"
+      },
+      "after": {
+        "id": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1760.4225,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1377.873375,
+        "completedAtMs": 1832.987666,
+        "file": "006-return-a-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    },
+    {
+      "label": "007-settled-a",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+        "clock": "host-monotonic",
+        "receivedAtMs": 493.113417,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 114.965209,
+        "completedAtMs": 568.611959,
+        "file": "007-settled-a-before.png"
+      },
+      "native": {
+        "id": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1357.515875,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+          "deviceImageNs": "39992066973152",
+          "deviceSnapshotNs": "39992284931921",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 569.201834,
+        "completedAtMs": 1361.871667,
+        "file": "007-settled-a-native.png"
+      },
+      "after": {
+        "id": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1857.4585,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1362.301417,
+        "completedAtMs": 1936.198334,
+        "file": "007-settled-a-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    },
+    {
+      "label": "010-return-b",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+        "clock": "host-monotonic",
+        "receivedAtMs": 516.103833,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 139.198458,
+        "completedAtMs": 587.259958,
+        "file": "010-return-b-before.png"
+      },
+      "native": {
+        "id": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1331.133625,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+          "deviceImageNs": "39997152700306",
+          "deviceSnapshotNs": "39997384269460",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 587.554875,
+        "completedAtMs": 1334.0375,
+        "file": "010-return-b-native.png"
+      },
+      "after": {
+        "id": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1783.643042,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1334.24125,
+        "completedAtMs": 1861.866958,
+        "file": "010-return-b-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    },
+    {
+      "label": "011-settled-b",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "345844998e69caa7b09db32ce8da9c59aa6ac5134c5e096564866522e6d7707e",
+        "clock": "host-monotonic",
+        "receivedAtMs": 590.261584,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "345844998e69caa7b09db32ce8da9c59aa6ac5134c5e096564866522e6d7707e",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 207.763417,
+        "completedAtMs": 656.359917,
+        "file": "011-settled-b-before.png"
+      },
+      "native": {
+        "id": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1466.661084,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+          "deviceImageNs": "39999717612307",
+          "deviceSnapshotNs": "39999931808614",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 656.792709,
+        "completedAtMs": 1471.341042,
+        "file": "011-settled-b-native.png"
+      },
+      "after": {
+        "id": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1856.230584,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1472.401459,
+        "completedAtMs": 1926.682417,
+        "file": "011-settled-b-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    },
+    {
+      "label": "017-party-settled",
+      "metrics": {
+        "adbControlsMeanAbs": 0,
+        "adbTopMeanAbs": 0,
+        "nativeControlsMeanAbs": 1.358368823849627,
+        "nativeTopMeanAbs": 1.1412073268750793,
+        "fits": [
+          {
+            "dx": -2,
+            "meanAbs": 4.049056966281341
+          },
+          {
+            "dx": -1,
+            "meanAbs": 2.0745140734573635
+          },
+          {
+            "dx": 0,
+            "meanAbs": 1.358368823849627
+          },
+          {
+            "dx": 1,
+            "meanAbs": 3.377325562778187
+          },
+          {
+            "dx": 2,
+            "meanAbs": 5.0356399500464315
+          }
+        ]
+      },
+      "before": {
+        "id": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+        "clock": "host-monotonic",
+        "receivedAtMs": 589.678375,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 184.054542,
+        "completedAtMs": 667.10525,
+        "file": "017-party-settled-before.png"
+      },
+      "native": {
+        "id": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1449.338708,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+          "deviceImageNs": "40272126289861",
+          "deviceSnapshotNs": "40272338079400",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        },
+        "requestAtMs": 667.453333,
+        "completedAtMs": 1450.621917,
+        "file": "017-party-settled-native.png"
+      },
+      "after": {
+        "id": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+        "clock": "host-monotonic",
+        "receivedAtMs": 1825.379917,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+          "foregroundPackage": "com.fastemulator.gbc"
+        },
+        "requestAtMs": 1450.842375,
+        "completedAtMs": 1908.472042,
+        "file": "017-party-settled-after.png"
+      },
+      "clockMap": "UNKNOWN",
+      "sequentialWitnesses": true,
+      "candidateMapping": {
+        "xScale": 0.45,
+        "yScale": 0.45,
+        "xOffset": 957,
+        "yOffset": 0
+      }
+    }
+  ],
+  "vision": [
+    {
+      "version": "v1",
+      "sha256": "7077cada5816e7760d2207d28ec30bb3a9d86c01928913c64ea0eec8cbfc4ffa",
+      "sourceFrames": {
+        "overworld": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+        "menu-pokemon": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221"
+      },
+      "limits": {
+        "controlsMeanAbs": 2,
+        "stateMeanAbs": 6,
+        "margin": 4
+      },
+      "cursorGate": false
+    },
+    {
+      "version": "v2",
+      "sha256": "e56a1ae7c47eb3d6496b3a154253253f83c336aabeb27be676072b3a85054462",
+      "sourceFrames": {
+        "overworld": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+        "menu-pokemon": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+        "overworld:006-return-a": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+        "overworld:007-settled-a": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+        "overworld:010-return-b": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+        "overworld:011-settled-b": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848"
+      },
+      "limits": {
+        "controlsMeanAbs": 2,
+        "stateMeanAbs": 6,
+        "margin": 4
+      },
+      "cursorGate": false
+    },
+    {
+      "version": "v3",
+      "sha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "sourceFrames": {
+        "overworld": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+        "menu-pokemon": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+        "overworld:006-return-a": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+        "overworld:007-settled-a": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+        "overworld:010-return-b": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+        "overworld:011-settled-b": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+        "party": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e"
+      },
+      "limits": {
+        "controlsMeanAbs": 2,
+        "stateMeanAbs": 6,
+        "margin": 4
+      },
+      "cursorGate": false
+    },
+    {
+      "version": "v4",
+      "sha256": "90e1db1f998cfbf049e612970d02f3aa8795a757f59208e9778fe094d674df7e",
+      "sourceFrames": {
+        "overworld": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+        "menu-pokemon": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+        "overworld:006-return-a": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+        "overworld:007-settled-a": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+        "overworld:010-return-b": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+        "overworld:011-settled-b": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+        "party": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e"
+      },
+      "limits": {
+        "controlsMeanAbs": 2,
+        "stateMeanAbs": 6,
+        "margin": 4
+      },
+      "cursorGate": true
+    }
+  ],
+  "validation": [
+    {
+      "vision": "v1",
+      "file": "012-holdout-map-before.png",
+      "expected": "overworld",
+      "witness": "003-baseline-before.png",
+      "purpose": "Keep the valid-map rejection that motivated v2",
+      "frameSha256": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+      "visionSha256": "7077cada5816e7760d2207d28ec30bb3a9d86c01928913c64ea0eec8cbfc4ffa",
+      "prediction": {
+        "state": "UNKNOWN",
+        "reason": "ambiguous-or-new-state",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "overworld",
+            "meanAbs": 6.647048875359378
+          },
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 31.382039573820396
+          }
+        ]
+      },
+      "matched": false,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af"
+    },
+    {
+      "vision": "v1",
+      "file": "013-holdout-menu-before.png",
+      "expected": "overworld",
+      "witness": "013-holdout-menu-witness.png",
+      "frameSha256": "3c625621fd51df69b28e873eca9999420aa5fae0f73de570eb5314ee075006df",
+      "visionSha256": "7077cada5816e7760d2207d28ec30bb3a9d86c01928913c64ea0eec8cbfc4ffa",
+      "prediction": {
+        "state": "overworld",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "overworld",
+            "meanAbs": 3.237104684593269
+          },
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 31.093691865381363
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44"
+    },
+    {
+      "vision": "v1",
+      "file": "013-holdout-menu-after.png",
+      "expected": "menu-pokemon",
+      "witness": "016-party-calibration-witness.png",
+      "frameSha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+      "visionSha256": "7077cada5816e7760d2207d28ec30bb3a9d86c01928913c64ea0eec8cbfc4ffa",
+      "prediction": {
+        "state": "menu-pokemon",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 1.3791645526805345
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 31.76103500761035
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a"
+    },
+    {
+      "vision": "v2",
+      "file": "014-v2-menu-before.png",
+      "expected": "menu-pokemon",
+      "witness": "016-party-calibration-witness.png",
+      "frameSha256": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+      "visionSha256": "e56a1ae7c47eb3d6496b3a154253253f83c336aabeb27be676072b3a85054462",
+      "prediction": {
+        "state": "menu-pokemon",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 1.0879418231016404
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 30.241670894638933
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a"
+    },
+    {
+      "vision": "v2",
+      "file": "016-party-calibration-before.png",
+      "expected": "menu-pokemon",
+      "witness": "016-party-calibration-witness.png",
+      "frameSha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+      "visionSha256": "e56a1ae7c47eb3d6496b3a154253253f83c336aabeb27be676072b3a85054462",
+      "prediction": {
+        "state": "menu-pokemon",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 0.8937933367157112
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 30.88736681887367
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a"
+    },
+    {
+      "vision": "v2",
+      "file": "016-party-calibration-after.png",
+      "expected": "UNKNOWN",
+      "purpose": "New state/transition before settled party reference; retained pale game window",
+      "frameSha256": "5dc965fb47324043683ca49cfa1dddd5364ffbb5dfbc1ababed49d088f43fa10",
+      "visionSha256": "e56a1ae7c47eb3d6496b3a154253253f83c336aabeb27be676072b3a85054462",
+      "prediction": {
+        "state": "UNKNOWN",
+        "reason": "ambiguous-or-new-state",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 51.16658210722137
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 54.01555893793337
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false
+    },
+    {
+      "vision": "v3",
+      "file": "019-runtime-from-map-runtime-6-native.png",
+      "expected": "menu-pokemon",
+      "witness": "019-runtime-from-map-runtime-6-physical.png",
+      "frameSha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+      "visionSha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "prediction": {
+        "state": "menu-pokemon",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 0.6025706071368172
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 30.727042110603755
+          },
+          {
+            "state": "party",
+            "meanAbs": 73.5832910536107
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a"
+    },
+    {
+      "vision": "v3",
+      "file": "019-runtime-from-map-runtime-9-native.png",
+      "expected": "party",
+      "witness": "019-runtime-from-map-runtime-9-physical.png",
+      "frameSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "visionSha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "prediction": {
+        "state": "party",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "party",
+            "meanAbs": 0.8127853881278538
+          },
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 73.61593099949265
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 77.47184170471841
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72"
+    },
+    {
+      "vision": "v3",
+      "file": "019-runtime-from-map-runtime-12-native.png",
+      "expected": "menu-pokemon",
+      "witness": "019-runtime-from-map-runtime-12-physical.png",
+      "frameSha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+      "visionSha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "prediction": {
+        "state": "menu-pokemon",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 1.3791645526805345
+          },
+          {
+            "state": "overworld",
+            "meanAbs": 30.080162354134956
+          },
+          {
+            "state": "party",
+            "meanAbs": 73.52782005750042
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "f8a41ea4d0db670e0dcbd2420f0f9af71c5d808531dac23dc71f637bb1e47af3"
+    },
+    {
+      "vision": "v3",
+      "file": "019-runtime-from-map-runtime-14-native.png",
+      "expected": "overworld",
+      "witness": "019-runtime-from-map-runtime-14-physical.png",
+      "frameSha256": "510131ec939c952e7622b3bab0fed52d0654add812db91676f315cfd5ac535e8",
+      "visionSha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "prediction": {
+        "state": "overworld",
+        "reason": "scoped-reference-match",
+        "controlsMeanAbs": 0,
+        "scores": [
+          {
+            "state": "overworld",
+            "meanAbs": 3.4271943176052764
+          },
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 31.43581938102486
+          },
+          {
+            "state": "party",
+            "meanAbs": 77.30272281413833
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44"
+    },
+    {
+      "vision": "v3",
+      "file": "023-runtime-on-home-runtime-1-native.png",
+      "expected": "UNKNOWN",
+      "witness": "023-runtime-on-home-runtime-1-physical.png",
+      "frameSha256": "97b619567bc89eaec5ee653f93b1089210b3277511fe77042c685a7deb9e495b",
+      "visionSha256": "5027f98ea6ef6eb72da659f57abb2c1e07aad3a6253bcf337ca0680340e8d5ae",
+      "prediction": {
+        "state": "UNKNOWN",
+        "reason": "controls",
+        "controlsMeanAbs": 3.050213675213675,
+        "scores": [
+          {
+            "state": "overworld",
+            "meanAbs": 191.4830035514967
+          },
+          {
+            "state": "menu-pokemon",
+            "meanAbs": 194.8334178927786
+          },
+          {
+            "state": "party",
+            "meanAbs": 198.1324200913242
+          }
+        ]
+      },
+      "matched": true,
+      "identicalToTrainingFrame": false,
+      "witnessSha256": "057c0aaa89f2518036d5cff1a6cecbb63d12a92fcd61fd618614580fff51f557"
+    }
+  ],
+  "correction": {
+    "claim": "Controls absent from old PNGs is retracted: all pixels in this ROI are RGB-identical to the complete baseline",
+    "auditCodeSha256": "f494baeb6cb39727482477b706b3cfa1443967d6d273a06ff314e9262a6956dd",
+    "baselineSha256": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+    "rgbAudit": {
+      "pillowVersion": "11.3.0",
+      "nativeControlsBox": [
+        965,
+        675,
+        1430,
+        1030
+      ],
+      "rows": [
+        {
+          "file": ".operator/experiments/pokemon-20261005/012-native-pokemon-frame.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "file": ".operator/experiments/pokemon-20261005/017-dismiss-door-after.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "file": ".operator/experiments/pokemon-20261005/018-start-short-a-after.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "file": ".operator/experiments/pokemon-20261005/020-start-held-a-after.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "file": ".operator/experiments/pokemon-20261005/021-close-held-a-after.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        },
+        {
+          "file": ".operator/experiments/pokemon-20261005/026-final-native-frame.png",
+          "rgbMeanAbs": [
+            0,
+            0,
+            0
+          ],
+          "rgbExtrema": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "oldMedia": [
+      {
+        "file": "012-native-pokemon-frame.png",
+        "sha256": "efe6f166f9fb20460260df56b973782e5aaba42ee499782abfc64b2d52dfdc36"
+      },
+      {
+        "file": "017-dismiss-door-after.png",
+        "sha256": "0fcd0822dccb7254c7342b61347adbf169a6216230a2cafdc2ddbebf93799ea5"
+      },
+      {
+        "file": "018-start-short-a-after.png",
+        "sha256": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357"
+      },
+      {
+        "file": "020-start-held-a-after.png",
+        "sha256": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221"
+      },
+      {
+        "file": "021-close-held-a-after.png",
+        "sha256": "306af9cfbfce85e3e6436ebea0b1bbb0af2c7dead203e1213ed7cea8ff633616"
+      },
+      {
+        "file": "026-final-native-frame.png",
+        "sha256": "413b65386ab02f96274fbe79a510c4625730c6309d4f5ac537788e01fba06655"
+      }
+    ]
+  },
+  "runtime": [
+    {
+      "label": "018-runtime-cleanup",
+      "result": {
+        "id": "508ad769-3258-4db7-9963-43640e434e85",
+        "planHash": "8632a050691f41e703d57dba61752f50ce2bd871bd991d43e9a9559d5a8cb4aa",
+        "level": "DEVICE_MEASURED",
+        "verdict": "PASS",
+        "startedAt": "2026-10-05T20:54:35.637Z",
+        "steps": [
+          {
+            "nodeId": "back",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 420.875334,
+            "endedAtMs": 5315.004917,
+            "observations": [
+              {
+                "id": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+                "clock": "host-monotonic",
+                "receivedAtMs": 1655.902584,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+                  "deviceImageNs": "40332909882096",
+                  "deviceSnapshotNs": "40333142428865",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "party"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "party",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "party",
+                        "meanAbs": 0
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 73.62743108405209
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 77.48334178927786
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 825.342
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e"
+              },
+              {
+                "id": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+                "clock": "host-monotonic",
+                "receivedAtMs": 5178.87075,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+                  "deviceImageNs": "40336443771404",
+                  "deviceSnapshotNs": "40336663201250",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.8937933367157112
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.88736681887367
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.5832910536107
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 4292.423334
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "close",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 5315.07375,
+            "endedAtMs": 9723.860334,
+            "observations": [
+              {
+                "id": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+                "clock": "host-monotonic",
+                "receivedAtMs": 6613.526167,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+                  "deviceImageNs": "40337894728865",
+                  "deviceSnapshotNs": "40338109734096",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 1.476238795873499
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.56553357009978
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.50008455944528
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 5792.99125
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8"
+              },
+              {
+                "id": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+                "clock": "host-monotonic",
+                "receivedAtMs": 9586.702959,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+                  "deviceImageNs": "40340827835096",
+                  "deviceSnapshotNs": "40341053485788",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 3.545408422120751
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 31.3904955183494
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.36428209030949
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "9d6a4fd83cc6f623cbe7a1b828e1aae9d8ad0b13d48a5355cf3d5e1cf4894394",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "9d6a4fd83cc6f623cbe7a1b828e1aae9d8ad0b13d48a5355cf3d5e1cf4894394",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 8629.007084
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          }
+        ]
+      }
+    },
+    {
+      "label": "019-runtime-from-map",
+      "result": {
+        "id": "22a039c5-f3c7-4942-a351-da66ab272454",
+        "planHash": "78838c195808fcf2eae05fde86fbf947f90db597bc58bd599308903c83bc4f8d",
+        "level": "DEVICE_MEASURED",
+        "verdict": "PASS",
+        "startedAt": "2026-10-05T20:55:32.768Z",
+        "steps": [
+          {
+            "nodeId": "foreground",
+            "verdict": "PASS",
+            "dispatched": false,
+            "startedAtMs": 644.289709,
+            "endedAtMs": 2230.417167,
+            "observations": [
+              {
+                "id": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                "clock": "host-monotonic",
+                "receivedAtMs": 2091.823375,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                  "deviceImageNs": "40390247495022",
+                  "deviceSnapshotNs": "40390456239638",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 0.6025706071368172
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 30.727042110603755
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.83426348723152
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "2ccd0c35d784f5d755c1a0054b55a3b8ee27694448adf74487ae19e3364fa079",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "2ccd0c35d784f5d755c1a0054b55a3b8ee27694448adf74487ae19e3364fa079",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 1153.9145
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "map",
+            "verdict": "PASS",
+            "dispatched": false,
+            "startedAtMs": 2230.486167,
+            "endedAtMs": 3691.669417,
+            "observations": [
+              {
+                "id": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                "clock": "host-monotonic",
+                "receivedAtMs": 3555.806709,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                  "deviceImageNs": "40391679564868",
+                  "deviceSnapshotNs": "40391926483715",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 0.6025706071368172
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 30.727042110603755
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.83426348723152
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "62cc695c012b7f9bbb0eeb609f90c6b4d1ca0aef75e9c2249ca082aa3ec64b60",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "62cc695c012b7f9bbb0eeb609f90c6b4d1ca0aef75e9c2249ca082aa3ec64b60",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 2626.687709
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "open",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 3691.871625,
+            "endedAtMs": 8494.56225,
+            "observations": [
+              {
+                "id": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                "clock": "host-monotonic",
+                "receivedAtMs": 4984.146709,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+                  "deviceImageNs": "40393161426099",
+                  "deviceSnapshotNs": "40393383061792",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 0.6025706071368172
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 30.727042110603755
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.83426348723152
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "73c6b61c4a63df2f7a185fefcda7a8e825c82430b90fa77f0a5f3317b601efed",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "73c6b61c4a63df2f7a185fefcda7a8e825c82430b90fa77f0a5f3317b601efed",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 4169.860625
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9"
+              },
+              {
+                "id": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+                "clock": "host-monotonic",
+                "receivedAtMs": 8370.267084,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+                  "deviceImageNs": "40396547980253",
+                  "deviceSnapshotNs": "40396783728253",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 1.476238795873499
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.56553357009978
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.50008455944528
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "9b27f1a16c10729a51042eb97a34412aab4b769cb104b05cc626d3a54a3aa4e5",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "9b27f1a16c10729a51042eb97a34412aab4b769cb104b05cc626d3a54a3aa4e5",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 7550.690125
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "party",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 8494.641959,
+            "endedAtMs": 12681.951334,
+            "observations": [
+              {
+                "id": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+                "clock": "host-monotonic",
+                "receivedAtMs": 9633.590292,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+                  "deviceImageNs": "40397847293869",
+                  "deviceSnapshotNs": "40398056621253",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.6025706071368172
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.727042110603755
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.5832910536107
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 8869.403959
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6"
+              },
+              {
+                "id": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                "clock": "host-monotonic",
+                "receivedAtMs": 12547.587584,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                  "deviceImageNs": "40400679646484",
+                  "deviceSnapshotNs": "40400889335946",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "party"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "party",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "party",
+                        "meanAbs": 0.8127853881278538
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 73.61593099949265
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 77.47184170471841
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 11653.836584
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "back",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 12682.564959,
+            "endedAtMs": 16988.4245,
+            "observations": [
+              {
+                "id": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                "clock": "host-monotonic",
+                "receivedAtMs": 13971.470167,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                  "deviceImageNs": "40402147131715",
+                  "deviceSnapshotNs": "40402357485869",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "party"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "party",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "party",
+                        "meanAbs": 0.8127853881278538
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 73.61593099949265
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 77.47184170471841
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 13078.269667
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42"
+              },
+              {
+                "id": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+                "clock": "host-monotonic",
+                "receivedAtMs": 16868.463792,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+                  "deviceImageNs": "40405064512946",
+                  "deviceSnapshotNs": "40405273672023",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.6025706071368172
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.727042110603755
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.5832910536107
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 16075.636209
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "close",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 16988.550417,
+            "endedAtMs": 21327.433625,
+            "observations": [
+              {
+                "id": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+                "clock": "host-monotonic",
+                "receivedAtMs": 18300.468834,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+                  "deviceImageNs": "40406465627100",
+                  "deviceSnapshotNs": "40406688845562",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 1.3791645526805345
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.080162354134956
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.52782005750042
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "f8a41ea4d0db670e0dcbd2420f0f9af71c5d808531dac23dc71f637bb1e47af3",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "f8a41ea4d0db670e0dcbd2420f0f9af71c5d808531dac23dc71f637bb1e47af3",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 17474.823542
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0"
+              },
+              {
+                "id": "510131ec939c952e7622b3bab0fed52d0654add812db91676f315cfd5ac535e8",
+                "clock": "host-monotonic",
+                "receivedAtMs": 21198.495917,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "510131ec939c952e7622b3bab0fed52d0654add812db91676f315cfd5ac535e8",
+                  "deviceImageNs": "40409397425792",
+                  "deviceSnapshotNs": "40409616153485",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 3.4271943176052764
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 31.43581938102486
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.30272281413833
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 20406.455084
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "510131ec939c952e7622b3bab0fed52d0654add812db91676f315cfd5ac535e8"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          }
+        ]
+      }
+    },
+    {
+      "label": "021-runtime-from-menu",
+      "result": {
+        "id": "0b807f70-486e-4141-b274-2c070ae110b4",
+        "planHash": "78838c195808fcf2eae05fde86fbf947f90db597bc58bd599308903c83bc4f8d",
+        "level": "DEVICE_MEASURED",
+        "verdict": "PASS",
+        "startedAt": "2026-10-05T20:56:19.543Z",
+        "steps": [
+          {
+            "nodeId": "foreground",
+            "verdict": "PASS",
+            "dispatched": false,
+            "startedAtMs": 293.401667,
+            "endedAtMs": 1620.167875,
+            "observations": [
+              {
+                "id": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                "clock": "host-monotonic",
+                "receivedAtMs": 1490.570792,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                  "deviceImageNs": "40436813929871",
+                  "deviceSnapshotNs": "40437029970717",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.48537121596482324
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.84424150177575
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.59969558599695
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 697.502542
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "map",
+            "verdict": "FAIL",
+            "dispatched": false,
+            "startedAtMs": 1620.244625,
+            "endedAtMs": 2921.11425,
+            "observations": [
+              {
+                "id": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                "clock": "host-monotonic",
+                "receivedAtMs": 2793.578209,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                  "deviceImageNs": "40438115712871",
+                  "deviceSnapshotNs": "40438329500256",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.48537121596482324
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.84424150177575
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.59969558599695
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 1980.201792
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "menu",
+            "verdict": "PASS",
+            "dispatched": false,
+            "startedAtMs": 2921.279959,
+            "endedAtMs": 4353.656875,
+            "observations": [
+              {
+                "id": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                "clock": "host-monotonic",
+                "receivedAtMs": 4215.971792,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+                  "deviceImageNs": "40439531663410",
+                  "deviceSnapshotNs": "40439752632333",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.48537121596482324
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.84424150177575
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.59969558599695
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 3432.0385
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "party",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 4353.836792,
+            "endedAtMs": 9228.657,
+            "observations": [
+              {
+                "id": "3f2032db5da8058862f5fd227cbdd9aebd1d4abc03152c3288576bf5f47e40a8",
+                "clock": "host-monotonic",
+                "receivedAtMs": 5559.963292,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "3f2032db5da8058862f5fd227cbdd9aebd1d4abc03152c3288576bf5f47e40a8",
+                  "deviceImageNs": "40440829739948",
+                  "deviceSnapshotNs": "40441088860256",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.7765939455437172
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.60544562827668
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.57196008794182
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 4732.023084
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "3f2032db5da8058862f5fd227cbdd9aebd1d4abc03152c3288576bf5f47e40a8"
+              },
+              {
+                "id": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+                "clock": "host-monotonic",
+                "receivedAtMs": 9083.787667,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+                  "deviceImageNs": "40444365733871",
+                  "deviceSnapshotNs": "40444583881256",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "party"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "party",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "party",
+                        "meanAbs": 0.8127853881278538
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 73.61593099949265
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 77.47184170471841
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "5e566b9a135d24aa284dfa4102cf4fbef86fe187129b64ff736e1ceb8e67ad18",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "5e566b9a135d24aa284dfa4102cf4fbef86fe187129b64ff736e1ceb8e67ad18",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 8194.221834
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "back",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 9228.831792,
+            "endedAtMs": 13728.545334,
+            "observations": [
+              {
+                "id": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+                "clock": "host-monotonic",
+                "receivedAtMs": 10477.004334,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+                  "deviceImageNs": "40445765591410",
+                  "deviceSnapshotNs": "40446001522179",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "party"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "party",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "party",
+                        "meanAbs": 0.8127853881278538
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 73.61593099949265
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 77.47184170471841
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "b405b2601a192c0f66291025799e0ca3186f73951441c8be4d012c243b7663d6",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "b405b2601a192c0f66291025799e0ca3186f73951441c8be4d012c243b7663d6",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 9618.425167
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640"
+              },
+              {
+                "id": "ed48bca24ed5560337467fd8c9267531074200a261d27b437c4412cdbd8bca22",
+                "clock": "host-monotonic",
+                "receivedAtMs": 13580.943917,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "ed48bca24ed5560337467fd8c9267531074200a261d27b437c4412cdbd8bca22",
+                  "deviceImageNs": "40448847409795",
+                  "deviceSnapshotNs": "40449088509564",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.29122272957889395
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 30.95518349399628
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.62743108405209
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 12594.855625
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "ed48bca24ed5560337467fd8c9267531074200a261d27b437c4412cdbd8bca22"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          },
+          {
+            "nodeId": "close",
+            "verdict": "PASS",
+            "dispatched": true,
+            "startedAtMs": 13728.684375,
+            "endedAtMs": 19033.396959,
+            "observations": [
+              {
+                "id": "b9954205c03fbd8e121375db6e15c31845d54a3fd369c469144de043886146af",
+                "clock": "host-monotonic",
+                "receivedAtMs": 15094.749375,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "b9954205c03fbd8e121375db6e15c31845d54a3fd369c469144de043886146af",
+                  "deviceImageNs": "40450397686180",
+                  "deviceSnapshotNs": "40450613398795",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "menu-pokemon"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "menu-pokemon",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 0.8736681887366818
+                      },
+                      {
+                        "state": "overworld",
+                        "meanAbs": 31.090816844241502
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 73.5442245898867
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "b30d7a3641148d3172c54dfe65af99109a649ff5b23c6d73705ae2cd5a262597",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "b30d7a3641148d3172c54dfe65af99109a649ff5b23c6d73705ae2cd5a262597",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 14223.087667
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "b9954205c03fbd8e121375db6e15c31845d54a3fd369c469144de043886146af"
+              },
+              {
+                "id": "37123f600af1d29d97ac6ef8a4000ee90917e1703ca8c8fb441de054846a7873",
+                "clock": "host-monotonic",
+                "receivedAtMs": 18823.894584,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "37123f600af1d29d97ac6ef8a4000ee90917e1703ca8c8fb441de054846a7873",
+                  "deviceImageNs": "40453348352257",
+                  "deviceSnapshotNs": "40453590517564",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": true,
+                  "foregroundPackage": "com.fastemulator.gbc",
+                  "pokemonState": "overworld"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "overworld",
+                    "reason": "scoped-reference-match",
+                    "controlsMeanAbs": 0,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 0.5252832741417216
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 30.856756299678676
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 77.527989176391
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "receivedAtMs": 17175.290709
+                  },
+                  "physicalControlsMeanAbs": 0,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "37123f600af1d29d97ac6ef8a4000ee90917e1703ca8c8fb441de054846a7873"
+              }
+            ],
+            "kind": "tap",
+            "clock": "host-monotonic",
+            "detail": ""
+          }
+        ]
+      }
+    },
+    {
+      "label": "023-runtime-on-home",
+      "result": {
+        "id": "3057015e-7a0b-4278-bb43-f3bfc98a1fac",
+        "planHash": "78838c195808fcf2eae05fde86fbf947f90db597bc58bd599308903c83bc4f8d",
+        "level": "DEVICE_MEASURED",
+        "verdict": "FAIL",
+        "startedAt": "2026-10-05T20:56:40.386Z",
+        "steps": [
+          {
+            "nodeId": "foreground",
+            "verdict": "FAIL",
+            "dispatched": false,
+            "startedAtMs": 373.22475,
+            "endedAtMs": 2500.112125,
+            "observations": [
+              {
+                "id": "97b619567bc89eaec5ee653f93b1089210b3277511fe77042c685a7deb9e495b",
+                "clock": "host-monotonic",
+                "receivedAtMs": 2375.20275,
+                "facts": {
+                  "width": 2400,
+                  "height": 1080,
+                  "frameSha256": "97b619567bc89eaec5ee653f93b1089210b3277511fe77042c685a7deb9e495b",
+                  "deviceImageNs": "40458485035334",
+                  "deviceSnapshotNs": "40458672324334",
+                  "deviceClock": "companion-System.nanoTime",
+                  "backend": "fnaf-companion-native-snap",
+                  "clockMap": "UNKNOWN",
+                  "geometryQualified": false,
+                  "foregroundPackage": "org.fossify.home"
+                },
+                "evidence": {
+                  "recognition": {
+                    "state": "UNKNOWN",
+                    "reason": "controls",
+                    "controlsMeanAbs": 3.050213675213675,
+                    "scores": [
+                      {
+                        "state": "overworld",
+                        "meanAbs": 191.4830035514967
+                      },
+                      {
+                        "state": "menu-pokemon",
+                        "meanAbs": 194.8334178927786
+                      },
+                      {
+                        "state": "party",
+                        "meanAbs": 198.1324200913242
+                      }
+                    ]
+                  },
+                  "physicalWitness": {
+                    "id": "057c0aaa89f2518036d5cff1a6cecbb63d12a92fcd61fd618614580fff51f557",
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "057c0aaa89f2518036d5cff1a6cecbb63d12a92fcd61fd618614580fff51f557",
+                      "foregroundPackage": "org.fossify.home"
+                    },
+                    "receivedAtMs": 736.357
+                  },
+                  "physicalControlsMeanAbs": 5.016955394024785,
+                  "sequentialWitnesses": true
+                },
+                "imageSha256": "97b619567bc89eaec5ee653f93b1089210b3277511fe77042c685a7deb9e495b"
+              }
+            ],
+            "kind": "check",
+            "clock": "host-monotonic",
+            "detail": ""
+          }
+        ]
+      }
+    }
+  ],
+  "cursorHardening": {
+    "visionSha256": "90e1db1f998cfbf049e612970d02f3aa8795a757f59208e9778fe094d674df7e",
+    "nativeCursorBox": [
+      1224,
+      288,
+      1247,
+      317
+    ],
+    "meanAbsLimit": 2,
+    "retrospectiveAudit": [
+      {
+        "file": "019-runtime-from-map-runtime-6-native.png",
+        "prediction": {
+          "state": "menu-pokemon",
+          "reason": "scoped-reference-match",
+          "controlsMeanAbs": 0,
+          "scores": [
+            {
+              "state": "menu-pokemon",
+              "meanAbs": 0.6025706071368172
+            },
+            {
+              "state": "overworld",
+              "meanAbs": 30.727042110603755
+            },
+            {
+              "state": "party",
+              "meanAbs": 73.5832910536107
+            }
+          ]
+        }
+      },
+      {
+        "file": "019-runtime-from-map-runtime-12-native.png",
+        "prediction": {
+          "state": "menu-pokemon",
+          "reason": "scoped-reference-match",
+          "controlsMeanAbs": 0,
+          "scores": [
+            {
+              "state": "menu-pokemon",
+              "meanAbs": 1.3791645526805345
+            },
+            {
+              "state": "overworld",
+              "meanAbs": 30.080162354134956
+            },
+            {
+              "state": "party",
+              "meanAbs": 73.52782005750042
+            }
+          ]
+        }
+      }
+    ],
+    "reason": "Whole-menu average can miss cursor changes. V3 is retired from live input; V4 requires an additional cursor ROI."
+  },
+  "contacts": {
+    "initialPhase": 12,
+    "phase3": 6,
+    "totalMenuContacts": 18,
+    "diagnosticAdb": 1,
+    "originalFnafHid": 17,
+    "romSelectionAdb": 1,
+    "nominalHoldMs": 150
+  },
+  "final": {
+    "projectionActive": false,
+    "researchHidPresent": false,
+    "frame": {
+      "id": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+      "clock": "host-monotonic",
+      "receivedAtMs": 655.792583,
+      "facts": {
+        "width": 1080,
+        "height": 2400,
+        "frameSha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+        "foregroundPackage": "com.fastemulator.gbc"
+      },
+      "requestAtMs": 246.895666,
+      "completedAtMs": 724.536916,
+      "file": "p3-010-final-frame.png"
+    }
+  },
+  "initialPhaseFinal": {
+    "projectionActive": false,
+    "researchHidPresent": false,
+    "frame": {
+      "facts": {
+        "foregroundPackage": "com.fastemulator.gbc"
+      },
+      "id": "5a26af392e17132e84c4f8e55a6a6607bfac9369a9970a48fa79ceb9c475537e",
+      "clock": "host-monotonic",
+      "receivedAtMs": 639.136375,
+      "requestAtMs": 252.680541,
+      "completedAtMs": 715.920541,
+      "file": "026-final-inspection-frame.png"
+    }
+  },
+  "phase3": {
+    "runtime": [
+      {
+        "label": "p3-006-refuse-a",
+        "result": {
+          "id": "44adf855-31e0-4631-9425-597fac2add69",
+          "planHash": "444d60aa88c3d166b1f69684fc504d8b72d56bb634a90210a1e982f8f964e73e",
+          "level": "DEVICE_MEASURED",
+          "verdict": "UNKNOWN",
+          "startedAt": "2026-10-05T21:32:35.192Z",
+          "steps": [
+            {
+              "nodeId": "party",
+              "verdict": "UNKNOWN",
+              "dispatched": false,
+              "startedAtMs": 381.050375,
+              "endedAtMs": 1718.149375,
+              "observations": [
+                {
+                  "id": "d725437b4c451ce3f1658f13fb57f5f03ebd7e0dd960ff0e0480791d2da9e2e4",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 1590.383834,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "d725437b4c451ce3f1658f13fb57f5f03ebd7e0dd960ff0e0480791d2da9e2e4",
+                    "deviceImageNs": "41886800587881",
+                    "deviceSnapshotNs": "41887000464188",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "UNKNOWN",
+                      "reason": "pokemon-cursor-not-confirmed",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 1.7972264501944868
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 29.971418907491966
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.48621681041773
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "bafa10540052cb91289e4c226b0a28f49be593d23e0454e365c220400e8ed9f8",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "bafa10540052cb91289e4c226b0a28f49be593d23e0454e365c220400e8ed9f8",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 768.953417
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "d725437b4c451ce3f1658f13fb57f5f03ebd7e0dd960ff0e0480791d2da9e2e4"
+                }
+              ],
+              "kind": "tap",
+              "clock": "host-monotonic",
+              "detail": "Precondição não confirmada"
+            }
+          ]
+        }
+      },
+      {
+        "label": "p3-008-runtime",
+        "result": {
+          "id": "2f700600-c8b8-4052-b43b-81519b8303fe",
+          "planHash": "78838c195808fcf2eae05fde86fbf947f90db597bc58bd599308903c83bc4f8d",
+          "level": "DEVICE_MEASURED",
+          "verdict": "PASS",
+          "startedAt": "2026-10-05T21:32:40.323Z",
+          "steps": [
+            {
+              "nodeId": "foreground",
+              "verdict": "PASS",
+              "dispatched": false,
+              "startedAtMs": 398.717459,
+              "endedAtMs": 1673.765959,
+              "observations": [
+                {
+                  "id": "af06096bf302725faa3439e76d294d621de9a91d5504fb49b62a14e2583915fa",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 1546.729125,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "af06096bf302725faa3439e76d294d621de9a91d5504fb49b62a14e2583915fa",
+                    "deviceImageNs": "41891854589496",
+                    "deviceSnapshotNs": "41892086954035",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 1.4309149331980382
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.683747674615255
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.56164383561644
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 789.803084
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "af06096bf302725faa3439e76d294d621de9a91d5504fb49b62a14e2583915fa"
+                }
+              ],
+              "kind": "check",
+              "clock": "host-monotonic",
+              "detail": ""
+            },
+            {
+              "nodeId": "map",
+              "verdict": "FAIL",
+              "dispatched": false,
+              "startedAtMs": 1673.905417,
+              "endedAtMs": 3024.354417,
+              "observations": [
+                {
+                  "id": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 2898.609667,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+                    "deviceImageNs": "41893168168189",
+                    "deviceSnapshotNs": "41893399733496",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 0.5572467444613564
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.491121258244547
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.64485032978183
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 2032.345667
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682"
+                }
+              ],
+              "kind": "check",
+              "clock": "host-monotonic",
+              "detail": ""
+            },
+            {
+              "nodeId": "menu",
+              "verdict": "PASS",
+              "dispatched": false,
+              "startedAtMs": 3024.523709,
+              "endedAtMs": 4366.699584,
+              "observations": [
+                {
+                  "id": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 4239.374417,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+                    "deviceImageNs": "41894521027266",
+                    "deviceSnapshotNs": "41894760813189",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 1.3338406900050737
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.198376458650433
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.58937933367157
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "4f6e1630f8a4d51f2e2c55a13a4dd9f509df0aa07b11905de83c3b483cbcdf3c",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "4f6e1630f8a4d51f2e2c55a13a4dd9f509df0aa07b11905de83c3b483cbcdf3c",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 3405.152167
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a"
+                }
+              ],
+              "kind": "check",
+              "clock": "host-monotonic",
+              "detail": ""
+            },
+            {
+              "nodeId": "party",
+              "verdict": "PASS",
+              "dispatched": true,
+              "startedAtMs": 4367.119459,
+              "endedAtMs": 8878.121459,
+              "observations": [
+                {
+                  "id": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 5513.176084,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+                    "deviceImageNs": "41895833941727",
+                    "deviceSnapshotNs": "41896055778112",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 0.5572467444613564
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.491121258244547
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.64485032978183
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 4745.119834
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682"
+                },
+                {
+                  "id": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 8768.299459,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+                    "deviceImageNs": "41899067366651",
+                    "deviceSnapshotNs": "41899295595651",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "party"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "party",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "party",
+                          "meanAbs": 0.8127853881278538
+                        },
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 73.61593099949265
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 77.47184170471841
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 7953.40775
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42"
+                }
+              ],
+              "kind": "tap",
+              "clock": "host-monotonic",
+              "detail": ""
+            },
+            {
+              "nodeId": "back",
+              "verdict": "PASS",
+              "dispatched": true,
+              "startedAtMs": 8878.192667,
+              "endedAtMs": 12877.474209,
+              "observations": [
+                {
+                  "id": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 10058.495792,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+                    "deviceImageNs": "41900382580804",
+                    "deviceSnapshotNs": "41900588642343",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "party"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "party",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "party",
+                          "meanAbs": 0
+                        },
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 73.62743108405209
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 77.48334178927786
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 9272.55925
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e"
+                },
+                {
+                  "id": "14a21ae8534bf5f5006892ca7d08ae14826580bec80dcc4cdf154f37f5294451",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 12770.036459,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "14a21ae8534bf5f5006892ca7d08ae14826580bec80dcc4cdf154f37f5294451",
+                    "deviceImageNs": "41903085166343",
+                    "deviceSnapshotNs": "41903306927958",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 0.8484694740402503
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.397936749534924
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.64485032978183
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 11985.127625
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "14a21ae8534bf5f5006892ca7d08ae14826580bec80dcc4cdf154f37f5294451"
+                }
+              ],
+              "kind": "tap",
+              "clock": "host-monotonic",
+              "detail": ""
+            },
+            {
+              "nodeId": "close",
+              "verdict": "PASS",
+              "dispatched": true,
+              "startedAtMs": 12877.526667,
+              "endedAtMs": 16946.649667,
+              "observations": [
+                {
+                  "id": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 14018.030042,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+                    "deviceImageNs": "41904316268805",
+                    "deviceSnapshotNs": "41904539394035",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "menu-pokemon"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "menu-pokemon",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 1.3338406900050737
+                        },
+                        {
+                          "state": "overworld",
+                          "meanAbs": 30.198376458650433
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 73.58937933367157
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 13234.651542
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a"
+                },
+                {
+                  "id": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+                  "clock": "host-monotonic",
+                  "receivedAtMs": 16838.417667,
+                  "facts": {
+                    "width": 2400,
+                    "height": 1080,
+                    "frameSha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+                    "deviceImageNs": "41907150757728",
+                    "deviceSnapshotNs": "41907373061113",
+                    "deviceClock": "companion-System.nanoTime",
+                    "backend": "fnaf-companion-native-snap",
+                    "clockMap": "UNKNOWN",
+                    "geometryQualified": true,
+                    "foregroundPackage": "com.fastemulator.gbc",
+                    "pokemonState": "overworld"
+                  },
+                  "evidence": {
+                    "recognition": {
+                      "state": "overworld",
+                      "reason": "scoped-reference-match",
+                      "controlsMeanAbs": 0,
+                      "scores": [
+                        {
+                          "state": "overworld",
+                          "meanAbs": 3.545408422120751
+                        },
+                        {
+                          "state": "menu-pokemon",
+                          "meanAbs": 31.3904955183494
+                        },
+                        {
+                          "state": "party",
+                          "meanAbs": 77.36428209030949
+                        }
+                      ]
+                    },
+                    "physicalWitness": {
+                      "id": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+                      "facts": {
+                        "width": 1080,
+                        "height": 2400,
+                        "frameSha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+                        "foregroundPackage": "com.fastemulator.gbc"
+                      },
+                      "receivedAtMs": 16039.246042
+                    },
+                    "physicalControlsMeanAbs": 0,
+                    "sequentialWitnesses": true
+                  },
+                  "imageSha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54"
+                }
+              ],
+              "kind": "tap",
+              "clock": "host-monotonic",
+              "detail": ""
+            }
+          ]
+        }
+      }
+    ],
+    "cursorUp": {
+      "state": "UNKNOWN",
+      "reason": "pokemon-cursor-not-confirmed",
+      "controlsMeanAbs": 0,
+      "scores": [
+        {
+          "state": "menu-pokemon",
+          "meanAbs": 1.3118552342296634
+        },
+        {
+          "state": "overworld",
+          "meanAbs": 30.170979198376457
+        },
+        {
+          "state": "party",
+          "meanAbs": 73.54168780652799
+        }
+      ]
+    },
+    "visionSha256": "90e1db1f998cfbf049e612970d02f3aa8795a757f59208e9778fe094d674df7e",
+    "coldResumeRefusal": "Refused contact: expected overworld, observed UNKNOWN",
+    "prepareFailureRetained": "Command failed: python3 -c import importlib.util,sys; spec=importlib.util.spec_from_file_location(\"original_setup\",sys.argv[1]); m=importlib.util.module_from_spec(spec); spec.loader.exec_module(m); m.start_capture(\"\") <workspace>/fnaf2-1020/packages/play/bin/companion/companion-setup.py\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<workspace>/fnaf2-1020/packages/play/bin/companion/companion-setup.py\", line 189, in start_capture\n    raise SetupError(\"helper capture button was not found\")\noriginal_setup.SetupError: helper capture button was not found\n"
+  },
+  "media": [
+    {
+      "file": "001-prepare-after.png",
+      "sha256": "12b20d0fda6a1459697184796b0996b18b922c2a4fec6429e3a3d7b39b81a4eb",
+      "bytes": 127643
+    },
+    {
+      "file": "002-resume-after.png",
+      "sha256": "e25cde26984c79e0b8555c9ff13a3643a61e294f0785c6b47dee384739cb2752",
+      "bytes": 336977
+    },
+    {
+      "file": "003-baseline-after.png",
+      "sha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+      "bytes": 101188
+    },
+    {
+      "file": "003-baseline-before.png",
+      "sha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+      "bytes": 101188
+    },
+    {
+      "file": "003-baseline-native.png",
+      "sha256": "9907c4d87db06fb05b953b077a7305e0d22edbc961bc072b540cdf9b94a83536",
+      "bytes": 100554
+    },
+    {
+      "file": "004-home-a-after.png",
+      "sha256": "47e7734d211fd2faa678b6ab95accf596ef58801a90ea133e7bf0d444d270f55",
+      "bytes": 57739
+    },
+    {
+      "file": "004-home-a-before.png",
+      "sha256": "43d25150a91618154d8e8633049776eba500cdbb8099ef44b299d8bd0e8969c4",
+      "bytes": 101020
+    },
+    {
+      "file": "005-resume-a-after.png",
+      "sha256": "3e2f1dd4250605df3215af9959612b55c975bde8f857e4dc7890dcf6e3520e7e",
+      "bytes": 408584
+    },
+    {
+      "file": "006-return-a-after.png",
+      "sha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+      "bytes": 101206
+    },
+    {
+      "file": "006-return-a-before.png",
+      "sha256": "ecf0ee3e486906bbbb51b0550160ab2ce98a6a3e89595e9bf0d58e869fca579a",
+      "bytes": 101283
+    },
+    {
+      "file": "006-return-a-native.png",
+      "sha256": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+      "bytes": 101055
+    },
+    {
+      "file": "007-settled-a-after.png",
+      "sha256": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+      "bytes": 101265
+    },
+    {
+      "file": "007-settled-a-before.png",
+      "sha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+      "bytes": 101049
+    },
+    {
+      "file": "007-settled-a-native.png",
+      "sha256": "8fccf7d65d3cbaded80fbc2b6d733f62c5a20492560f97189b595286b83af3e1",
+      "bytes": 100751
+    },
+    {
+      "file": "008-home-b-after.png",
+      "sha256": "edaca4965ddae7ac8a978efdb260338ef6bfb7f5cfb653825026155cfcfcdd46",
+      "bytes": 108068
+    },
+    {
+      "file": "008-home-b-before.png",
+      "sha256": "5ea781596fdde84ba6a33d84b603b67ab34878c8dafa81b2b00e0eef6a2aae87",
+      "bytes": 101002
+    },
+    {
+      "file": "009-resume-b-after.png",
+      "sha256": "0501958b2f7b5183e47148fe0e2296be9e8700c135be52f74b6be7f8aff2e895",
+      "bytes": 403260
+    },
+    {
+      "file": "010-return-b-after.png",
+      "sha256": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+      "bytes": 101259
+    },
+    {
+      "file": "010-return-b-before.png",
+      "sha256": "997baecf71c682073123808d770b0b0137a3dfbe318cb1b099ecb6dc446251cd",
+      "bytes": 101265
+    },
+    {
+      "file": "010-return-b-native.png",
+      "sha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+      "bytes": 100237
+    },
+    {
+      "file": "011-settled-b-after.png",
+      "sha256": "ec1fcbaac8e83192fa2ad98600fcd8659367c8a0f35951e416f234f9978babf7",
+      "bytes": 101259
+    },
+    {
+      "file": "011-settled-b-before.png",
+      "sha256": "345844998e69caa7b09db32ce8da9c59aa6ac5134c5e096564866522e6d7707e",
+      "bytes": 101172
+    },
+    {
+      "file": "011-settled-b-native.png",
+      "sha256": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+      "bytes": 100011
+    },
+    {
+      "file": "012-holdout-map-before.png",
+      "sha256": "900b889d22f3ff291c765835b137e59602851670466a75446e41a93f8514295d",
+      "bytes": 101055
+    },
+    {
+      "file": "013-holdout-menu-after.png",
+      "sha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+      "bytes": 86913
+    },
+    {
+      "file": "013-holdout-menu-before.png",
+      "sha256": "3c625621fd51df69b28e873eca9999420aa5fae0f73de570eb5314ee075006df",
+      "bytes": 100032
+    },
+    {
+      "file": "013-holdout-menu-witness.png",
+      "sha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+      "bytes": 101049
+    },
+    {
+      "file": "014-v2-menu-before.png",
+      "sha256": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+      "bytes": 86835
+    },
+    {
+      "file": "016-party-calibration-after.png",
+      "sha256": "5dc965fb47324043683ca49cfa1dddd5364ffbb5dfbc1ababed49d088f43fa10",
+      "bytes": 48004
+    },
+    {
+      "file": "016-party-calibration-before.png",
+      "sha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+      "bytes": 86849
+    },
+    {
+      "file": "016-party-calibration-witness.png",
+      "sha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+      "bytes": 97917
+    },
+    {
+      "file": "017-party-settled-after.png",
+      "sha256": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+      "bytes": 94936
+    },
+    {
+      "file": "017-party-settled-before.png",
+      "sha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+      "bytes": 94917
+    },
+    {
+      "file": "017-party-settled-native.png",
+      "sha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+      "bytes": 69591
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-1-native.png",
+      "sha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+      "bytes": 69591
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-1-physical.png",
+      "sha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+      "bytes": 94917
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-2-native.png",
+      "sha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "bytes": 69706
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-2-physical.png",
+      "sha256": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+      "bytes": 94936
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-3-native.png",
+      "sha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+      "bytes": 86849
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-3-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-4-native.png",
+      "sha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+      "bytes": 86803
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-4-physical.png",
+      "sha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+      "bytes": 97917
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-5-native.png",
+      "sha256": "1b961a229f88de703a8b47d25b584ae969e590a3e267cfb516ec9924d771a68b",
+      "bytes": 86849
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-5-physical.png",
+      "sha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+      "bytes": 97917
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-6-native.png",
+      "sha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+      "bytes": 100154
+    },
+    {
+      "file": "018-runtime-cleanup-runtime-6-physical.png",
+      "sha256": "9d6a4fd83cc6f623cbe7a1b828e1aae9d8ad0b13d48a5355cf3d5e1cf4894394",
+      "bytes": 101237
+    },
+    {
+      "file": "019-runtime-from-map-runtime-1-native.png",
+      "sha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+      "bytes": 100283
+    },
+    {
+      "file": "019-runtime-from-map-runtime-1-physical.png",
+      "sha256": "2ccd0c35d784f5d755c1a0054b55a3b8ee27694448adf74487ae19e3364fa079",
+      "bytes": 101036
+    },
+    {
+      "file": "019-runtime-from-map-runtime-10-native.png",
+      "sha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+      "bytes": 69591
+    },
+    {
+      "file": "019-runtime-from-map-runtime-10-physical.png",
+      "sha256": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+      "bytes": 94936
+    },
+    {
+      "file": "019-runtime-from-map-runtime-11-native.png",
+      "sha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+      "bytes": 86811
+    },
+    {
+      "file": "019-runtime-from-map-runtime-11-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "019-runtime-from-map-runtime-12-native.png",
+      "sha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+      "bytes": 86913
+    },
+    {
+      "file": "019-runtime-from-map-runtime-12-physical.png",
+      "sha256": "f8a41ea4d0db670e0dcbd2420f0f9af71c5d808531dac23dc71f637bb1e47af3",
+      "bytes": 97901
+    },
+    {
+      "file": "019-runtime-from-map-runtime-13-native.png",
+      "sha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+      "bytes": 86811
+    },
+    {
+      "file": "019-runtime-from-map-runtime-13-physical.png",
+      "sha256": "28ddbd97a1554a8858ef0e920c6daa3cfde83c4508d8f3aee891739352ed2a3f",
+      "bytes": 97936
+    },
+    {
+      "file": "019-runtime-from-map-runtime-14-native.png",
+      "sha256": "510131ec939c952e7622b3bab0fed52d0654add812db91676f315cfd5ac535e8",
+      "bytes": 99942
+    },
+    {
+      "file": "019-runtime-from-map-runtime-14-physical.png",
+      "sha256": "06c6d4c5204cdae6005cd4598728b793752e0573bcb4a2f5cba0422f40453c44",
+      "bytes": 101049
+    },
+    {
+      "file": "019-runtime-from-map-runtime-2-native.png",
+      "sha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+      "bytes": 100283
+    },
+    {
+      "file": "019-runtime-from-map-runtime-2-physical.png",
+      "sha256": "62cc695c012b7f9bbb0eeb609f90c6b4d1ca0aef75e9c2249ca082aa3ec64b60",
+      "bytes": 101159
+    },
+    {
+      "file": "019-runtime-from-map-runtime-3-native.png",
+      "sha256": "f940565e4e38139bd10d564de2b3adfc64c6988ad2d6c2cd8f81e595586e51a9",
+      "bytes": 100283
+    },
+    {
+      "file": "019-runtime-from-map-runtime-3-physical.png",
+      "sha256": "73c6b61c4a63df2f7a185fefcda7a8e825c82430b90fa77f0a5f3317b601efed",
+      "bytes": 101256
+    },
+    {
+      "file": "019-runtime-from-map-runtime-4-native.png",
+      "sha256": "f65a6c048c517c3ca6de7016c20ef6646f96604919aab905ec5af169a4050848",
+      "bytes": 100011
+    },
+    {
+      "file": "019-runtime-from-map-runtime-4-physical.png",
+      "sha256": "62cc695c012b7f9bbb0eeb609f90c6b4d1ca0aef75e9c2249ca082aa3ec64b60",
+      "bytes": 101159
+    },
+    {
+      "file": "019-runtime-from-map-runtime-5-native.png",
+      "sha256": "abd710100ba709e6a388f95e658739200b7f2c15b508e2325acf9cbc259b98b8",
+      "bytes": 86803
+    },
+    {
+      "file": "019-runtime-from-map-runtime-5-physical.png",
+      "sha256": "9b27f1a16c10729a51042eb97a34412aab4b769cb104b05cc626d3a54a3aa4e5",
+      "bytes": 96962
+    },
+    {
+      "file": "019-runtime-from-map-runtime-6-native.png",
+      "sha256": "eeda5e47273975555b091c6c0329c21d80ad417aaf8b3cbdc1faf3c91cb9dba6",
+      "bytes": 86811
+    },
+    {
+      "file": "019-runtime-from-map-runtime-6-physical.png",
+      "sha256": "58129cf3e6b692766552baccf1963391f0fb6756e6fbaa17cf5971f20d69cd1a",
+      "bytes": 97917
+    },
+    {
+      "file": "019-runtime-from-map-runtime-7-native.png",
+      "sha256": "9aa451100fbd94d46d2bcecbd33a3d266451e831e1d70c8382d5c715437271e0",
+      "bytes": 86913
+    },
+    {
+      "file": "019-runtime-from-map-runtime-7-physical.png",
+      "sha256": "f8a41ea4d0db670e0dcbd2420f0f9af71c5d808531dac23dc71f637bb1e47af3",
+      "bytes": 97901
+    },
+    {
+      "file": "019-runtime-from-map-runtime-8-native.png",
+      "sha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "bytes": 69706
+    },
+    {
+      "file": "019-runtime-from-map-runtime-8-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "019-runtime-from-map-runtime-9-native.png",
+      "sha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "bytes": 69706
+    },
+    {
+      "file": "019-runtime-from-map-runtime-9-physical.png",
+      "sha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+      "bytes": 94917
+    },
+    {
+      "file": "020-prepare-open-menu-after.png",
+      "sha256": "3f2032db5da8058862f5fd227cbdd9aebd1d4abc03152c3288576bf5f47e40a8",
+      "bytes": 86963
+    },
+    {
+      "file": "020-prepare-open-menu-before.png",
+      "sha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+      "bytes": 100237
+    },
+    {
+      "file": "020-prepare-open-menu-witness.png",
+      "sha256": "5ea781596fdde84ba6a33d84b603b67ab34878c8dafa81b2b00e0eef6a2aae87",
+      "bytes": 101002
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-1-native.png",
+      "sha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+      "bytes": 86897
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-1-physical.png",
+      "sha256": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+      "bytes": 97927
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-10-native.png",
+      "sha256": "b9954205c03fbd8e121375db6e15c31845d54a3fd369c469144de043886146af",
+      "bytes": 86866
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-10-physical.png",
+      "sha256": "b30d7a3641148d3172c54dfe65af99109a649ff5b23c6d73705ae2cd5a262597",
+      "bytes": 97916
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-11-native.png",
+      "sha256": "ed48bca24ed5560337467fd8c9267531074200a261d27b437c4412cdbd8bca22",
+      "bytes": 86909
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-11-physical.png",
+      "sha256": "b30d7a3641148d3172c54dfe65af99109a649ff5b23c6d73705ae2cd5a262597",
+      "bytes": 97916
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-12-native.png",
+      "sha256": "37123f600af1d29d97ac6ef8a4000ee90917e1703ca8c8fb441de054846a7873",
+      "bytes": 101057
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-12-physical.png",
+      "sha256": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+      "bytes": 101301
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-2-native.png",
+      "sha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+      "bytes": 86897
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-2-physical.png",
+      "sha256": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+      "bytes": 97913
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-3-native.png",
+      "sha256": "42260e40a657d9a439a48551d4f51554423b011d07afcb8c5b3127ad87bdce27",
+      "bytes": 86897
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-3-physical.png",
+      "sha256": "82c9f0e304c70c201a7547d2c9c7aed97524dd835c11f8edd29e49528ea6f052",
+      "bytes": 97927
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-4-native.png",
+      "sha256": "3f2032db5da8058862f5fd227cbdd9aebd1d4abc03152c3288576bf5f47e40a8",
+      "bytes": 86963
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-4-physical.png",
+      "sha256": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+      "bytes": 97913
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-5-native.png",
+      "sha256": "94400a50e79150128ff4ac838904dd9aef154ac4b8eb17d02c706e4ee9f0d9e3",
+      "bytes": 92445
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-5-physical.png",
+      "sha256": "46e228c133bbc05fdc77a6fcdf4300115c6eaa391048771f26720d42b55ca8c1",
+      "bytes": 113602
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-6-native.png",
+      "sha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+      "bytes": 75608
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-6-physical.png",
+      "sha256": "5e566b9a135d24aa284dfa4102cf4fbef86fe187129b64ff736e1ceb8e67ad18",
+      "bytes": 104302
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-7-native.png",
+      "sha256": "27146a2b1d8d1daf8f64374fa285e51fb8fe5c21af533473b2510c9eec950640",
+      "bytes": 75608
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-7-physical.png",
+      "sha256": "b405b2601a192c0f66291025799e0ca3186f73951441c8be4d012c243b7663d6",
+      "bytes": 110573
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-8-native.png",
+      "sha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+      "bytes": 69591
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-8-physical.png",
+      "sha256": "0b36e091ebc044b9d2d11e8173ad763a4a40ed641fd0adca37c96910d422b5e1",
+      "bytes": 94936
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-9-native.png",
+      "sha256": "ed48bca24ed5560337467fd8c9267531074200a261d27b437c4412cdbd8bca22",
+      "bytes": 86909
+    },
+    {
+      "file": "021-runtime-from-menu-runtime-9-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "022-home-runtime-after.png",
+      "sha256": "c1ee6b034f71226b10fcd7184f4d7a99d0caf75d54bd1b6a048279e01cc50258",
+      "bytes": 52318
+    },
+    {
+      "file": "022-home-runtime-before.png",
+      "sha256": "5a26af392e17132e84c4f8e55a6a6607bfac9369a9970a48fa79ceb9c475537e",
+      "bytes": 101219
+    },
+    {
+      "file": "023-runtime-on-home-runtime-1-native.png",
+      "sha256": "97b619567bc89eaec5ee653f93b1089210b3277511fe77042c685a7deb9e495b",
+      "bytes": 20193
+    },
+    {
+      "file": "023-runtime-on-home-runtime-1-physical.png",
+      "sha256": "057c0aaa89f2518036d5cff1a6cecbb63d12a92fcd61fd618614580fff51f557",
+      "bytes": 32541
+    },
+    {
+      "file": "024-final-resume-after.png",
+      "sha256": "4ddb7c4aadd7156d24694fb83bf0c47edd62150d25514f5029b8f6006d96729e",
+      "bytes": 413526
+    },
+    {
+      "file": "025-final-cleanup-after.png",
+      "sha256": "43d25150a91618154d8e8633049776eba500cdbb8099ef44b299d8bd0e8969c4",
+      "bytes": 101020
+    },
+    {
+      "file": "026-final-inspection-frame.png",
+      "sha256": "5a26af392e17132e84c4f8e55a6a6607bfac9369a9970a48fa79ceb9c475537e",
+      "bytes": 101219
+    },
+    {
+      "file": "p3-001-reconnected-frame.png",
+      "sha256": "da82f2d04f04dc429343e3c42ef7f52b55a73451e673affab0a8490755c2c347",
+      "bytes": 727167
+    },
+    {
+      "file": "p3-002b-collapse-after.png",
+      "sha256": "743269fa0387df3844149d4afb282439a69b99cfbab5680943f0ba6686382530",
+      "bytes": 597266
+    },
+    {
+      "file": "p3-002c-prepare-after.png",
+      "sha256": "6dfcc15727e1d056039b17118370a9c44e67d3095881450733ae290eac6606fb",
+      "bytes": 142526
+    },
+    {
+      "file": "p3-003-resume-after.png",
+      "sha256": "0d5463498ab247df5a1427aa63e411556eb8296d7a010af9e4e09ef0ba948141",
+      "bytes": 118418
+    },
+    {
+      "file": "p3-003b-select-red-after.png",
+      "sha256": "890acef25a7de5b4d7157f1ae973be5b30c7c0b7a521355963c7b13e5d278343",
+      "bytes": 139648
+    },
+    {
+      "file": "p3-003b-select-red-before.png",
+      "sha256": "6b48fb14e559dfe3a2629dc70eef8d737627d71658d0e09c384455bef88b81c9",
+      "bytes": 131979
+    },
+    {
+      "file": "p3-003c-state-before.png",
+      "sha256": "354ed0e772c90e684fe4decfebde789cf6936fe999c83ec57bd4c8a7ab330e20",
+      "bytes": 24558
+    },
+    {
+      "file": "p3-003d-delayed-frame.png",
+      "sha256": "5a26af392e17132e84c4f8e55a6a6607bfac9369a9970a48fa79ceb9c475537e",
+      "bytes": 101219
+    },
+    {
+      "file": "p3-004-menu-before.png",
+      "sha256": "50558da811e0dae8a65c834dc236a821ad4baed4be18f6255d54823fd5fd2412",
+      "bytes": 79412
+    },
+    {
+      "file": "p3-004b-menu-after.png",
+      "sha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+      "bytes": 86839
+    },
+    {
+      "file": "p3-004b-menu-before.png",
+      "sha256": "28b57aa5db00fbbb2915c39c68a20fb7c74f52fc129107d04f0ba443dd9e7e32",
+      "bytes": 100300
+    },
+    {
+      "file": "p3-004b-menu-witness.png",
+      "sha256": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+      "bytes": 101301
+    },
+    {
+      "file": "p3-005-cursor-up-after.png",
+      "sha256": "af4742e2e8fe97afbba545ed5fa591f15d588fbaad2bd9dc058a825e56b2ee31",
+      "bytes": 86796
+    },
+    {
+      "file": "p3-005-cursor-up-before.png",
+      "sha256": "ec28fca08f21703e86ecf9febb753459452de63b4934bbf53bb2fc907085ad73",
+      "bytes": 86861
+    },
+    {
+      "file": "p3-005-cursor-up-witness.png",
+      "sha256": "fde8967fbaa1d78645b2d9291b4d396430e8efc7847c38b2822a0d2979773e0c",
+      "bytes": 97859
+    },
+    {
+      "file": "p3-006-refuse-a-runtime-1-native.png",
+      "sha256": "d725437b4c451ce3f1658f13fb57f5f03ebd7e0dd960ff0e0480791d2da9e2e4",
+      "bytes": 86860
+    },
+    {
+      "file": "p3-006-refuse-a-runtime-1-physical.png",
+      "sha256": "bafa10540052cb91289e4c226b0a28f49be593d23e0454e365c220400e8ed9f8",
+      "bytes": 97884
+    },
+    {
+      "file": "p3-007-cursor-down-after.png",
+      "sha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+      "bytes": 86839
+    },
+    {
+      "file": "p3-007-cursor-down-before.png",
+      "sha256": "a0469b1ab7feb8ddd604ad29819f13b8c4161e9852592e97de79580c45d7f407",
+      "bytes": 86758
+    },
+    {
+      "file": "p3-007-cursor-down-witness.png",
+      "sha256": "bafa10540052cb91289e4c226b0a28f49be593d23e0454e365c220400e8ed9f8",
+      "bytes": 97884
+    },
+    {
+      "file": "p3-008-runtime-runtime-1-native.png",
+      "sha256": "af06096bf302725faa3439e76d294d621de9a91d5504fb49b62a14e2583915fa",
+      "bytes": 86831
+    },
+    {
+      "file": "p3-008-runtime-runtime-1-physical.png",
+      "sha256": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+      "bytes": 97861
+    },
+    {
+      "file": "p3-008-runtime-runtime-10-native.png",
+      "sha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+      "bytes": 86931
+    },
+    {
+      "file": "p3-008-runtime-runtime-10-physical.png",
+      "sha256": "44c8d826f4c78ae1abad39ab05da2a133b79f4904019d2bccfa76eee6ecf157c",
+      "bytes": 97861
+    },
+    {
+      "file": "p3-008-runtime-runtime-11-native.png",
+      "sha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+      "bytes": 86839
+    },
+    {
+      "file": "p3-008-runtime-runtime-11-physical.png",
+      "sha256": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+      "bytes": 97880
+    },
+    {
+      "file": "p3-008-runtime-runtime-12-native.png",
+      "sha256": "d4719aaee49e3c67d3c7e0ae2de89c6825af9201129fa3ec57488486fdf36c54",
+      "bytes": 100154
+    },
+    {
+      "file": "p3-008-runtime-runtime-12-physical.png",
+      "sha256": "6e7c7c5e6d46ee119e89183ec18b0101d6c999db9a5de47eff8aeaeb40fc75af",
+      "bytes": 101188
+    },
+    {
+      "file": "p3-008-runtime-runtime-2-native.png",
+      "sha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+      "bytes": 86839
+    },
+    {
+      "file": "p3-008-runtime-runtime-2-physical.png",
+      "sha256": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+      "bytes": 97880
+    },
+    {
+      "file": "p3-008-runtime-runtime-3-native.png",
+      "sha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+      "bytes": 86931
+    },
+    {
+      "file": "p3-008-runtime-runtime-3-physical.png",
+      "sha256": "4f6e1630f8a4d51f2e2c55a13a4dd9f509df0aa07b11905de83c3b483cbcdf3c",
+      "bytes": 97846
+    },
+    {
+      "file": "p3-008-runtime-runtime-4-native.png",
+      "sha256": "e14b6411fa7421f63ad8b7344592e87f53ef56c2a3f8a749993c3d40bfd1d682",
+      "bytes": 86839
+    },
+    {
+      "file": "p3-008-runtime-runtime-4-physical.png",
+      "sha256": "f7eb231b83296b30540903620ba4b69d0fb7bfab7dfa893f09aaee7df8cd13de",
+      "bytes": 97880
+    },
+    {
+      "file": "p3-008-runtime-runtime-5-native.png",
+      "sha256": "d18d5a80456f1e5ee8f249c406bea9a1278fe42344cbcd99f277a6fb71ab8c8a",
+      "bytes": 86931
+    },
+    {
+      "file": "p3-008-runtime-runtime-5-physical.png",
+      "sha256": "4f6e1630f8a4d51f2e2c55a13a4dd9f509df0aa07b11905de83c3b483cbcdf3c",
+      "bytes": 97846
+    },
+    {
+      "file": "p3-008-runtime-runtime-6-native.png",
+      "sha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "bytes": 69706
+    },
+    {
+      "file": "p3-008-runtime-runtime-6-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "p3-008-runtime-runtime-7-native.png",
+      "sha256": "d131a3b3d29167133b5b4f6f97a1dde1accb6f4d998784f63feb590e93f6658e",
+      "bytes": 69591
+    },
+    {
+      "file": "p3-008-runtime-runtime-7-physical.png",
+      "sha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+      "bytes": 94917
+    },
+    {
+      "file": "p3-008-runtime-runtime-8-native.png",
+      "sha256": "b08cec56089f51ab8ac8f68d89418366fac0a0c9aac7a61aa58f9c65f58b7a42",
+      "bytes": 69706
+    },
+    {
+      "file": "p3-008-runtime-runtime-8-physical.png",
+      "sha256": "33a64653556c638addc57f7429017c2eecf734285814d173b4557c0595b95c72",
+      "bytes": 94917
+    },
+    {
+      "file": "p3-008-runtime-runtime-9-native.png",
+      "sha256": "14a21ae8534bf5f5006892ca7d08ae14826580bec80dcc4cdf154f37f5294451",
+      "bytes": 86873
+    },
+    {
+      "file": "p3-008-runtime-runtime-9-physical.png",
+      "sha256": "58c4233466737f88d0b09ec3bcff5013f53e56df8ec97b7b8ec1e2b77206d314",
+      "bytes": 88774
+    },
+    {
+      "file": "p3-009-cleanup-after.png",
+      "sha256": "5ea781596fdde84ba6a33d84b603b67ab34878c8dafa81b2b00e0eef6a2aae87",
+      "bytes": 101002
+    },
+    {
+      "file": "p3-010-final-frame.png",
+      "sha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+      "bytes": 101206
+    }
+  ],
+  "limits": [
+    "One device, emulator build and existing save/scene; same-session temporal holdout",
+    "Agent labels and sequential witnesses, not blinded independent ground truth",
+    "Witnesses are sequential and some labels use a later settled image. Labels were assigned after measurement and are agent-reviewed. Training references are frozen before their corresponding captures; this is an exploratory audit, not a blinded benchmark.",
+    "Native geometry/input mapping is scoped; device and host clocks are unmapped",
+    "UI/MCP live contacts remain refused; research port uses the common executor directly",
+    "Initial live runs used v3 without a dedicated cursor ROI; selected item was agent-reviewed in this scene. V3 is retired from input",
+    "Initial phase did not automatically pin emulator build/settings in the port. Reconnection harness adds device and emulator-build checks; control settings still require qualification",
+    "Phase3 used fresh Android UI semantics for one named ROM selection; no pixel ROM-list/dialogue detector, general process-death recovery, save editing, battle, movement or input landing latency qualification in this round",
+    "Media, reference vectors, compiled/source instrument archives and original operation records stay local under .operator; Git retains hashes and results"
+  ]
+}

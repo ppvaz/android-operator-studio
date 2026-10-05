@@ -1,0 +1,12 @@
+{
+  "schema":"operator-plan/v1","name":"Pokemon Red: menu, equipe, retorno (pesquisa)","entry":"foreground","maxSteps":8,"timeoutMs":28000,
+  "nodes":[
+    {"id":"foreground","kind":"check","label":"Emulador em primeiro plano","deadlineMs":5000,"condition":{"fact":"foregroundPackage","equals":"com.fastemulator.gbc"},"next":{"PASS":"map"}},
+    {"id":"map","kind":"check","label":"Mapa ou menu já aberto","deadlineMs":5000,"condition":{"fact":"pokemonState","equals":"overworld"},"next":{"PASS":"open","FAIL":"menu"}},
+    {"id":"menu","kind":"check","label":"Menu com Pokemon selecionado","deadlineMs":5000,"condition":{"fact":"pokemonState","equals":"menu-pokemon"},"next":{"PASS":"party"}},
+    {"id":"open","kind":"tap","label":"Abrir menu","deadlineMs":7000,"x":748,"y":1555,"holdMs":150,"before":{"fact":"pokemonState","equals":"overworld"},"after":{"fact":"pokemonState","equals":"menu-pokemon"},"next":{"PASS":"party"}},
+    {"id":"party","kind":"tap","label":"Consultar equipe","deadlineMs":7000,"x":883,"y":1940,"holdMs":150,"before":{"fact":"pokemonState","equals":"menu-pokemon"},"after":{"fact":"pokemonState","equals":"party"},"next":{"PASS":"back"}},
+    {"id":"back","kind":"tap","label":"Voltar ao menu","deadlineMs":7000,"x":650,"y":1825,"holdMs":150,"before":{"fact":"pokemonState","equals":"party"},"after":{"fact":"pokemonState","equals":"menu-pokemon"},"next":{"PASS":"close"}},
+    {"id":"close","kind":"tap","label":"Voltar ao mapa","deadlineMs":7000,"x":650,"y":1825,"holdMs":150,"before":{"fact":"pokemonState","equals":"menu-pokemon"},"after":{"fact":"pokemonState","equals":"overworld"},"next":{}}
+  ]
+}

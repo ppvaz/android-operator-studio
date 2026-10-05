@@ -39,11 +39,14 @@ x=704..792 no frame final. O sucesso dos contatos não valida esse perfil.
 A [revisão da binding](experiments/POKEMON-20261005.controls-review.json)
 o marca como impróprio para replay, e uma chamada posterior verificou a recusa.
 
-Alguns SNAPs logo após contatos/retomada mostraram partes do jogo ou dos
-controles ausentes. Capturas posteriores mostraram o mapa e controles
-completos. Não houve testemunhos sincronizados suficientes para atribuir
-a causa ao emulador, à composição Android ou ao Companion. A causa permanece
-UNKNOWN. Uma espera fixa de 350 ms não qualificou estabilidade nesta sessão.
+A inspeção visual sugeriu partes do jogo ou controles ausentes em alguns
+SNAPs. **Correção na [segunda rodada](EXPERIMENT-POKEMON-ROUND2-20261005.md):**
+os pixels RGB de toda a região dos controles, nos seis PNGs antigos auditados,
+são idênticos aos de uma captura completa. A inferência de controles ausentes
+do arquivo é retirada. A aparência na visualização não demonstra uma falha
+da captura, nem identifica sua causa. A espera fixa de 350 ms tampouco é um
+critério de qualificação. O achado de deslocamento na captura física de
+entrada da tarefa permanece: ele foi medido nos pixels.
 
 O gate que falta deve conferir conteúdo/viewport e estabilidade relevantes
 ao controle, além de foreground, dimensões e bounds. Um PNG válido e um ACK
@@ -82,5 +85,7 @@ e qualificar a binding estável antes de repetir contatos.
 Para rederivar o relatório sem operar o aparelho: `npm run build` e
 `node dist/experiments/report-pokemon.js`, no host que retém `.operator`.
 O harness de operação é `dist/experiments/pokemon.js`; ele seleciona um único
-aparelho autorizado e lê `OPERATOR_FNAF_ROOT`. Os verbos são fechados e a
+aparelho autorizado. A configuração original usava `OPERATOR_FNAF_ROOT`;
+agora o checkout opcional vem de `.operator/config.json`, em
+`integrations.fnaf.checkout`. Os verbos são fechados e a
 binding de contato desta sessão permanece recusada.

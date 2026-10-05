@@ -35,5 +35,11 @@ test('a real MCP client validates and executes the same plan over stdio', async 
       await sleep(10);
     }
     assert.equal(done, true);
+    const research=parsePlan(JSON.parse(await readFile('examples/pokemon-menu-party-research.json','utf8')));
+    const result=z.object({planHash:z.string()}).parse(textResult(await client.callTool({name:'plan_validate',arguments:{plan:research}})));
+    assert.equal(result.planHash,identity(research));
+    const refusal=z.object({isError:z.literal(true),content:z.array(z.object({type:z.string(),text:z.string().optional()}))}).parse(
+      await client.callTool({name:'run_start',arguments:{plan:research,target:{kind:'fnaf-companion',serial:'research-qualification-required'}}}));
+    assert.ok(refusal.content.some(item=>item.text?.includes('somente leitura')));
   } finally { await client.close(); await rm(directory, { recursive: true, force: true }); }
 });

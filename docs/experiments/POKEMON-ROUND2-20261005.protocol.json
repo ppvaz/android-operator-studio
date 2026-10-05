@@ -1,0 +1,10 @@
+{
+  "schema": "operator-research-protocol/v1",
+  "scope": "Moto g56, installed My OldBoy 2.0.3, Pokemon Red existing gym-door scene; no universal qualification",
+  "questions": ["Does native SNAP disagree with stable bracketing ADB frames?", "Can scoped game states distinguish held-out frames and refuse transitions?", "Can the common executor verify a bounded menu/party/back flow?"],
+  "limits": {"homeResumeCycles":2,"brackets":8,"menuContacts":12,"contactMs":150,"operationTimeoutMs":30000},
+  "rules": ["Archive instrument bytes before measurements; exclusive labels", "Original FNaF cross-checkout lease for each operation", "Sequential ADB-before/SNAP/ADB-after are witnesses, never synchronous", "Host and device clocks stay separate", "Compare controls separately from animated game scene", "No movement, battle, save, load-state, game process kill, settings change", "Unknown geometry or semantic precondition refuses contact", "Restore helper capture state at completion"],
+  "comparison": {"physicalControlsBox":[20,1460,1020,2020],"physicalStaticTopBox":[80,130,1000,360],"candidateMap":"native x = physical x * 0.45 + 957; native y = physical y * 0.45", "candidateMapStatus":"hypothesis, fit against image evidence", "stableAdbMeanAbsLimit":1,"nativeMappedMeanAbsLimit":8},
+  "stateValidation": "Freeze reference corpus and threshold before collecting holdout. Report unknown and errors; in-sample accuracy is not validation.",
+  "runtime": "A research port may call the existing executor directly. UI/MCP contacts remain refused until a scoped product adapter is implemented and verified."
+}

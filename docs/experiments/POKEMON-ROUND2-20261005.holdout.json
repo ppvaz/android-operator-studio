@@ -1,0 +1,19 @@
+{
+  "schema":"operator-research-labels/v1",
+  "labeler":"Codex agent, visual review of retained frames; not independent human annotation",
+  "scope":"Temporal holdout in the same session; pixel-identical samples and repeated animation phases are possible. No accuracy claim on unseen devices or saves.",
+  "cases":[
+    {"vision":"v1","file":"012-holdout-map-before.png","expected":"overworld","witness":"003-baseline-before.png","purpose":"Keep the valid-map rejection that motivated v2"},
+    {"vision":"v1","file":"013-holdout-menu-before.png","expected":"overworld","witness":"013-holdout-menu-witness.png"},
+    {"vision":"v1","file":"013-holdout-menu-after.png","expected":"menu-pokemon","witness":"016-party-calibration-witness.png"},
+    {"vision":"v2","file":"014-v2-menu-before.png","expected":"menu-pokemon","witness":"016-party-calibration-witness.png"},
+    {"vision":"v2","file":"016-party-calibration-before.png","expected":"menu-pokemon","witness":"016-party-calibration-witness.png"},
+    {"vision":"v2","file":"016-party-calibration-after.png","expected":"UNKNOWN","purpose":"New state/transition before settled party reference; retained pale game window"},
+    {"vision":"v3","file":"019-runtime-from-map-runtime-6-native.png","expected":"menu-pokemon","witness":"019-runtime-from-map-runtime-6-physical.png"},
+    {"vision":"v3","file":"019-runtime-from-map-runtime-9-native.png","expected":"party","witness":"019-runtime-from-map-runtime-9-physical.png"},
+    {"vision":"v3","file":"019-runtime-from-map-runtime-12-native.png","expected":"menu-pokemon","witness":"019-runtime-from-map-runtime-12-physical.png"},
+    {"vision":"v3","file":"019-runtime-from-map-runtime-14-native.png","expected":"overworld","witness":"019-runtime-from-map-runtime-14-physical.png"},
+    {"vision":"v3","file":"023-runtime-on-home-runtime-1-native.png","expected":"UNKNOWN","witness":"023-runtime-on-home-runtime-1-physical.png"}
+  ],
+  "limitations":"Witnesses are sequential and some labels use a later settled image. Labels were assigned after measurement and are agent-reviewed. Training references are frozen before their corresponding captures; this is an exploratory audit, not a blinded benchmark."
+}

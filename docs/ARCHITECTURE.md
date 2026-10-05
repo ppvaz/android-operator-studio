@@ -35,15 +35,25 @@ Uma observação ausente nunca vira FAIL ou PASS por conveniência.
 
 | Capacidade | Origem | Forma de integração | Limite atual |
 |---|---|---|---|
-| SNAP nativo | FNaF `packages/play/bin/phone/native-frame.ts` | Subprocesso do CLI original | Exercitado no Pokémon; geometria e estabilidade entre alvos abertas |
-| Lease do aparelho | FNaF `packages/play/src/safety/device-lock-exec.py` | Wrapper original, mesma raiz de locks | Não há segunda implementação do lock |
+| SNAP nativo | Transporte Companion original do FNaF | Pacote privado independente `@android-operator/device` | Artefato npm instalado em diretório separado capturou o aparelho sem checkout; estabilidade entre alvos aberta |
+| Lease do aparelho | FNaF `packages/play/src/safety/device-lock-exec.py` | Script original empacotado, namespace configurável | Bloqueio nos dois sentidos com consumidor original exercitado em serial de fixture; consumidores precisam compartilhar o diretório |
 | Compilação de Night 1 | FNaF `packages/propose/bin/plans/emit.ts` | Comando fixo, winner canônico existente | Night 1 inicial; sem copiar estratégia |
 | Gates da campanha | FNaF `apps/desktop/src/device-cli.ts` | `campaign --dry-run --json` | Resultado MODEL_ONLY, não vitória física |
 | Gate de email | FNaF `tools/commit-identity.ts` | Cópia rastreada sob MIT | Mesma regra; nenhuma exceção histórica no novo repo |
+| Leitor PNG | FNaF `packages/play/games/fnaf3/fnaf3-detectors.ts` | Importação de `decodePng`, sem os detectores do jogo | Comparação de pixels e referências locais de pesquisa |
+| HID | FNaF `HidWireTransport` + `AdbHidProcess` | Classes extraídas no pacote independente; rodada 2 mantém a integração histórica | Menu e combate Gold no controlador de pesquisa; UI/MCP ainda recusam contatos |
 | Protocolo MCP | SDK oficial TypeScript | Biblioteca publicada | Não reimplementar o protocolo |
 
 O uso do Python no lease é consumo de uma interface existente. Não introduz
 uma nova camada de scripts de dispositivo paralela.
+O endereço ADB é um transporte, não a identidade do aparelho. A captura e o
+controlador Gold consultam `ro.serialno` e usam essa identidade no lease;
+assim a troca USB/Wi‑Fi preserva a chave do lock. Endereço e identidade ficam
+distintos no rastro. Identidade ausente é recusada, sem usar IP como substituto.
+Os outros consumidores precisam adotar a mesma convenção e o mesmo diretório.
+O [fluxo físico de pesquisa](EXPERIMENT-POKEMON-ROUND2-20261005.md) mantém a
+estratégia e os detectores no adaptador Pokémon. Seu plano tem o mesmo schema
+do editor/MCP; o adaptador ainda não pertence à seleção pública de backends.
 
 ## Próximos backends
 
@@ -72,9 +82,10 @@ Essas limitações tornam necessária a qualificação do contrato de cada backe
 - Captura e pacote foreground no ADB são testemunhos sequenciais, não atômicos.
 - Rotinas temporais FNaF continuam nos executores locais já existentes. Não
   converter noites para um loop de chamadas host/LLM por toque.
-- A integração ainda referencia um checkout. Publicar um pacote reutilizável
-  ou trocar a direção da dependência requer caracterizar contratos e comparar
-  traces antes de alterar consumidores existentes.
+- Só a integração opcional de campanha requer o checkout FNaF. O pacote de
+  dispositivo preserva algoritmos e origem em `ORIGIN.json`, sem imports do
+  checkout. O Companion Android ainda tem identidade histórica; adoção do
+  pacote pelo consumidor FNaF e extração do APK permanecem abertas.
 - Os [experimentos Pokémon](EXPERIMENT-POKEMON-CAPABILITIES-20261005.md)
   mostraram que resolução, foreground e PNG válido não identificam geometria
   estável de contato. O buffer Companion pode conter um viewport retrato

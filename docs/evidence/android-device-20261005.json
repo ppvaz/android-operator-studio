@@ -1,0 +1,36 @@
+{
+  "schema": "operator-device-package-evidence/v1",
+  "date": "2026-10-05",
+  "captureScope": "DEVICE_MEASURED",
+  "artifactSha256": "ea2c729e3c909424af58a1a642a9f356238981603d263c02cc0a143496a3119b",
+  "artifactLimit": "Artifact predates final provenance metadata and file-list refinements; no claim that it is a pack of the final commit.",
+  "sourceCheckoutRequired": false,
+  "capture": {
+    "imageSha256": "d5fee07b64b4725a21f6a56331f18bac71e5a09cf5d9e2d077da3a1dcf35d30d",
+    "bytes": 78909,
+    "imageNs": "46281508925758",
+    "snapshotNs": "46281710096219"
+  },
+  "leaseInterop": {
+    "scope": "SYNTHETIC_IDENTITY",
+    "originalBlocksPackagedExitCode": 75,
+    "packagedBlocksOriginalExitCode": 75,
+    "phoneInputs": 0,
+    "requirement": "Both consumers must use the same lock namespace and canonical identity."
+  },
+  "localProofs": [
+    {
+      "file": "standalone-smoke.json",
+      "sha256": "2a5e76f8bb00a6e4da8b504006397ad80498a15aded26cd9050c8501c31ecb9f"
+    },
+    {
+      "file": "lease-interop.json",
+      "sha256": "23ea38adff7fa9143cd333e661bed163260fb095d711bdff163bbf7cdb1ae47f"
+    }
+  ],
+  "limits": [
+    "One phone and installed legacy Companion APK.",
+    "No independent APK packaging or FNaF consumer migration.",
+    "Raw media, host paths, hardware serials and pairing credentials are withheld."
+  ]
+}

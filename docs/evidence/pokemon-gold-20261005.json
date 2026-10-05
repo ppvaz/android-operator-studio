@@ -1,0 +1,116 @@
+{
+  "schema": "operator-pokemon-gold-checkpoint/v1",
+  "sessionDate": "2026-10-05",
+  "status": "IN_PROGRESS",
+  "level": "DEVICE_MEASURED",
+  "mission": "Prepare Slowqueen for Whitney while preserving Curse and the long-term team.",
+  "result": {
+    "reviewer": "agent",
+    "slowqueenLevel": 11,
+    "hp": [
+      35,
+      42
+    ],
+    "confirmedOpponent": "Kim / Vulpix level 15",
+    "xpAwardObserved": 202,
+    "fullPreparationComplete": false
+  },
+  "selectedLocalRecords": [
+    {
+      "file": "g086-native-provider-operation.json",
+      "sha256": "0c70fdb8113bc1d94e9c61f4df99fd5bcd088333ea3c22238c781f33b93513b6",
+      "instrumentManifestSha256": "2724e94bc84c4a9cd82096ecf44a3a9c0a149a366ef1b76708ce9033f713d8a6",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g107-operation.json",
+      "sha256": "816ba3f8f7b85c6a087d167d13bf4e2b3774dc3b96d7cdf775f3476cce2d7791",
+      "instrumentManifestSha256": "08c8c80edf79b74a0ef2c28fe223898abdc041cfe8498dc2a21fde430f54fe79",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g121-operation.json",
+      "sha256": "a267bffd6d9ce940dec1d8039851323dfc9ec064d13cb17b682907b195590921",
+      "instrumentManifestSha256": "2d31511f77400ec3c538a4f021aec003d79c26ed2e1c87190ad98caea73e2b09",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g122-operation.json",
+      "sha256": "c2c50c8c4622e247698ad4ae1cc4035b5193782de0c3feae533a02621ff29caf",
+      "instrumentManifestSha256": "5d9ed0b12a79062cc658cdd7eaba398caf3d4355aa266636271642587234e221",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g123-operation.json",
+      "sha256": "c63ff5e80501bd459afd398f5a78e53dce5a854f77df0c0b7fc3780d94584242",
+      "instrumentManifestSha256": "5d9ed0b12a79062cc658cdd7eaba398caf3d4355aa266636271642587234e221",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g126-operation.json",
+      "sha256": "41c9fd276b661a5394ea8d30a4aa385c5d90668819492bdd90043fc3da4ffbaf",
+      "instrumentManifestSha256": "5d9ed0b12a79062cc658cdd7eaba398caf3d4355aa266636271642587234e221",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g128-operation.json",
+      "sha256": "b8ec08a787223017a2f593a136dca408e8daab5b99fbe9e65f5e719c756c0fbb",
+      "instrumentManifestSha256": "5aa723281ed9ad24cc02080ec5a4d61b197b761f4f6c3bae3a4bff84c71582c1",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g131-operation.json",
+      "sha256": "24c86e38759678e47655ff7160633f27aedead35ff990e4478ab8e1272a71018",
+      "instrumentManifestSha256": "d6f156a4982935f740a2b80be29d9a82094c65e89e7e915bb3db8652d909d9c2",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g133-operation.json",
+      "sha256": "52c0cca8a5816ce506197c10089905e836207c04554cb146c8edf8da05f90853",
+      "instrumentManifestSha256": "d6f156a4982935f740a2b80be29d9a82094c65e89e7e915bb3db8652d909d9c2",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g135-operation.json",
+      "sha256": "ffc3d9450d21d832cbcee6797fe3c082a9218de73ff23a347a5f1ad8c5c90e17",
+      "instrumentManifestSha256": "d6f156a4982935f740a2b80be29d9a82094c65e89e7e915bb3db8652d909d9c2",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g136-operation.json",
+      "sha256": "e8c4385ab70bb2d87038a88129307f06156a0e083b6442a34293a7fdb620964e",
+      "instrumentManifestSha256": "d6f156a4982935f740a2b80be29d9a82094c65e89e7e915bb3db8652d909d9c2",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g140-operation.json",
+      "sha256": "9113d8f0c072722030f10be232878d7496932835c9d08a2cf6ab799442e67ef9",
+      "instrumentManifestSha256": "d6f156a4982935f740a2b80be29d9a82094c65e89e7e915bb3db8652d909d9c2",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g141-operation.json",
+      "sha256": "60a52eb21b956143b6e307d8f0301b059c979caef47e46635d300a41491909d6",
+      "instrumentManifestSha256": "61dba4ddcb4bbc5dff0c19b81cf5eedfb5129aa07f6140345682e83923bc2cfc",
+      "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    }
+  ],
+  "earlyFailure": {
+    "label": "g142",
+    "terminalRecordMissing": true,
+    "contactIntentPresent": false,
+    "limitation": "Initial failure was obscured by a secondary serialization error; no cause asserted.",
+    "reservedMarkerSha256": "4cc989c536c34a551736a9828c2165b5211c24861bdf53e46ec1517c00f278cc"
+  },
+  "normalClose": {
+    "checkpointSha256": "3fb66434f3e6d0756f391c4dbd2bea6e9eefa6ddc46447dab1a60928452a009b",
+    "uiWitnessSha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df"
+  },
+  "limits": [
+    "Source disassembly and emulator auto-state were optional auxiliary oracles; pending-trainer flags were not all visually verified.",
+    "Wireless capture succeeded; InputReader registration also failed once and stopped continuation.",
+    "Clock stopping in the review menu was not independently measured.",
+    "No general navigation, full preparation, Whitney victory or production write backend qualification.",
+    "Raw game media, save bytes, host paths, device serials and pairing credentials are withheld."
+  ]
+}

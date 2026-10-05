@@ -12,6 +12,7 @@ pertencendo aos jogos.
 [Escopo e plano consolidados](PROJECT.md) · [Anatomia do experimento Pokémon](docs/EXPERIMENT-POKEMON-20261005.md).
 
 [Experimentos no aparelho: capacidades e limites no Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
+[Segunda rodada: captura, reconhecimento e fluxo físico de menu](docs/EXPERIMENT-POKEMON-ROUND2-20261005.md).
 
 ## Primeira entrega
 
@@ -30,15 +31,19 @@ pertencendo aos jogos.
 **Verificado:** fixture, integração MCP, interface no navegador, campanha FNaF
 em dry-run e SNAP físico no Pokémon com gates do runtime via MCP. Veja os
 [registros gerados](docs/evidence).
-**Aberto:** geometria e estabilidade da captura entre alvos, inputs Android
-pelo runtime, verificadores visuais por ROI/OCR e execução local temporal.
-Os contatos exploratórios usaram diagnóstico ADB separado; o perfil desta
-rodada foi recusado para replay após detectar deslocamento de controles.
+**Medido na segunda rodada:** comparação ADB/SNAP, reconhecimento por regiões
+e o mesmo plano de menu/equipe/retorno executado no aparelho, partindo do mapa
+e do menu aberto. Usa HID e leitor PNG originais do FNaF, em um adaptador de
+pesquisa ligado ao executor comum. Home foi recusado com zero contatos.
+**Aberto:** admissão desse adaptador pela UI/MCP, identidade de build/perfil,
+qualificação entre sessões/alvos, detectores semânticos gerais e execução
+temporal. O perfil da primeira rodada continua recusado para replay.
 
 ## Executar
 
-Node >=22.18, npm e Git. A integração FNaF precisa de um checkout desse projeto
-com suas dependências instaladas. Configuração de checkout e serial é local.
+Node >=22.18, npm e Git. O estúdio, a fixture, o MCP e a captura Companion usam
+o pacote privado `@android-operator/device`, sem precisar de checkout do FNaF.
+A integração opcional de campanha FNaF precisa desse checkout e suas dependências.
 
 ```sh
 npm ci
@@ -48,11 +53,17 @@ npm run verify
 npm start
 ```
 
-Abra **http://127.0.0.1:4310**. Execute a fixture ou carregue a demonstração FNaF
-na barra lateral. A configuração do FNaF vale também para o estúdio e o MCP:
+Abra **http://127.0.0.1:4310** e execute a fixture. Para a demonstração de campanha,
+configure o arquivo local e ignorado `.operator/config.json`:
+
+```json
+{
+  "schema": "operator-config/v1",
+  "integrations": {"fnaf": {"checkout": "/caminho/para/fnaf2-1020"}}
+}
+```
 
 ```sh
-export OPERATOR_FNAF_ROOT=/caminho/para/fnaf2-1020
 npm run demo:fnaf
 npm start
 ```
@@ -60,11 +71,16 @@ npm start
 Para observação física, selecione o celular/Companion e use **Observar**.
 O Companion precisa estar instalado e sua sessão de MediaProjection ativa.
 Esta integração não instala APKs nem inicia consentimento automaticamente.
+O APK instalado ainda usa a identidade histórica do Companion FNaF; a extração
+do aplicativo Android é uma etapa futura. Se outro controlador usa o aparelho,
+configure `device.leaseDirectory` no mesmo arquivo com o diretório de locks que
+ele utiliza. Todos os consumidores precisam compartilhar o mesmo namespace;
+o padrão independente fica em `~/.local/state/android-operator/locks`.
 
 ## MCP
 
 `npm run build`, depois configure o cliente para iniciar `node /caminho/absoluto/dist/mcp.js`,
-com `cwd` neste repositório e `OPERATOR_FNAF_ROOT` no ambiente.
+com `cwd` neste repositório. A configuração de campanha é opcional e local.
 Não use `npm run mcp` como transporte stdio: o banner do npm pode interferir
 no protocolo. O script é apenas um atalho de terminal.
 
@@ -81,7 +97,7 @@ npm run verify
 npx playwright install chromium
 npm run test:browser
 npm run test:identity
-OPERATOR_FNAF_ROOT=/caminho/para/fnaf2-1020 npm run test:fnaf
+npm run test:fnaf # integração opcional previamente configurada
 ```
 
 Para usar um Chrome local no teste de navegador, defina

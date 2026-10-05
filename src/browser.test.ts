@@ -1,11 +1,13 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { chromium } from '@playwright/test';
-import { mkdtemp, rm, mkdir } from 'node:fs/promises';
+import { mkdtemp, rm, mkdir, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { createStudioServer } from './server.js';
 import { Operator } from './operator.js';
+import { parsePlan } from './core/plan.js';
+import { identity } from './core/identity.js';
 
 test('the visual editor executes, edits and exports the shared plan without browser errors', async () => {
   const directory = await mkdtemp(join(tmpdir(), 'operator-browser-'));
@@ -29,6 +31,16 @@ test('the visual editor executes, edits and exports the shared plan without brow
     assert.equal(await page.locator('.node').count(), 4);
     await page.locator('#fnaf-example').click(); await page.locator('#notice').filter({ hasText: 'Plano FNaF carregado' }).waitFor();
     assert.equal(await page.locator('#target').inputValue(), 'fnaf-preview');
+    const research = parsePlan(JSON.parse(await readFile('examples/pokemon-menu-party-research.json','utf8')));
+    await page.locator('#json').fill(JSON.stringify(research)); await page.locator('#apply-json').click();
+    assert.equal(await page.locator('.node').count(),7);
+    await page.locator('#validate').click();await page.locator('#notice').filter({hasText:'Plano válido'}).waitFor();
+    assert.equal(await page.locator('#identity').textContent(),`sha256:${identity(research).slice(0,20)}…`);
+    const downloadPromise=page.waitForEvent('download');await page.locator('#export').click();
+    const download=await downloadPromise,stream=await download.createReadStream();assert.ok(stream);
+    const chunks:Buffer[]=[];for await(const chunk of stream)chunks.push(Buffer.from(chunk));
+    assert.equal(identity(parsePlan(JSON.parse(Buffer.concat(chunks).toString()))),identity(research));
+    await page.locator('#run').click();await page.locator('#notice.error').filter({hasText:'somente leitura'}).waitFor();
     await mkdir('.operator/previews', { recursive: true });
     await page.screenshot({ path: '.operator/previews/studio-desktop.png', fullPage: true });
     await page.setViewportSize({ width: 390, height: 844 });

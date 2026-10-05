@@ -1,0 +1,9 @@
+{
+  "schema":"operator-research-amendment/v1",
+  "reason":"After two capture Home/resume cycles, add one Home trial to test the actual runtime foreground gate. Before this additional action, not a retroactive change to capture evidence.",
+  "limits":{"totalHomeResumeCycles":3,"totalContacts":12},
+  "runtimeScope":"Original FNaF HID and SNAP, direct common executor, research target only. Same menu/party/back plan from map and already-open menu; interrupted Home must dispatch zero contacts.",
+  "visionVersions":{"v1":"one overworld reference; UNKNOWN on one valid animation frame","v2":"bank of the five already-collected capture-phase map frames; unchanged numeric thresholds","v3":"v2 plus settled party reference; first party-transition frame is excluded and remains UNKNOWN"},
+  "holdout":"New captures after each freeze, same episode. Repeated or identical pixel hashes are disclosed; this is not independent-session generalization.",
+  "productionAdmission":"UI and MCP Android contact plans remain refused. Do not claim that product integration or general phone qualification passed."
+}

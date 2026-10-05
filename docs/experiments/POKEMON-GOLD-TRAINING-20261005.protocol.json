@@ -1,0 +1,16 @@
+{
+  "schema": "operator-research-protocol/v1",
+  "status": "PROPOSAL_NOT_EXECUTED; superseded for this mission by the LLM situational protocol before loop execution",
+  "scope": "Pokemon Gold, Moto g56 / My OldBoy 2.0.3, supervised qualification followed by a bounded autonomous walking loop",
+  "question": "Can the common executor move between two visually confirmed safe map positions and produce independently read-back Day Care experience?",
+  "productBackends": "remain read-only",
+  "deviceId": "f88a35e75d347b6b",
+  "limits": {"calibrationContacts": 8, "autonomousContacts": 12, "contactMs": 150, "runTimeoutMs": 120000, "battles": 0},
+  "controlsCandidate": {"left": [102,1825], "right": [342,1825]},
+  "preconditions": ["Fresh emulator package/build and display geometry", "Gold outside Goldenrod Pokemon Center", "Slowqueen remains in Day Care below level 20", "Exclusive original FNaF device lease"],
+  "method": ["Native Companion SNAP sensor and original FNaF HID transport", "ADB screen only as independent before/after witness", "Manually qualify each direction and returned map position before admitting loop", "State detector uses small static map regions excluding NPC animation and player pose", "Two-cycle held-out loop before a maximum six-cycle cohort", "Read original and resulting emulator auto-state locally, without modifying saves"],
+  "stop": ["UNKNOWN state or geometry", "Unexpected battle/dialog/menu", "Foreground drift", "Deadline or contact budget", "User interruption"],
+  "terminalClaims": ["Transport ACK never means accepted movement", "Pixel movement proof is distinct from Day Care EXP readback", "Neither proves battle grinding, healing, level-up choices, full mission completion or generic navigation"],
+  "stateReadback": "Normal emulator Close automatically persists its state; reopen named Pokemon Gold row and compare decoded Day Care EXP. This is an emulator-assisted oracle, not a vision-only level detector.",
+  "rawMedia": "local ignored .operator only"
+}
