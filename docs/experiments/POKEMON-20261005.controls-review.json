@@ -1,0 +1,8 @@
+{
+  "schema":"operator-exploratory-control-review/v1",
+  "profileSha256":"c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+  "approvedForReplay":false,
+  "reason":"The source physical frame was retained during task-entry animation. Later steady frames have the same 1080x2400 dimensions but shifted controls. Two menu contacts were visibly accepted, which does not qualify these coordinates for replay.",
+  "measurement":{"rowY":1532,"grayStrokeSegments":{"sourceFrame":[[610,700],[786,876]],"steadyFinalFrame":[[528,616],[704,792]]}},
+  "next":"Derive a new control binding from stable frames, name the viewport/transform and check content-relative geometry before contacts. Do not reuse the current experimental coordinates."
+}

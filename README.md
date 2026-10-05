@@ -11,6 +11,8 @@ pertencendo aos jogos.
 
 [Escopo e plano consolidados](PROJECT.md) · [Anatomia do experimento Pokémon](docs/EXPERIMENT-POKEMON-20261005.md).
 
+[Experimentos no aparelho: capacidades e limites no Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
+
 ## Primeira entrega
 
 - Editor de blocos com condições, prazos, saídas por resultado e loops limitados.
@@ -25,11 +27,13 @@ pertencendo aos jogos.
 - Gate de email reutilizado do FNaF: autor e committer GitHub noreply em
   `commit-msg`, `pre-push` e CI com histórico completo, sem exceções herdadas.
 
-**Verificado:** fixture, integração MCP, interface no navegador e campanha FNaF
-em dry-run. Veja os [registros gerados](docs/evidence).
-**Aberto:** captura física nesta integração, inputs Android, verificadores
-visuais por ROI/OCR e execução local temporal. O celular deixou de estar
-disponível no ADB durante o bootstrap. Não há nova afirmação de vitória física.
+**Verificado:** fixture, integração MCP, interface no navegador, campanha FNaF
+em dry-run e SNAP físico no Pokémon com gates do runtime via MCP. Veja os
+[registros gerados](docs/evidence).
+**Aberto:** geometria e estabilidade da captura entre alvos, inputs Android
+pelo runtime, verificadores visuais por ROI/OCR e execução local temporal.
+Os contatos exploratórios usaram diagnóstico ADB separado; o perfil desta
+rodada foi recusado para replay após detectar deslocamento de controles.
 
 ## Executar
 

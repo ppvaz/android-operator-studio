@@ -80,7 +80,7 @@ tempo real, multitoque ou validação. Medir o comportamento observável.
 | Entrega | Critério de conclusão | Estado inicial |
 |---|---|---|
 | Contrato comum | UI/CLI/MCP concordam em schema e hash; fixture cobre resultado e interrupções | Implementado e testado |
-| Primeiro consumidor FNaF | Rotina existente invocada, gates preservados, relatório retido | Dry-run integrado; captura física pendente |
+| Primeiro consumidor FNaF | Rotina existente invocada, gates preservados, relatório retido | Dry-run integrado; SNAP original exercitado no Pokémon; geometria e estabilidade abertas |
 | Fluxo físico curto | Estado final observado, pacote de evidência e falhas retidas | Aberto |
 | Backend comparado | Mesmo alvo/protocolo em bases candidatas; decisão ligada ao resultado | Aberto |
 | Autoria de operação real | Exploração/gravação resulta em plano revisável e repetível | Aberto |
@@ -114,12 +114,16 @@ conta de Pedro, com o nome provisório acordado.
 
 Não se declara nesta entrega uma nova vitória no aparelho, confiabilidade
 geral, superioridade de fornecedor ou controlador temporal qualificado.
-O celular tornou-se indisponível durante o trabalho; a integração física
-aguarda reconexão. Os resultados medidos estão nos registros gerados.
+O celular tornou-se indisponível durante o bootstrap e foi reconectado para
+os [experimentos Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
+A captura física e os gates do plano foram exercitados; transferência de
+coordenadas e estabilidade permanecem sem qualificação. Os resultados
+medidos estão nos registros gerados.
 
 ## Documentos de apoio
 
 - [Anatomia do desafio Pokémon](docs/EXPERIMENT-POKEMON-20261005.md).
+- [Experimentos de capacidades e limites no Pokémon](docs/EXPERIMENT-POKEMON-CAPABILITIES-20261005.md).
 - [Arquitetura e interfaces consumidas](docs/ARCHITECTURE.md).
 - [Produto](docs/PRODUCT.md) e [roadmap operacional](docs/ROADMAP.md).
 - [Pesquisa e proveniência](docs/research/README.md).

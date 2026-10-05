@@ -1,0 +1,1909 @@
+{
+  "evidenceId": "pokemon-capabilities-656d797abb86a7d4",
+  "schema": "operator-pokemon-experiments/v1",
+  "date": "2026-10-05",
+  "level": "DEVICE_MEASURED",
+  "deviceId": "f88a35e75d347b6b",
+  "method": "Bounded exploratory tests on one phone. Questions and bounds recorded before mutations; the research harness was adapted during exploration. Visual reviews are agent judgments, separate from runtime verdicts.",
+  "sources": {
+    "src/experiments/pokemon.ts": "4e907cd46784c4ca612b1e2dd4428ea7b6c0e21691a8c3d84a883215726f100f",
+    "src/experiments/report-pokemon.ts": "76f176977ee3f85cc1ba72016b667d7728984be773df1ebb39b57627238a6a9e",
+    "docs/experiments/POKEMON-20261005.protocol.json": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10",
+    "docs/experiments/POKEMON-20261005.controls.json": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+    "docs/experiments/POKEMON-20261005.controls-review.json": "e81d6530ee452d450e8f36f5f8da9fcfb2aedddd7ef03d458e9be84b2265c4fe",
+    "examples/pokemon-native-observe.json": "02f69a3216cbebd1aa653596b03407afb7a8307ab88efddd7d03b9d8b863ef9d"
+  },
+  "inputs": [
+    {
+      "file": "001-capabilities-operation.json",
+      "sha256": "c58db023105c6716f9190527dad15202995bd3f3a8922734e70134fdbc05c626"
+    },
+    {
+      "file": "002-launcher-guard-operation.json",
+      "sha256": "1e1f82ee16c3805c61d7cf45b52fe81470511cb0394eec52b49917cf71b6c9e8"
+    },
+    {
+      "file": "003-missing-game-fact-operation.json",
+      "sha256": "8ce703d83095d875e2d5aad51ca40ded4eef7c783fc2d3f59b4b099ac504103b"
+    },
+    {
+      "file": "004-native-initial-operation.json",
+      "sha256": "57a8f7ced8b309465a975ca72d4a03f5434e016d1ca1f9d15879233ef2a0292b"
+    },
+    {
+      "file": "005-emulator-launch-operation.json",
+      "sha256": "b831b94711844a4773ba67ca8cac9557f7c418a79feb8e581a5b5e351ef65614"
+    },
+    {
+      "file": "006-emulator-ui-operation.json",
+      "sha256": "c691d6b77043c6cfe8ab48f7f2b54d0b55aaaa3574c0f4e5fd53905f07c32295"
+    },
+    {
+      "file": "007-select-red-operation.json",
+      "sha256": "d0287340e09bc4a1b21e392323a2cd2608d981ba83f7b51e1a050d1383af714d"
+    },
+    {
+      "file": "008-emulator-foreground-operation.json",
+      "sha256": "e0a7723b852477d380ac064c2c5148736263a919d4ef2b18ab519f3259d08dab"
+    },
+    {
+      "file": "009-game-ui-operation.json",
+      "sha256": "08a715c3e180e5301a55c9a48f0e01bb87be29ce14c067471ee4c79a55000b3f"
+    },
+    {
+      "file": "010-companion-consent-operation.json",
+      "sha256": "ea0a2beecfea2b661f228be87ad5282ced4700f76409d2b8b0ae159735e60821"
+    },
+    {
+      "file": "011-return-emulator-operation.json",
+      "sha256": "f09095791422aeccb7600be0f1b46f08773afa737ddb8b019d8eebc09f12dc97"
+    },
+    {
+      "file": "012-native-pokemon-operation.json",
+      "sha256": "f9efb9bb83a35786a14473d4a1c9f3104fc1e74d88c79236c5e7fd3fc3b94dde"
+    },
+    {
+      "file": "013-home-interruption-operation.json",
+      "sha256": "7d35d68f492084d3aeeed72f4ad337a66f7bf06a694b9ec4deb9c30dd68763fa"
+    },
+    {
+      "file": "014-guard-during-home-operation.json",
+      "sha256": "f524b18a886b9e2097c853374d85a9e57b66cf854a6c45c0c4a8917be60985ce"
+    },
+    {
+      "file": "015-resume-operation.json",
+      "sha256": "d8f3285d74a34cc77fcd813e5d30358199f48f9479f04ce71e29fc1790d82c0a"
+    },
+    {
+      "file": "016-native-after-resume-operation.json",
+      "sha256": "0e8e9af7119fd345b87241bb5fc03d9c308f75c46e958981677946e7a35e82a5"
+    },
+    {
+      "file": "017-dismiss-door-operation.json",
+      "sha256": "7c24cd9cb5de6d2551d8a5019beff2061550743d5738f9dfe45402556552c751"
+    },
+    {
+      "file": "018-start-short-a-operation.json",
+      "sha256": "3f63f65015c90a0d3d869a9ac627b3685c41dada9899a1626240209a168a850b"
+    },
+    {
+      "file": "019-close-short-a-operation.json",
+      "sha256": "aab3ac34de9f03489e010e6a2e7ed24e567bfdb5e5a07487f1666a5bbd3069c2"
+    },
+    {
+      "file": "020-start-held-a-operation.json",
+      "sha256": "1f727f37661ec7c5dc2309bab59cf629479edb697a5a3daaaf53f6809a36b199"
+    },
+    {
+      "file": "021-close-held-a-operation.json",
+      "sha256": "a6c9d5f967cc171975b874cf5cd46540e6777f5358602e4637eca7560d6c747f"
+    },
+    {
+      "file": "022-runtime-native-operation.json",
+      "sha256": "1904d622bc8b560ad3c565f4aa905e4fdcb1c24bbc13df494122003057ad8f90"
+    },
+    {
+      "file": "023-contact-admission-operation.json",
+      "sha256": "2441697d781cb3a9525581bd33bc252ee723a27a336eb719701ec990585f05c8"
+    },
+    {
+      "file": "024-final-foreground-operation.json",
+      "sha256": "0a30b125d0e6c895a30fdc3bd071dcda65289555b6ddff5b10ce789316260802"
+    },
+    {
+      "file": "025-final-adb-operation.json",
+      "sha256": "39a7bdfcccd807365219784e403e2241e8f78b33dfc5383c74dffcbff22d3a13"
+    },
+    {
+      "file": "026-final-native-operation.json",
+      "sha256": "b4982d39d7d6662194aa40a1d36f55ad8db3ab64059e70b85ba1bc836c22f8e7"
+    },
+    {
+      "file": "027-capture-cleanup-operation.json",
+      "sha256": "f663e6a702414141162d55a8246fc6ec4566eb5a2df0d86e8a2be1034e9d5205"
+    },
+    {
+      "file": "028-final-capabilities-operation.json",
+      "sha256": "3b1c7c60a5146a2d5b52c202d363bc2d4687b6aab50bda739fe0f6ab27528fef"
+    },
+    {
+      "file": "029-retracted-binding-operation.json",
+      "sha256": "91d203a52c21b272dcc32732b76e0754a018734ba754365c89dc8c42553fb572"
+    }
+  ],
+  "operations": [
+    {
+      "label": "001-capabilities",
+      "verb": "inspect",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:32.830Z",
+      "outcome": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "companion": {
+          "versionCode": "16",
+          "versionName": "0.2.0"
+        },
+        "foregroundPackage": "org.fossify.home",
+        "projectionActive": false
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 186.33383400000002,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "c2c5d6ccb4864921c1b6feea363dad8977bd69b67e9129783ec12896a53e3c09",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "002-launcher-guard",
+      "verb": "guard",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:14.010Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon guard foregroundPackage",
+          "entry": "check",
+          "maxSteps": 1,
+          "timeoutMs": 10000,
+          "nodes": [
+            {
+              "id": "check",
+              "label": "Verify observed precondition",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "foregroundPackage",
+                "equals": "com.fastemulator.gbc"
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "e218a1ed-6439-4e6e-ab3e-0b94f7eac763",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "e218a1ed-6439-4e6e-ab3e-0b94f7eac763",
+            "planHash": "2c83e285edbb70ded739bd7dd2cdebbf74c472a363218700e2681f53837a912c",
+            "target": "adb-readonly:device:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "FAIL",
+            "startedAt": "2026-10-05T20:15:14.015Z",
+            "steps": [
+              {
+                "nodeId": "check",
+                "kind": "check",
+                "verdict": "FAIL",
+                "startedAtMs": 388.796375,
+                "endedAtMs": 833.824417,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 745.480917,
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+                      "foregroundPackage": "org.fossify.home"
+                    },
+                    "imageSha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 522.673834,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      }
+    },
+    {
+      "label": "003-missing-game-fact",
+      "verb": "guard",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:14.801Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon guard pokemonOverworld",
+          "entry": "check",
+          "maxSteps": 1,
+          "timeoutMs": 10000,
+          "nodes": [
+            {
+              "id": "check",
+              "label": "Verify observed precondition",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "pokemonOverworld",
+                "equals": true
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "55f8cfbd-8588-472b-b48e-9a6aeb901969",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "55f8cfbd-8588-472b-b48e-9a6aeb901969",
+            "planHash": "e9c48c89b5c653aa375d70b19c1cdfb2fbb65897d59cd4740ba1db5a5ff29b62",
+            "target": "adb-readonly:device:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "UNKNOWN",
+            "startedAt": "2026-10-05T20:15:14.806Z",
+            "steps": [
+              {
+                "nodeId": "check",
+                "kind": "check",
+                "verdict": "UNKNOWN",
+                "startedAtMs": 121.73275,
+                "endedAtMs": 545.99475,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 486.297,
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+                      "foregroundPackage": "org.fossify.home"
+                    },
+                    "imageSha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 526.0002079999999,
+      "clock": "host-monotonic",
+      "parameter": "unknown",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      }
+    },
+    {
+      "label": "004-native-initial",
+      "verb": "snapshot",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:15.594Z",
+      "error": "Command failed: python3 packages/play/src/safety/device-lock-exec.py device:f88a35e75d347b6b -- env FNAF_LEASE_HELD=1 FNAF_SERIAL=device:f88a35e75d347b6b <host-path> packages/play/bin/phone/native-frame.ts --out <temporary-path> --label operator-studio\n(node:53115) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\nnative-frame: Command failed: adb -s device:f88a35e75d347b6b shell pidof com.ppvaz.fnafcompanion\n",
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 332.62050000000005,
+      "clock": "host-monotonic",
+      "parameter": "native",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      }
+    },
+    {
+      "label": "005-emulator-launch",
+      "verb": "launch",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:39.455Z",
+      "outcome": {
+        "component": "com.fastemulator.gbc/.RomListActivity",
+        "launchOutput": "Starting: Intent { cmp=com.fastemulator.gbc/.RomListActivity }\nStatus: ok\nLaunchState: COLD\nActivity: com.fastemulator.gbc/.RomListActivity\nTotalTime: 216\nWaitTime: 229\nComplete",
+        "foregroundPackage": "com.fastemulator.gbc",
+        "observation": {
+          "id": "f031e5263e6e3ec35ccb517fcf5cbd4e7a9237952cbb295da37c8b2ec630520f",
+          "clock": "host-monotonic",
+          "receivedAtMs": 1030.094333,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "f031e5263e6e3ec35ccb517fcf5cbd4e7a9237952cbb295da37c8b2ec630520f",
+            "foregroundPackage": "com.fastemulator.gbc"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 968.2119580000001,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "c2c5d6ccb4864921c1b6feea363dad8977bd69b67e9129783ec12896a53e3c09",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "006-emulator-ui",
+      "verb": "ui",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:15:40.679Z",
+      "outcome": {
+        "xmlSha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df",
+        "foregroundPackage": "com.fastemulator.gbc"
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 2387.930041,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "c2c5d6ccb4864921c1b6feea363dad8977bd69b67e9129783ec12896a53e3c09",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "007-select-red",
+      "verb": "select-rom",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:16:45.043Z",
+      "outcome": {
+        "namedControl": "Pokemon Red",
+        "uiSha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df",
+        "x": 540,
+        "y": 1143,
+        "observation": {
+          "id": "8f4350a37a75138511fdb738c195dcb91231f3f0fc975efd517efc290165d16b",
+          "clock": "host-monotonic",
+          "receivedAtMs": 3835.177041,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "8f4350a37a75138511fdb738c195dcb91231f3f0fc975efd517efc290165d16b",
+            "foregroundPackage": "com.fastemulator.gbc"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 3782.033542,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "a4f93fdb688bd6261b47f0f77e434bd85a728f966ad514a4fee826d9d3ba02bb",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "008-emulator-foreground",
+      "verb": "guard",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:16:50.098Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon guard foregroundPackage",
+          "entry": "check",
+          "maxSteps": 1,
+          "timeoutMs": 10000,
+          "nodes": [
+            {
+              "id": "check",
+              "label": "Verify observed precondition",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "foregroundPackage",
+                "equals": "com.fastemulator.gbc"
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "160827b4-f6f6-4e50-ae55-d57ce8838d07",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "160827b4-f6f6-4e50-ae55-d57ce8838d07",
+            "planHash": "2c83e285edbb70ded739bd7dd2cdebbf74c472a363218700e2681f53837a912c",
+            "target": "adb-readonly:device:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "PASS",
+            "startedAt": "2026-10-05T20:16:50.113Z",
+            "steps": [
+              {
+                "nodeId": "check",
+                "kind": "check",
+                "verdict": "PASS",
+                "startedAtMs": 130.683166,
+                "endedAtMs": 611.573208,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "1dcdf2af4eec17f30e1c123bf2a1e7265bfba10312d5a3b64932b4f418d2e36f",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 526.568041,
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "1dcdf2af4eec17f30e1c123bf2a1e7265bfba10312d5a3b64932b4f418d2e36f",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "imageSha256": "1dcdf2af4eec17f30e1c123bf2a1e7265bfba10312d5a3b64932b4f418d2e36f"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 525.264584,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "a4f93fdb688bd6261b47f0f77e434bd85a728f966ad514a4fee826d9d3ba02bb",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "009-game-ui",
+      "verb": "ui",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:16:50.887Z",
+      "outcome": {
+        "xmlSha256": "4c0abf346c63d2e716244ee81cf3b975c2f91179bbaba7c2bda17912f612e817",
+        "foregroundPackage": "com.fastemulator.gbc"
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 2443.359708,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "a4f93fdb688bd6261b47f0f77e434bd85a728f966ad514a4fee826d9d3ba02bb",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "010-companion-consent",
+      "verb": "prepare-capture",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:16:56.353Z",
+      "outcome": {
+        "existingSetupOutput": "ACTION tap package=helper text='Start video capture' x=540 y=810\nACTION tap package=system text='Share screen' x=776 y=1515\nCAPTURE started",
+        "observation": {
+          "id": "caf4282c9c91c52a718aeebe88ef69381eb7b5ed5e307d6c8c1cb6803b56c052",
+          "clock": "host-monotonic",
+          "receivedAtMs": 11301.462667,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "caf4282c9c91c52a718aeebe88ef69381eb7b5ed5e307d6c8c1cb6803b56c052",
+            "foregroundPackage": "com.ppvaz.fnafcompanion"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 11241.7565,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "a4f93fdb688bd6261b47f0f77e434bd85a728f966ad514a4fee826d9d3ba02bb",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "011-return-emulator",
+      "verb": "launch",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:17:28.958Z",
+      "outcome": {
+        "component": "com.fastemulator.gbc/.RomListActivity",
+        "launchOutput": "Starting: Intent { flg=0x10200000 cmp=com.fastemulator.gbc/.RomListActivity }\nWarning: Activity not started, its current task has been brought to the front\nStatus: ok\nLaunchState: HOT\nActivity: com.fastemulator.gbc/.EmulatorActivity\nTotalTime: 85\nWaitTime: 91\nComplete",
+        "foregroundPackage": "com.fastemulator.gbc",
+        "observation": {
+          "id": "3c2a2eaa070634b0bc9f604e23d6debd8b65b160bc885f05fc8f2f8649e6f77f",
+          "clock": "host-monotonic",
+          "receivedAtMs": 907.810375,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "3c2a2eaa070634b0bc9f604e23d6debd8b65b160bc885f05fc8f2f8649e6f77f",
+            "foregroundPackage": "com.fastemulator.gbc"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 866.439959,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "012-native-pokemon",
+      "verb": "snapshot",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:17:30.070Z",
+      "outcome": {
+        "id": "efe6f166f9fb20460260df56b973782e5aaba42ee499782abfc64b2d52dfdc36",
+        "clock": "host-monotonic",
+        "receivedAtMs": 881.2755,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "efe6f166f9fb20460260df56b973782e5aaba42ee499782abfc64b2d52dfdc36",
+          "deviceImageNs": "38106866370655",
+          "deviceSnapshotNs": "38107107910963",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 773.2044169999999,
+      "clock": "host-monotonic",
+      "parameter": "native",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "013-home-interruption",
+      "verb": "home",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:18:15.302Z",
+      "outcome": {
+        "before": {
+          "id": "a19b164df4268beafe827c3e6a307c2ef847131fbc70cee3f63860e3941ddecd",
+          "clock": "host-monotonic",
+          "receivedAtMs": 584.789416,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "a19b164df4268beafe827c3e6a307c2ef847131fbc70cee3f63860e3941ddecd",
+            "foregroundPackage": "com.fastemulator.gbc"
+          }
+        },
+        "foregroundPackage": "org.fossify.home",
+        "after": {
+          "id": "87e597200c05283830ed5a0e56e95c17db2b1e355e9ecc8e95882ccd4ea1a63c",
+          "clock": "host-monotonic",
+          "receivedAtMs": 1384.190958,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "87e597200c05283830ed5a0e56e95c17db2b1e355e9ecc8e95882ccd4ea1a63c",
+            "foregroundPackage": "org.fossify.home"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1323.4436249999999,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "014-guard-during-home",
+      "verb": "guard",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:18:16.893Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon guard foregroundPackage",
+          "entry": "check",
+          "maxSteps": 1,
+          "timeoutMs": 10000,
+          "nodes": [
+            {
+              "id": "check",
+              "label": "Verify observed precondition",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "foregroundPackage",
+                "equals": "com.fastemulator.gbc"
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "83adfc6a-3516-4234-8067-b15c21730e43",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "83adfc6a-3516-4234-8067-b15c21730e43",
+            "planHash": "2c83e285edbb70ded739bd7dd2cdebbf74c472a363218700e2681f53837a912c",
+            "target": "adb-readonly:device:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "FAIL",
+            "startedAt": "2026-10-05T20:18:16.897Z",
+            "steps": [
+              {
+                "nodeId": "check",
+                "kind": "check",
+                "verdict": "FAIL",
+                "startedAtMs": 126.477542,
+                "endedAtMs": 543.102375,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "46e3865741b55b8c4ad3f4da7529b1c8ba0e90abe2bcbbe3431ad923d25c44e3",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 473.819708,
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "46e3865741b55b8c4ad3f4da7529b1c8ba0e90abe2bcbbe3431ad923d25c44e3",
+                      "foregroundPackage": "org.fossify.home"
+                    },
+                    "imageSha256": "46e3865741b55b8c4ad3f4da7529b1c8ba0e90abe2bcbbe3431ad923d25c44e3"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 523.715792,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "015-resume",
+      "verb": "launch",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:18:17.678Z",
+      "outcome": {
+        "component": "com.fastemulator.gbc/.RomListActivity",
+        "launchOutput": "Starting: Intent { flg=0x10200000 cmp=com.fastemulator.gbc/.RomListActivity }\nWarning: Activity not started, its current task has been brought to the front\nStatus: ok\nLaunchState: HOT\nActivity: com.fastemulator.gbc/.EmulatorActivity\nTotalTime: 75\nWaitTime: 78\nComplete",
+        "foregroundPackage": "com.fastemulator.gbc",
+        "observation": {
+          "id": "ff76aa12a8451806b06bbf6e8d7a74898751869743ff09679523f4e8b030ed9a",
+          "clock": "host-monotonic",
+          "receivedAtMs": 832.855042,
+          "facts": {
+            "width": 1080,
+            "height": 2400,
+            "frameSha256": "ff76aa12a8451806b06bbf6e8d7a74898751869743ff09679523f4e8b030ed9a",
+            "foregroundPackage": "com.fastemulator.gbc"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 791.95,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "016-native-after-resume",
+      "verb": "snapshot",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:18:18.712Z",
+      "outcome": {
+        "id": "b16fe1cef1a0c9239a95c251aced5e51aefdee8f9205c061eb92bb3dc1bd690d",
+        "clock": "host-monotonic",
+        "receivedAtMs": 926.962333,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "b16fe1cef1a0c9239a95c251aced5e51aefdee8f9205c061eb92bb3dc1bd690d",
+          "deviceImageNs": "38155483225966",
+          "deviceSnapshotNs": "38155794270043",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 822.841083,
+      "clock": "host-monotonic",
+      "parameter": "native",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "1686af9201ee3e0e243ddda15f95076a42550543c32e71341162cd7e2f953481",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "017-dismiss-door",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:19:34.405Z",
+      "outcome": {
+        "control": "B",
+        "nominalHoldMs": 150,
+        "point": {
+          "x": 736,
+          "y": 1825
+        },
+        "profileSha256": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+        "dispatchAccepted": true,
+        "gameAcceptance": "UNKNOWN until visual review",
+        "inputBackend": "diagnostic-adb-stationary-swipe",
+        "guardScope": "foreground and physical geometry; semantic game state reviewed by agent",
+        "before": {
+          "facts": {
+            "foregroundPackage": "com.fastemulator.gbc",
+            "width": 1080,
+            "height": 2400
+          },
+          "id": "f93632ea56b398d37d160374aac98b97736481d434929620c6fc5f17e2e14f49",
+          "clock": "host-monotonic",
+          "receivedAtMs": 514.320625
+        },
+        "after": {
+          "id": "0fcd0822dccb7254c7342b61347adbf169a6216230a2cafdc2ddbebf93799ea5",
+          "clock": "host-monotonic",
+          "receivedAtMs": 1972.936584,
+          "facts": {
+            "width": 2400,
+            "height": 1080,
+            "frameSha256": "0fcd0822dccb7254c7342b61347adbf169a6216230a2cafdc2ddbebf93799ea5",
+            "deviceImageNs": "38232319201355",
+            "deviceSnapshotNs": "38232525352740",
+            "deviceClock": "companion-System.nanoTime",
+            "backend": "fnaf-companion-native-snap",
+            "clockMap": "UNKNOWN"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1848.5302079999997,
+      "clock": "host-monotonic",
+      "parameter": "B:150",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "0bfd1ed3926391c8fa2f1e4c11ad2165ecd29eab1ae09664250f4f8e2a21b97b",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "018-start-short-a",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:19:54.812Z",
+      "outcome": {
+        "control": "Start",
+        "nominalHoldMs": 20,
+        "point": {
+          "x": 831,
+          "y": 1555
+        },
+        "profileSha256": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+        "dispatchAccepted": true,
+        "gameAcceptance": "UNKNOWN until visual review",
+        "inputBackend": "diagnostic-adb-stationary-swipe",
+        "guardScope": "foreground and physical geometry; semantic game state reviewed by agent",
+        "before": {
+          "facts": {
+            "foregroundPackage": "com.fastemulator.gbc",
+            "width": 1080,
+            "height": 2400
+          },
+          "id": "9d6a4fd83cc6f623cbe7a1b828e1aae9d8ad0b13d48a5355cf3d5e1cf4894394",
+          "clock": "host-monotonic",
+          "receivedAtMs": 492.27675
+        },
+        "after": {
+          "id": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+          "clock": "host-monotonic",
+          "receivedAtMs": 1930.206625,
+          "facts": {
+            "width": 2400,
+            "height": 1080,
+            "frameSha256": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+            "deviceImageNs": "38252654190279",
+            "deviceSnapshotNs": "38252877038587",
+            "deviceClock": "companion-System.nanoTime",
+            "backend": "fnaf-companion-native-snap",
+            "clockMap": "UNKNOWN"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1817.598417,
+      "clock": "host-monotonic",
+      "parameter": "Start:20",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "0bfd1ed3926391c8fa2f1e4c11ad2165ecd29eab1ae09664250f4f8e2a21b97b",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "019-close-short-a",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:20:25.944Z",
+      "outcome": {
+        "control": "B",
+        "nominalHoldMs": 150,
+        "point": {
+          "x": 736,
+          "y": 1825
+        },
+        "profileSha256": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+        "dispatchAccepted": true,
+        "gameAcceptance": "UNKNOWN until visual review",
+        "inputBackend": "diagnostic-adb-stationary-swipe",
+        "guardScope": "foreground and physical geometry; semantic game state reviewed by agent",
+        "before": {
+          "facts": {
+            "foregroundPackage": "com.fastemulator.gbc",
+            "width": 1080,
+            "height": 2400
+          },
+          "id": "28ddbd97a1554a8858ef0e920c6daa3cfde83c4508d8f3aee891739352ed2a3f",
+          "clock": "host-monotonic",
+          "receivedAtMs": 496.383541
+        },
+        "after": {
+          "id": "3c625621fd51df69b28e873eca9999420aa5fae0f73de570eb5314ee075006df",
+          "clock": "host-monotonic",
+          "receivedAtMs": 1994.363291,
+          "facts": {
+            "width": 2400,
+            "height": 1080,
+            "frameSha256": "3c625621fd51df69b28e873eca9999420aa5fae0f73de570eb5314ee075006df",
+            "deviceImageNs": "38283886759281",
+            "deviceSnapshotNs": "38284091518050",
+            "deviceClock": "companion-System.nanoTime",
+            "backend": "fnaf-companion-native-snap",
+            "clockMap": "UNKNOWN"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1880.8366660000002,
+      "clock": "host-monotonic",
+      "parameter": "B:150",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "0bfd1ed3926391c8fa2f1e4c11ad2165ecd29eab1ae09664250f4f8e2a21b97b",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "020-start-held-a",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:20:32.136Z",
+      "outcome": {
+        "control": "Start",
+        "nominalHoldMs": 150,
+        "point": {
+          "x": 831,
+          "y": 1555
+        },
+        "profileSha256": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+        "dispatchAccepted": true,
+        "gameAcceptance": "UNKNOWN until visual review",
+        "inputBackend": "diagnostic-adb-stationary-swipe",
+        "guardScope": "foreground and physical geometry; semantic game state reviewed by agent",
+        "before": {
+          "facts": {
+            "foregroundPackage": "com.fastemulator.gbc",
+            "width": 1080,
+            "height": 2400
+          },
+          "id": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+          "clock": "host-monotonic",
+          "receivedAtMs": 577.180334
+        },
+        "after": {
+          "id": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+          "clock": "host-monotonic",
+          "receivedAtMs": 2040.603417,
+          "facts": {
+            "width": 2400,
+            "height": 1080,
+            "frameSha256": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+            "deviceImageNs": "38290073381051",
+            "deviceSnapshotNs": "38290278243512",
+            "deviceClock": "companion-System.nanoTime",
+            "backend": "fnaf-companion-native-snap",
+            "clockMap": "UNKNOWN"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1864.393667,
+      "clock": "host-monotonic",
+      "parameter": "Start:150",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "0bfd1ed3926391c8fa2f1e4c11ad2165ecd29eab1ae09664250f4f8e2a21b97b",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "021-close-held-a",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:20:45.846Z",
+      "outcome": {
+        "control": "B",
+        "nominalHoldMs": 150,
+        "point": {
+          "x": 736,
+          "y": 1825
+        },
+        "profileSha256": "c67ff241c80bbcd6625cb24359be4aa7e3abe61a9a6ee17fde7585e56709f76c",
+        "dispatchAccepted": true,
+        "gameAcceptance": "UNKNOWN until visual review",
+        "inputBackend": "diagnostic-adb-stationary-swipe",
+        "guardScope": "foreground and physical geometry; semantic game state reviewed by agent",
+        "before": {
+          "facts": {
+            "foregroundPackage": "com.fastemulator.gbc",
+            "width": 1080,
+            "height": 2400
+          },
+          "id": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+          "clock": "host-monotonic",
+          "receivedAtMs": 562.963666
+        },
+        "after": {
+          "id": "306af9cfbfce85e3e6436ebea0b1bbb0af2c7dead203e1213ed7cea8ff633616",
+          "clock": "host-monotonic",
+          "receivedAtMs": 2038.267916,
+          "facts": {
+            "width": 2400,
+            "height": 1080,
+            "frameSha256": "306af9cfbfce85e3e6436ebea0b1bbb0af2c7dead203e1213ed7cea8ff633616",
+            "deviceImageNs": "38303823596744",
+            "deviceSnapshotNs": "38304042329129",
+            "deviceClock": "companion-System.nanoTime",
+            "backend": "fnaf-companion-native-snap",
+            "clockMap": "UNKNOWN"
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 1928.155583,
+      "clock": "host-monotonic",
+      "parameter": "B:150",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "0bfd1ed3926391c8fa2f1e4c11ad2165ecd29eab1ae09664250f4f8e2a21b97b",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "022-runtime-native",
+      "verb": "native-plan",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:22:04.243Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon native capture and missing semantic fact",
+          "entry": "observe",
+          "maxSteps": 3,
+          "timeoutMs": 30000,
+          "nodes": [
+            {
+              "id": "observe",
+              "label": "Retain native Companion frame",
+              "kind": "observe",
+              "deadlineMs": 8000,
+              "next": {
+                "PASS": "backend"
+              }
+            },
+            {
+              "id": "backend",
+              "label": "Confirm delegated native backend",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {
+                "PASS": "game-state"
+              },
+              "condition": {
+                "fact": "backend",
+                "equals": "fnaf-companion-native-snap"
+              }
+            },
+            {
+              "id": "game-state",
+              "label": "Require an actual game-state detector",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "pokemonOverworld",
+                "equals": true
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "4be505c1-afa1-4155-804c-08089d78ea11",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "4be505c1-afa1-4155-804c-08089d78ea11",
+            "planHash": "a977a152441deeeb08ef007a5dcab45816d082bc41046ddd4227d3960eb77227",
+            "target": "fnaf-companion:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "UNKNOWN",
+            "startedAt": "2026-10-05T20:22:04.248Z",
+            "steps": [
+              {
+                "nodeId": "observe",
+                "kind": "observe",
+                "verdict": "PASS",
+                "startedAtMs": 130.467625,
+                "endedAtMs": 903.835125,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "efa2d4455b0a59020362534eeec99c0485d8e5ecfc5ed541ac4ac8fdfa46db62",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 903.04925,
+                    "facts": {
+                      "width": 2400,
+                      "height": 1080,
+                      "frameSha256": "efa2d4455b0a59020362534eeec99c0485d8e5ecfc5ed541ac4ac8fdfa46db62",
+                      "deviceImageNs": "38381074043595",
+                      "deviceSnapshotNs": "38381281964825",
+                      "deviceClock": "companion-System.nanoTime",
+                      "backend": "fnaf-companion-native-snap",
+                      "clockMap": "UNKNOWN"
+                    },
+                    "imageSha256": "efa2d4455b0a59020362534eeec99c0485d8e5ecfc5ed541ac4ac8fdfa46db62"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              },
+              {
+                "nodeId": "backend",
+                "kind": "check",
+                "verdict": "PASS",
+                "startedAtMs": 903.951833,
+                "endedAtMs": 1618.862958,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 1617.567708,
+                    "facts": {
+                      "width": 2400,
+                      "height": 1080,
+                      "frameSha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+                      "deviceImageNs": "38381790823210",
+                      "deviceSnapshotNs": "38381993849979",
+                      "deviceClock": "companion-System.nanoTime",
+                      "backend": "fnaf-companion-native-snap",
+                      "clockMap": "UNKNOWN"
+                    },
+                    "imageSha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              },
+              {
+                "nodeId": "game-state",
+                "kind": "check",
+                "verdict": "UNKNOWN",
+                "startedAtMs": 1619.188083,
+                "endedAtMs": 2344.821042,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 2344.230167,
+                    "facts": {
+                      "width": 2400,
+                      "height": 1080,
+                      "frameSha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+                      "deviceImageNs": "38382507847287",
+                      "deviceSnapshotNs": "38382717803210",
+                      "deviceClock": "companion-System.nanoTime",
+                      "backend": "fnaf-companion-native-snap",
+                      "clockMap": "UNKNOWN"
+                    },
+                    "imageSha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 2261.727917,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "261c04e41befb25ecddc4668f75febc2df5057ec6bfa80e19800a92cc0f93be7",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "023-contact-admission",
+      "verb": "reject-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:22:06.756Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Refuse unqualified Android contact",
+          "entry": "tap",
+          "maxSteps": 1,
+          "timeoutMs": 1000,
+          "nodes": [
+            {
+              "id": "tap",
+              "kind": "tap",
+              "label": "Contact must be refused before starting a run",
+              "deadlineMs": 500,
+              "next": {},
+              "x": 0,
+              "y": 0,
+              "holdMs": 20,
+              "before": {
+                "fact": "foregroundPackage",
+                "equals": "com.fastemulator.gbc"
+              },
+              "after": {
+                "fact": "pokemonOverworld",
+                "equals": true
+              }
+            }
+          ]
+        },
+        "expectedRefusal": "Plano contém contato; backend Android inicial é somente leitura",
+        "scope": "MCP admission control, no run started; not an input-acceptance experiment"
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 3.0212080000000014,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "261c04e41befb25ecddc4668f75febc2df5057ec6bfa80e19800a92cc0f93be7",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "024-final-foreground",
+      "verb": "guard",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:22:06.994Z",
+      "outcome": {
+        "plan": {
+          "schema": "operator-plan/v1",
+          "name": "Pokemon guard foregroundPackage",
+          "entry": "check",
+          "maxSteps": 1,
+          "timeoutMs": 10000,
+          "nodes": [
+            {
+              "id": "check",
+              "label": "Verify observed precondition",
+              "kind": "check",
+              "deadlineMs": 8000,
+              "next": {},
+              "condition": {
+                "fact": "foregroundPackage",
+                "equals": "com.fastemulator.gbc"
+              }
+            }
+          ]
+        },
+        "run": {
+          "status": "DONE",
+          "id": "54f5e83d-4f51-411f-adcd-baffcaf536b1",
+          "result": {
+            "schema": "operator-run/v1",
+            "id": "54f5e83d-4f51-411f-adcd-baffcaf536b1",
+            "planHash": "2c83e285edbb70ded739bd7dd2cdebbf74c472a363218700e2681f53837a912c",
+            "target": "adb-readonly:device:f88a35e75d347b6b",
+            "level": "DEVICE_MEASURED",
+            "verdict": "PASS",
+            "startedAt": "2026-10-05T20:22:06.999Z",
+            "steps": [
+              {
+                "nodeId": "check",
+                "kind": "check",
+                "verdict": "PASS",
+                "startedAtMs": 113.180208,
+                "endedAtMs": 551.121625,
+                "clock": "host-monotonic",
+                "observations": [
+                  {
+                    "id": "36c31480688427a33e49fbe2ba6ed9e0fc3d0db7b87a290c8d4424f56c7b201d",
+                    "clock": "host-monotonic",
+                    "receivedAtMs": 479.5225,
+                    "facts": {
+                      "width": 1080,
+                      "height": 2400,
+                      "frameSha256": "36c31480688427a33e49fbe2ba6ed9e0fc3d0db7b87a290c8d4424f56c7b201d",
+                      "foregroundPackage": "com.fastemulator.gbc"
+                    },
+                    "imageSha256": "36c31480688427a33e49fbe2ba6ed9e0fc3d0db7b87a290c8d4424f56c7b201d"
+                  }
+                ],
+                "dispatched": false,
+                "detail": ""
+              }
+            ]
+          }
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 522.6945,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "261c04e41befb25ecddc4668f75febc2df5057ec6bfa80e19800a92cc0f93be7",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "025-final-adb",
+      "verb": "snapshot",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:22:21.711Z",
+      "outcome": {
+        "id": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+        "clock": "host-monotonic",
+        "receivedAtMs": 500.452334,
+        "facts": {
+          "width": 1080,
+          "height": 2400,
+          "frameSha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+          "foregroundPackage": "com.fastemulator.gbc"
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 453.21504200000004,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "261c04e41befb25ecddc4668f75febc2df5057ec6bfa80e19800a92cc0f93be7",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "026-final-native",
+      "verb": "snapshot",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:22:22.417Z",
+      "outcome": {
+        "id": "413b65386ab02f96274fbe79a510c4625730c6309d4f5ac537788e01fba06655",
+        "clock": "host-monotonic",
+        "receivedAtMs": 885.251417,
+        "facts": {
+          "width": 2400,
+          "height": 1080,
+          "frameSha256": "413b65386ab02f96274fbe79a510c4625730c6309d4f5ac537788e01fba06655",
+          "deviceImageNs": "38399228342673",
+          "deviceSnapshotNs": "38399446357750",
+          "deviceClock": "companion-System.nanoTime",
+          "backend": "fnaf-companion-native-snap",
+          "clockMap": "UNKNOWN"
+        }
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 775.6268329999999,
+      "clock": "host-monotonic",
+      "parameter": "native",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59"
+        }
+      },
+      "harnessSha256": "261c04e41befb25ecddc4668f75febc2df5057ec6bfa80e19800a92cc0f93be7",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "027-capture-cleanup",
+      "verb": "stop-capture",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:25:22.247Z",
+      "outcome": {
+        "existingSetupOutput": "CAPTURE stopped helper=force-stopped target=left-unchanged",
+        "foregroundPackage": "com.fastemulator.gbc"
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 440.763291,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+          "packages/play/bin/companion/companion-setup.py": "a9be8da0e07683c8b10818a284946de6c1f5c30f36b98e45aba61a192d0b52f8"
+        }
+      },
+      "harnessSha256": "4e907cd46784c4ca612b1e2dd4428ea7b6c0e21691a8c3d84a883215726f100f",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "028-final-capabilities",
+      "verb": "inspect",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:25:22.938Z",
+      "outcome": {
+        "emulator": {
+          "versionCode": "90025",
+          "versionName": "2.0.3"
+        },
+        "companion": {
+          "versionCode": "16",
+          "versionName": "0.2.0"
+        },
+        "foregroundPackage": "com.fastemulator.gbc",
+        "projectionActive": false
+      },
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 156.069583,
+      "clock": "host-monotonic",
+      "model": "moto_g56_5G",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+          "packages/play/bin/companion/companion-setup.py": "a9be8da0e07683c8b10818a284946de6c1f5c30f36b98e45aba61a192d0b52f8"
+        }
+      },
+      "harnessSha256": "4e907cd46784c4ca612b1e2dd4428ea7b6c0e21691a8c3d84a883215726f100f",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    },
+    {
+      "label": "029-retracted-binding",
+      "verb": "menu-contact",
+      "deviceId": "f88a35e75d347b6b",
+      "startedAt": "2026-10-05T20:25:47.551Z",
+      "error": "Control binding refused: The source physical frame was retained during task-entry animation. Later steady frames have the same 1080x2400 dimensions but shifted controls. Two menu contacts were visibly accepted, which does not qualify these coordinates for replay.",
+      "schema": "operator-pokemon-operation/v1",
+      "hostElapsedMs": 0.609958000000006,
+      "clock": "host-monotonic",
+      "parameter": "Start:150",
+      "source": {
+        "revision": "7604358518114a039faed78344b7da167e7b7fcb",
+        "sources": {
+          "packages/propose/bin/plans/emit.ts": "0718e52019b6276e5ad741589e28817df36d93bb0cb4d2a4ca9e8a5f6c69577f",
+          "apps/desktop/src/device-cli.ts": "9b84090e286773ee7aff38d3ea02090f3b7c407cbb5d7a42a383cf2339d66092",
+          "packages/propose/bindings/fnaf2/campaign-night1-minimal-winner.json": "efc64897bc2e6fe8e4be8955ee7b76cccbc0ed2cf298c41c4ab468f76dba8c48",
+          "packages/play/bin/phone/native-frame.ts": "2542f3a1da970e050e1159cfba65305bfffb62480c91f9892f7be077db4737b4",
+          "packages/play/src/safety/device-lock-exec.py": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+          "packages/play/bin/companion/companion-setup.py": "a9be8da0e07683c8b10818a284946de6c1f5c30f36b98e45aba61a192d0b52f8"
+        }
+      },
+      "harnessSha256": "4e907cd46784c4ca612b1e2dd4428ea7b6c0e21691a8c3d84a883215726f100f",
+      "protocolSha256": "d28c3462c2289ab942bbe350a6ed60d4e075efb47823310f31f5ceb451cf1f10"
+    }
+  ],
+  "withheldMedia": [
+    {
+      "file": "000-initial.png",
+      "sha256": "063dde7e0955ad01853d0f577112e963dac50af383d52ad6e5885f7a63fa0f5e",
+      "bytes": 32681
+    },
+    {
+      "file": "005-emulator-launch-after.png",
+      "sha256": "f031e5263e6e3ec35ccb517fcf5cbd4e7a9237952cbb295da37c8b2ec630520f",
+      "bytes": 124344
+    },
+    {
+      "file": "006-emulator-ui.xml",
+      "sha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df",
+      "bytes": 9020
+    },
+    {
+      "file": "007-select-red-after.png",
+      "sha256": "8f4350a37a75138511fdb738c195dcb91231f3f0fc975efd517efc290165d16b",
+      "bytes": 47413
+    },
+    {
+      "file": "007-select-red.xml",
+      "sha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df",
+      "bytes": 9020
+    },
+    {
+      "file": "009-game-ui.xml",
+      "sha256": "4c0abf346c63d2e716244ee81cf3b975c2f91179bbaba7c2bda17912f612e817",
+      "bytes": 1952
+    },
+    {
+      "file": "010-companion-consent-after.png",
+      "sha256": "caf4282c9c91c52a718aeebe88ef69381eb7b5ed5e307d6c8c1cb6803b56c052",
+      "bytes": 141021
+    },
+    {
+      "file": "011-return-emulator-after.png",
+      "sha256": "3c2a2eaa070634b0bc9f604e23d6debd8b65b160bc885f05fc8f2f8649e6f77f",
+      "bytes": 269600
+    },
+    {
+      "file": "012-native-pokemon-frame.png",
+      "sha256": "efe6f166f9fb20460260df56b973782e5aaba42ee499782abfc64b2d52dfdc36",
+      "bytes": 83690
+    },
+    {
+      "file": "013-home-interruption-after.png",
+      "sha256": "87e597200c05283830ed5a0e56e95c17db2b1e355e9ecc8e95882ccd4ea1a63c",
+      "bytes": 45511
+    },
+    {
+      "file": "013-home-interruption-before.png",
+      "sha256": "a19b164df4268beafe827c3e6a307c2ef847131fbc70cee3f63860e3941ddecd",
+      "bytes": 97196
+    },
+    {
+      "file": "015-resume-after.png",
+      "sha256": "ff76aa12a8451806b06bbf6e8d7a74898751869743ff09679523f4e8b030ed9a",
+      "bytes": 314482
+    },
+    {
+      "file": "016-native-after-resume-frame.png",
+      "sha256": "b16fe1cef1a0c9239a95c251aced5e51aefdee8f9205c061eb92bb3dc1bd690d",
+      "bytes": 83566
+    },
+    {
+      "file": "017-dismiss-door-after.png",
+      "sha256": "0fcd0822dccb7254c7342b61347adbf169a6216230a2cafdc2ddbebf93799ea5",
+      "bytes": 100219
+    },
+    {
+      "file": "017-dismiss-door-before.png",
+      "sha256": "f93632ea56b398d37d160374aac98b97736481d434929620c6fc5f17e2e14f49",
+      "bytes": 97302
+    },
+    {
+      "file": "018-start-short-a-after.png",
+      "sha256": "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+      "bytes": 86835
+    },
+    {
+      "file": "018-start-short-a-before.png",
+      "sha256": "9d6a4fd83cc6f623cbe7a1b828e1aae9d8ad0b13d48a5355cf3d5e1cf4894394",
+      "bytes": 101237
+    },
+    {
+      "file": "019-close-short-a-after.png",
+      "sha256": "3c625621fd51df69b28e873eca9999420aa5fae0f73de570eb5314ee075006df",
+      "bytes": 100032
+    },
+    {
+      "file": "019-close-short-a-before.png",
+      "sha256": "28ddbd97a1554a8858ef0e920c6daa3cfde83c4508d8f3aee891739352ed2a3f",
+      "bytes": 97936
+    },
+    {
+      "file": "020-start-held-a-after.png",
+      "sha256": "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221",
+      "bytes": 86872
+    },
+    {
+      "file": "020-start-held-a-before.png",
+      "sha256": "3da80d6239f353c792bc63ff132bb93c764baf6927f92594545bbb55d123e855",
+      "bytes": 101301
+    },
+    {
+      "file": "021-close-held-a-after.png",
+      "sha256": "306af9cfbfce85e3e6436ebea0b1bbb0af2c7dead203e1213ed7cea8ff633616",
+      "bytes": 100605
+    },
+    {
+      "file": "021-close-held-a-before.png",
+      "sha256": "0a825d7b06c00fb9355711f573d332c9e433351ec77a8c247c2c0385b47ddf9a",
+      "bytes": 97913
+    },
+    {
+      "file": "025-final-adb-frame.png",
+      "sha256": "8c3956cc661e24afd86a53fb5c0b792cc8830de4d2f9554b91230f232ea93eb0",
+      "bytes": 101206
+    },
+    {
+      "file": "026-final-native-frame.png",
+      "sha256": "413b65386ab02f96274fbe79a510c4625730c6309d4f5ac537788e01fba06655",
+      "bytes": 100263
+    },
+    {
+      "file": "runtime/e218a1ed-6439-4e6e-ab3e-0b94f7eac763/6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652.png",
+      "sha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+      "bytes": 32688
+    },
+    {
+      "file": "runtime/55f8cfbd-8588-472b-b48e-9a6aeb901969/6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652.png",
+      "sha256": "6fa83d4b30124b1718460a62cf8b0370b8fdc205a4d09d001e56ff7ea89df652",
+      "bytes": 32688
+    },
+    {
+      "file": "runtime/160827b4-f6f6-4e50-ae55-d57ce8838d07/1dcdf2af4eec17f30e1c123bf2a1e7265bfba10312d5a3b64932b4f418d2e36f.png",
+      "sha256": "1dcdf2af4eec17f30e1c123bf2a1e7265bfba10312d5a3b64932b4f418d2e36f",
+      "bytes": 97280
+    },
+    {
+      "file": "runtime/83adfc6a-3516-4234-8067-b15c21730e43/46e3865741b55b8c4ad3f4da7529b1c8ba0e90abe2bcbbe3431ad923d25c44e3.png",
+      "sha256": "46e3865741b55b8c4ad3f4da7529b1c8ba0e90abe2bcbbe3431ad923d25c44e3",
+      "bytes": 31534
+    },
+    {
+      "file": "runtime/4be505c1-afa1-4155-804c-08089d78ea11/7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987.png",
+      "sha256": "7eceecb4658d2c88b98b9e495e6caba1a816f049b5acea040bc91dfff7fd2987",
+      "bytes": 100237
+    },
+    {
+      "file": "runtime/4be505c1-afa1-4155-804c-08089d78ea11/efa2d4455b0a59020362534eeec99c0485d8e5ecfc5ed541ac4ac8fdfa46db62.png",
+      "sha256": "efa2d4455b0a59020362534eeec99c0485d8e5ecfc5ed541ac4ac8fdfa46db62",
+      "bytes": 101040
+    },
+    {
+      "file": "runtime/54f5e83d-4f51-411f-adcd-baffcaf536b1/36c31480688427a33e49fbe2ba6ed9e0fc3d0db7b87a290c8d4424f56c7b201d.png",
+      "sha256": "36c31480688427a33e49fbe2ba6ed9e0fc3d0db7b87a290c8d4424f56c7b201d",
+      "bytes": 101131
+    }
+  ],
+  "results": {
+    "entry": {
+      "launch": "COLD RomListActivity",
+      "selection": "Semantic Pokemon Red row",
+      "observedGame": "Cinnabar GYM locked-door dialogue",
+      "reviewer": "agent"
+    },
+    "guards": {
+      "launcher": "FAIL",
+      "absentGameFact": "UNKNOWN",
+      "emulator": "PASS",
+      "homeInterruption": "FAIL",
+      "resumed": "PASS"
+    },
+    "nativeTransport": {
+      "initial": "ERROR, Companion unavailable",
+      "setup": "Existing FNaF named capture and consent controls",
+      "afterSetup": "Native PNG and device timestamps retained",
+      "physicalSize": [
+        1080,
+        2400
+      ],
+      "nativeSize": [
+        2400,
+        1080
+      ],
+      "coordinateTransfer": "UNQUALIFIED"
+    },
+    "sharedRuntime": {
+      "plan": "examples/pokemon-native-observe.json",
+      "verdicts": [
+        "PASS",
+        "PASS",
+        "UNKNOWN"
+      ],
+      "finalVerdict": "UNKNOWN",
+      "reason": "No Pokemon semantic detector; receiving a frame is not proof of game readiness."
+    },
+    "contacts": {
+      "inputBackend": "Diagnostic ADB, outside production runtime",
+      "nominalDurationsMs": [
+        20,
+        150
+      ],
+      "trialsPerDuration": [
+        1,
+        1
+      ],
+      "observed": "Both opened the Start menu; B closed it",
+      "reviewer": "agent",
+      "postFrameSha256": [
+        "911639fa11ab0c75943f55adf0d3166f7c806e963b9fab12749491e61e6d1357",
+        "d76060871fcd3f9f1f53e43f072edf700c25e95cecca976f5e788e9225ea0221"
+      ],
+      "minimumAcceptedDurationMs": "UNKNOWN",
+      "acceptanceReliability": "UNKNOWN",
+      "bindingReplay": "REFUSED after transition-related coordinate drift"
+    },
+    "recovery": {
+      "observed": "Emulator resumed in the same gym-door scene and dialogue after Home",
+      "reviewer": "agent",
+      "pixelIdentical": false,
+      "processDeathRecovery": "NOT_TESTED"
+    },
+    "visualInstability": {
+      "observed": "Physical task-entry screenshots shifted despite identical dimensions; some immediate post-contact native frames had partially missing game/control regions. Later independent witnesses showed the complete overworld.",
+      "cause": "UNKNOWN; no synchronized capture comparison",
+      "implication": "Require observed content geometry and stability before coordinate replay."
+    },
+    "final": {
+      "foregroundPackage": "com.fastemulator.gbc",
+      "projectionActive": false,
+      "emulator": {
+        "versionCode": "90025",
+        "versionName": "2.0.3"
+      },
+      "companion": {
+        "versionCode": "16",
+        "versionName": "0.2.0"
+      },
+      "observedGame": "Overworld outside the Cinnabar gym, menu closed",
+      "reviewer": "agent"
+    }
+  },
+  "custody": {
+    "rawFiles": "Local .operator/experiments/pokemon-20261005 plus runtime packs; media named by hash only in Git",
+    "missing": [
+      "Complete tool transcript",
+      "Deposited intermediate research-harness versions before the final source; hashes exist for later operations, first two guard operations precede source hashing"
+    ],
+    "reproduction": "The final harness refuses the retracted controls. Repeating contacts requires a new observed binding and experiment review."
+  },
+  "open": [
+    "Stable viewport/physical-contact mapping",
+    "Positive Pokemon state detector",
+    "Faithfulness of immediate post-transition native capture",
+    "Qualified Android action adapter",
+    "Exploration-to-plan recording",
+    "Repeated-run and failure qualification"
+  ]
+}

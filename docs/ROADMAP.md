@@ -5,7 +5,9 @@
    neste bootstrap, com registro gerado e testes.
 2. **FNaF como primeiro consumidor.** Usar suas interfaces existentes de
    captura, lease, compilação, execução e revisão. A primeira campanha
-   dry-run está integrada; a captura física espera o celular conectado.
+   dry-run está integrada; o SNAP físico foi exercitado no Pokémon em
+   2026-10-05, com transferência de geometria e estabilidade abertas
+   ([experimentos](EXPERIMENT-POKEMON-CAPABILITIES-20261005.md)).
    Empacotamento estável e consumo direto pelo checkout FNaF permanecem abertos.
 3. **Primeiro fluxo físico reutilizável.** Um fluxo curto observado no FNaF,
    com identidade de venue, condições visuais, interrupção e evidência. Usar

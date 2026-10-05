@@ -35,7 +35,7 @@ Uma observação ausente nunca vira FAIL ou PASS por conveniência.
 
 | Capacidade | Origem | Forma de integração | Limite atual |
 |---|---|---|---|
-| SNAP nativo | FNaF `packages/play/bin/phone/native-frame.ts` | Subprocesso do CLI original | Depende de Companion ativo; sem teste físico nesta sessão |
+| SNAP nativo | FNaF `packages/play/bin/phone/native-frame.ts` | Subprocesso do CLI original | Exercitado no Pokémon; geometria e estabilidade entre alvos abertas |
 | Lease do aparelho | FNaF `packages/play/src/safety/device-lock-exec.py` | Wrapper original, mesma raiz de locks | Não há segunda implementação do lock |
 | Compilação de Night 1 | FNaF `packages/propose/bin/plans/emit.ts` | Comando fixo, winner canônico existente | Night 1 inicial; sem copiar estratégia |
 | Gates da campanha | FNaF `apps/desktop/src/device-cli.ts` | `campaign --dry-run --json` | Resultado MODEL_ONLY, não vitória física |
@@ -75,3 +75,7 @@ Essas limitações tornam necessária a qualificação do contrato de cada backe
 - A integração ainda referencia um checkout. Publicar um pacote reutilizável
   ou trocar a direção da dependência requer caracterizar contratos e comparar
   traces antes de alterar consumidores existentes.
+- Os [experimentos Pokémon](EXPERIMENT-POKEMON-CAPABILITIES-20261005.md)
+  mostraram que resolução, foreground e PNG válido não identificam geometria
+  estável de contato. O buffer Companion pode conter um viewport retrato
+  reduzido; essa transformação precisa de contrato e qualificação.

@@ -1,0 +1,12 @@
+{
+  "schema":"operator-plan/v1",
+  "name":"Pokemon native capture and missing semantic fact",
+  "entry":"observe",
+  "maxSteps":3,
+  "timeoutMs":30000,
+  "nodes":[
+    {"id":"observe","label":"Retain native Companion frame","kind":"observe","deadlineMs":8000,"next":{"PASS":"backend"}},
+    {"id":"backend","label":"Confirm delegated native backend","kind":"check","deadlineMs":8000,"next":{"PASS":"game-state"},"condition":{"fact":"backend","equals":"fnaf-companion-native-snap"}},
+    {"id":"game-state","label":"Require an actual game-state detector","kind":"check","deadlineMs":8000,"next":{},"condition":{"fact":"pokemonOverworld","equals":true}}
+  ]
+}

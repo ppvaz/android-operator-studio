@@ -1,0 +1,12 @@
+{
+  "schema": "operator-exploratory-controls/v1",
+  "targetPackage": "com.fastemulator.gbc",
+  "emulatorBuild": "90025:2.0.3",
+  "geometry": {"width":1080,"height":2400,"space":"adb-physical-display"},
+  "sourceFrameSha256": "3c2a2eaa070634b0bc9f604e23d6debd8b65b160bc885f05fc8f2f8649e6f77f",
+  "sourceFrame": "011-return-emulator-after.png",
+  "derivation": "Agent visual inspection of emulator controls, with Pillow stroke-component bounds from the same retained physical screenshot. Start oval spans approximately x772..890,y1529..1581; B center estimated from its circle and letter.",
+  "controls":{"Start":{"x":831,"y":1555},"B":{"x":736,"y":1825}},
+  "qualification":"EXPLORATORY, this observed layout only. No general device or game qualification.",
+  "observationLimit":"Native SNAP is a 2400x1080 letterboxed projection; its pixel coordinates must not be used directly as physical contact coordinates. Semantic game-state checks remain human/agent review."
+}

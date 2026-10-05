@@ -1,0 +1,17 @@
+{
+  "schema": "operator-experiment-protocol/v1",
+  "date": "2026-10-05",
+  "targetPackage": "com.fastemulator.gbc",
+  "initialDiscovery": "One authorized Moto g56 5G; portrait 1080x2400; foreground org.fossify.home, observed through the Studio MCP before mutations.",
+  "questions": [
+    {"id":"unprepared-entry","question":"Can the agent discover and enter the installed emulator from the launcher without assuming an already loaded game?","pass":"Installed launcher activity resolved, foreground observed after launch, Pokemon content visually identified.","limit":"Launching the emulator is not proof of loading Pokemon; ROM selection remains a separate observation."},
+    {"id":"native-capture-transfer","question":"Does the existing FNaF Companion SNAP capture this non-FNaF app and its current geometry?","pass":"A valid native frame identifies the emulator content and retains native timestamps; compare its geometry with an independent ADB witness.","limit":"No cross-clock latency claim; initial failure is retained; capture consent may require setup."},
+    {"id":"state-guards","question":"Do Studio preconditions distinguish launcher, emulator and absent game facts?","pass":"Wrong foreground gives FAIL, unavailable semantic game fact gives UNKNOWN, Android contact plan is refused before dispatch.","limit":"A package match does not prove game state or visual input acceptance."},
+    {"id":"bounded-menu-contacts","question":"Do nominally short and held Start contacts open the game menu under a retained geometry?","pass":"Each attempt has fresh pre/post images, explicit nominal duration and a visual verdict; restore the observed overworld between trials.","limit":"Exploratory observations only; not a success-rate estimate or Android touch landing measurement. No player movement, saving, battle or settings change."},
+    {"id":"interruption-recovery","question":"Can a Home interruption be detected and the emulator resumed with the same game state?","pass":"Observe foreground before, during and after interruption; compare game content and the outcome of Studio guards.","limit":"Home/resume only; no force-stop, save edit or claim of process-death recovery."}
+  ],
+  "bounds":{"maxMenuTrials":6,"maxContactMs":200,"maxRecoveryAttempts":2,"operationTimeoutMs":30000},
+  "evidence":"Retain local PNG/XML and original operation records; commit derived JSON, source hashes and media hashes only.",
+  "execution":"Studio MCP/runtime for observations and guards; original FNaF lease/SNAP for device ownership and native capture; bounded diagnostic ADB actions outside the production runtime, explicitly labelled.",
+  "stop":"Stop game inputs if foreground, geometry or overworld/menu precondition is not observed. Stop on disconnection, unexpected dialog, contradictory capture or repeated failure."
+}
