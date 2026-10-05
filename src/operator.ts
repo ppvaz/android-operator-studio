@@ -1,3 +1,4 @@
+import { CompanionTarget } from './device/companion.js';
 import { randomUUID } from 'node:crypto';
 import { z } from 'zod';
 import { execute } from './core/runtime.js';
@@ -8,12 +9,12 @@ import type { Plan } from './core/plan.js';
 import { Store } from './core/store.js';
 import { FixtureTarget } from './device/fixture.js';
 import { AdbReadOnlyTarget } from './device/adb.js';
-import { FnafPreviewTarget, FnafCompanionTarget, configuredFnafRoot } from './device/fnaf.js';
+import { FnafPreviewTarget, configuredFnafRoot } from './integrations/fnaf.js';
 
 export const targetSchema = z.discriminatedUnion('kind', [
   z.strictObject({ kind: z.literal('fixture') }),
   z.strictObject({ kind: z.literal('fnaf-preview') }),
-  z.strictObject({ kind: z.literal('fnaf-companion'), serial: z.string().regex(/^[a-zA-Z0-9_.:-]{1,96}$/) }),
+  z.strictObject({ kind: z.enum(['companion','fnaf-companion']), serial: z.string().regex(/^[a-zA-Z0-9_.:-]{1,96}$/) }),
   z.strictObject({ kind: z.literal('adb-readonly'), serial: z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/) }),
 ]);
 export type TargetSelection = z.infer<typeof targetSchema>;
@@ -45,7 +46,7 @@ export class Operator {
       await this.store.savePlan(plan);
       const target = selection.kind === 'fixture' ? new FixtureTarget()
         : selection.kind === 'fnaf-preview' ? new FnafPreviewTarget(configuredFnafRoot())
-        : selection.kind === 'fnaf-companion' ? new FnafCompanionTarget(configuredFnafRoot(), selection.serial)
+        : (selection.kind === 'companion'||selection.kind==='fnaf-companion') ? new CompanionTarget(selection.serial)
         : new AdbReadOnlyTarget(selection.serial);
       const result = await execute(plan, target, job.controller.signal, job.id);
       await this.store.saveRun(result);

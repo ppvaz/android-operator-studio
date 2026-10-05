@@ -6,7 +6,7 @@ import { Operator, targetSchema } from './operator.js';
 import { parsePlan } from './core/plan.js';
 import { identity } from './core/identity.js';
 import { devices, AdbReadOnlyTarget } from './device/adb.js';
-import { FnafCompanionTarget, configuredFnafRoot } from './device/fnaf.js';
+import { CompanionTarget } from './device/companion.js';
 
 async function body(request: IncomingMessage): Promise<unknown> {
   const chunks: Buffer[] = [];
@@ -65,8 +65,8 @@ async function route(request: IncomingMessage, response: ServerResponse, operato
       if (url.pathname === '/api/run') { json(response, operator.status(url.searchParams.get('id') ?? '')); return; }
       if (url.pathname === '/api/snapshot') {
         const serial = url.searchParams.get('serial') ?? '';
-        const target = url.searchParams.get('backend') === 'fnaf-companion'
-          ? new FnafCompanionTarget(configuredFnafRoot(), serial) : new AdbReadOnlyTarget(serial);
+        const target = ['companion','fnaf-companion'].includes(url.searchParams.get('backend')??'')
+          ? new CompanionTarget(serial) : new AdbReadOnlyTarget(serial);
         const observation = await target.observe(AbortSignal.timeout(30_000));
         const { image, ...record } = observation;
         json(response, { ...record, image: image?.toString('base64') }); return;

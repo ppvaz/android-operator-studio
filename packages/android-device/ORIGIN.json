@@ -1,0 +1,109 @@
+{
+  "repository": "https://github.com/ppvaz/fnaf2-1020",
+  "revision": "b688efb32812b0f226d190eb63212b03beb54728",
+  "files": [
+    {
+      "source": "packages/play/src/venues/phone/hid.ts",
+      "sourceSha256": "2008bcf4854b110666d81d47145320a6eb2f7d21ff48055dac4121e3b3529896",
+      "selection": {
+        "start": null,
+        "end": null
+      },
+      "target": "src/hid.ts",
+      "extractedSha256": "0008d0d0136c4bb877b6e91ecf340a7e3b5b98a70e665b67fc7f237980a26ffb",
+      "adaptations": [
+        "from '@sixam/kernel' -> from './predicates.js'",
+        "records[0].flags -> records[0]?.flags",
+        "Strict tuple return for toRaw; explicit equivalent two-axis bounds; optional first record access after cardinality validation.",
+        "Trim trailing whitespace and blank lines at EOF; no algorithm change."
+      ]
+    },
+    {
+      "source": "packages/play/src/campaign/port-kit.ts",
+      "sourceSha256": "01fa7b00d783a2f974cd7affc81c996e7c311ad56054d3438fad5c98d4c4242c",
+      "selection": {
+        "start": null,
+        "end": null
+      },
+      "target": "src/port-kit.ts",
+      "extractedSha256": "b7103b38fec6181e9ad2b4d35b7c29f91fe014f537a80582056ce530742a1b8e",
+      "adaptations": [
+        "from '@sixam/kernel' -> from './predicates.js'"
+      ]
+    },
+    {
+      "source": "packages/play/src/venues/phone/companion.ts",
+      "sourceSha256": "6f8a06e8f18c1f011c1145e798859c6e790ac529bc6bedca896ebc10486e04ac",
+      "selection": {
+        "start": "const bounded =",
+        "end": "/** A REGION read"
+      },
+      "target": "src/snap-reply.ts",
+      "extractedSha256": "5527901a85e968a84d7002f4ac7eeefc4c4c832269bff54997759088b5689aca",
+      "adaptations": [
+        "Trim trailing whitespace and blank lines at EOF; no algorithm change."
+      ]
+    },
+    {
+      "source": "packages/play/src/venues/phone/companion-status.ts",
+      "sourceSha256": "60c3e9fea36624d41199a5dd1bd26fcc30e2336681d4f56b0fe34ac7774e303e",
+      "selection": {
+        "start": "export function parseCompanionEndpoint",
+        "end": null
+      },
+      "target": "src/endpoint.ts",
+      "extractedSha256": "206016356df43c85b10f6dbaff474caf13a9e1770f8cfd2b3d2c8863b1a9eee4",
+      "adaptations": [
+        "export function parseCompanionEndpoint -> const COMPANION_ENDPOINT_SCHEMA = 'companion-endpoint-v1';\nexport const COMPANION_ENDPOINT_FILE = 'files/companion-endpoint.properties';\nexport function parseCompanionEndpoint",
+        "if (!/^[0-9a-f]{32}$/.test(fields.token ?? '')) -> if (!fields.token || !/^[0-9a-f]{32}$/.test(fields.token))",
+        "if (!/^com\\.fnaf2\\.cuehelper\\.control\\.[0-9a-z]+$/.test(fields.socket ?? '')) -> if (!fields.socket || !/^com\\.fnaf2\\.cuehelper\\.control\\.[0-9a-z]+$/.test(fields.socket))"
+      ]
+    },
+    {
+      "source": "packages/play/src/campaign/physical-ports.ts",
+      "sourceSha256": "a3c944e0f515fa75276c05713ed95c5ae3e7491d448aa286e3c57ed730443cd6",
+      "target": "src/transports.ts",
+      "extractedSha256": "93c8bf7e130a6b361c54f069fac8448926d7c5adbfa9150f55ee90401e67a133",
+      "selection": "endpoint discovery, bounded ADB, line exchange, SNAP, HID process; game reads, regions, clock, audio and lesson APIs excluded",
+      "adaptations": "Local imports, typed absent-value checks, explicit missing-reply failure. Installed helper wire identities retained."
+    },
+    {
+      "source": "packages/play/src/safety/device-lock-exec.py",
+      "sourceSha256": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+      "selection": {
+        "start": null,
+        "end": null
+      },
+      "target": "python/device-lock-exec.py",
+      "extractedSha256": "019fe266c665003fe0ffa31e6c1d97ac93c9ea2dce6768e66b65c004bf7a3b59",
+      "adaptations": []
+    },
+    {
+      "source": "packages/play/src/safety/companion_device_lock.py",
+      "sourceSha256": "1c1312803f2ef492dfe6bf67b19cec4aaaa4b157383b29a41380803e31c702b6",
+      "selection": {
+        "start": null,
+        "end": null
+      },
+      "target": "python/companion_device_lock.py",
+      "extractedSha256": "f774f19ebd6e7d266ffc7554d66a9b3e66a58761a5068a81dc052278f1b93393",
+      "adaptations": [
+        "ROOT = Path(__file__).resolve().parents[4] -> ROOT = Path.home() / '.local/state/android-operator'",
+        "str(main_checkout() / \"captures/cue-helper\") -> str(ROOT)"
+      ]
+    },
+    {
+      "source": "packages/kernel/src/labels.ts",
+      "sourceSha256": "9cf88e714911fd327c297b2babcbd9ed096d2d7f7de874adaf97a4458487d720",
+      "target": "src/predicates.ts",
+      "extractedSha256": "7f988c35e334282df54b0c4399cebdb8ae9e96d93789176d6180b6ee728b2aab",
+      "selection": "isRecord, isText, isList, isOneOf predicates and their comments",
+      "adaptations": [
+        "Selected dependencies only; no game policy.",
+        "Trim trailing whitespace and blank lines at EOF; no algorithm change."
+      ]
+    }
+  ],
+  "scope": "Extraction preserves selected transport algorithms and wire protocols. No game policy, dynamic source imports or external checkout required. Predicate selections from packages/kernel/src/labels.ts; not a new transport implementation.",
+  "license": "No license assigned; private source owned by Pedro; retain provenance pending licensing decision."
+}

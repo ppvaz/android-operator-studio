@@ -1,0 +1,25 @@
+{
+  "name": "@android-operator/device",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent host transport mechanisms extracted from device research",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "python/*.py",
+    "ORIGIN.json",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

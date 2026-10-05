@@ -5,7 +5,8 @@ import { Operator, targetSchema } from './operator.js';
 import { parsePlan } from './core/plan.js';
 import { identity } from './core/identity.js';
 import { devices, AdbReadOnlyTarget } from './device/adb.js';
-import { FnafCompanionTarget, configuredFnafRoot, inspectFnaf } from './device/fnaf.js';
+import { CompanionTarget } from './device/companion.js';
+import { configuredFnafRoot, inspectFnaf } from './device/fnaf.js';
 
 const operator = new Operator();
 const server = new McpServer({ name: 'android-operator-studio', version: '0.1.0' });
@@ -15,9 +16,9 @@ server.registerTool('devices_list', {
 }, async () => content(await devices()));
 server.registerTool('device_observe', {
   description: 'Snapshot diagnóstico independente via ADB; não é captura temporal qualificada.',
-  inputSchema: z.strictObject({ serial: z.string(), backend: z.enum(['fnaf-companion', 'adb-readonly']).default('fnaf-companion') }),
+  inputSchema: z.strictObject({ serial: z.string(), backend: z.enum(['companion','fnaf-companion', 'adb-readonly']).default('companion') }),
 }, async ({ serial, backend }) => {
-  const target = backend === 'fnaf-companion' ? new FnafCompanionTarget(configuredFnafRoot(), serial) : new AdbReadOnlyTarget(serial);
+  const target = backend !== 'adb-readonly' ? new CompanionTarget(serial) : new AdbReadOnlyTarget(serial);
   const observation = await target.observe(AbortSignal.timeout(30_000));
   const { image, ...record } = observation;
   return { content: [

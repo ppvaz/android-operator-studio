@@ -170,7 +170,7 @@ async function run(): Promise<void> {
   const selectedTarget = select('target').value;
   const target = selectedTarget === 'fixture' ? { kind: 'fixture' }
     : selectedTarget === 'fnaf-preview' ? { kind: 'fnaf-preview' }
-    : selectedTarget.startsWith('companion:') ? { kind: 'fnaf-companion', serial: selectedTarget.slice(10) }
+    : selectedTarget.startsWith('companion:') ? { kind: 'companion', serial: selectedTarget.slice(10) }
     : { kind: 'adb-readonly', serial: selectedTarget };
   const data = z.object({ id: z.string() }).parse(await api('/api/runs', { plan, target }));
   activeRun = data.id; button('run').disabled = true; button('cancel').disabled = false;
@@ -195,7 +195,7 @@ async function snapshot(): Promise<void> {
   element('fixture-screen').hidden = serial !== 'fixture'; element('device-image').hidden = serial === 'fixture';
   if (serial === 'fixture') { element('device-facts').textContent = 'A fixture inicia em ready a cada execução.'; return; }
   const isCompanion = serial.startsWith('companion:');
-  const data = z.object({ image: z.string(), facts: z.record(z.string(), z.unknown()), receivedAtMs: z.number() }).parse(await api(`/api/snapshot?serial=${encodeURIComponent(isCompanion ? serial.slice(10) : serial)}${isCompanion ? '&backend=fnaf-companion' : ''}`));
+  const data = z.object({ image: z.string(), facts: z.record(z.string(), z.unknown()), receivedAtMs: z.number() }).parse(await api(`/api/snapshot?serial=${encodeURIComponent(isCompanion ? serial.slice(10) : serial)}${isCompanion ? '&backend=companion' : ''}`));
   const image = element('device-image'); if (image instanceof HTMLImageElement) image.src = `data:image/png;base64,${data.image}`;
   element('device-facts').textContent = JSON.stringify(data.facts, null, 2); notice('Snapshot diagnóstico recebido. Relógio da captura no aparelho: UNKNOWN.');
 }
@@ -232,7 +232,7 @@ async function initialize(): Promise<void> {
     const list = z.array(z.object({ serial: z.string(), model: z.string(), state: z.string() })).parse(await api('/api/devices'));
     const target = select('target'); target.replaceChildren(new Option('Fixture · botão simulado', 'fixture'), new Option('FNaF · campanha dry-run', 'fnaf-preview'));
     for (const device of list) if (device.state === 'device') {
-      target.add(new Option(`${device.model} · Companion FNaF`, `companion:${device.serial}`));
+      target.add(new Option(`${device.model} · Companion · captura nativa`, `companion:${device.serial}`));
       target.add(new Option(`${device.model} · ADB diagnóstico`, device.serial));
     }
     notice(`${list.filter(device => device.state === 'device').length} celular(es) disponível(is).`);

@@ -4,7 +4,7 @@ import { identity } from './core/identity.js';
 import { execute } from './core/runtime.js';
 import { FixtureTarget } from './device/fixture.js';
 import { Store } from './core/store.js';
-import { FnafPreviewTarget, configuredFnafRoot } from './device/fnaf.js';
+import { FnafPreviewTarget, configuredFnafRoot } from './integrations/fnaf.js';
 
 const [command, path, backend] = process.argv.slice(2);
 if (!path || (command !== 'validate' && command !== 'run')) {
