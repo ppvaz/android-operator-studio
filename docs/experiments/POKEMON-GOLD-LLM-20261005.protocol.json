@@ -32,11 +32,18 @@
       "maxContacts": 8,
       "onlyAction": "A",
       "maxTotalSettleMs": 12000,
-      "everyContact": "new native capture, inferred continuation, fresh foreground guard, common executor; release after every contact",
+      "everyContact": "Inferred continuation, fresh foreground guard, common executor and release after every contact; sensor capture at declared boundary (end by default, each optional).",
       "purpose": "avoid reopening HID between predictable dialog/Headbutt actions; no autonomous semantic stop"
+    },
+    "sameTransportMixedBlock": {
+      "maxContacts": 8,
+      "maxTotalSettleMs": 12000,
+      "durations": "Each contact uses a preregistered bounded duration; long holds only for navigation.",
+      "everyContact": "Shared executor, foreground guard and release; later decisions marked inferred. Capture at the declared block boundary, not an asserted fresh view between inferred steps.",
+      "criticalChoices": "Do not batch successive A confirmations across uncertain replacement/learning dialogs; verify the party or learning menu before confirming."
     }
   },
-  "method": "Session LLM reads native image, records scene, intended action and evidence. Common executor dispatches exactly one bounded contact. Result stays UNKNOWN until the next LLM image assessment, stored separately; dispatch is never a successful game action.",
+  "method": "Session LLM reviews the selected sensor image and binds its hash. Each common-executor iteration dispatches one bounded contact. A declared block reuses HID for up to eight explicit actions. Capture defaults to block end; optional each-contact capture. Deferred observations retain the old image and timestamp and explicitly record captureDeferred; they do not assert a new scene or result. Outcomes remain UNKNOWN until LLM review.",
   "calibration": "Menu directions exercised in prior experiments. Left/Right must be visually qualified on first use. Nominal 150ms is not measured app landing duration. Longer navigation-only holds are bounded experiments; visually verify first effect. No fixed tile count inferred.",
   "guards": [
     "One original lease per complete action/capture",
@@ -50,7 +57,7 @@
     "Do not forget Curse",
     "Do not withdraw from Day Care at level 20 or above without move-queue analysis",
     "Free healing before depletion",
-    "No purchase or use of scarce battle items without concrete need",
+    "No inventory item consumption by automation; use free Pokemon Center healing and healthy long-term party members (Pedro, 2026-10-05)",
     "No save edits, ROM edits, cheats, reset or state restore"
   ],
   "measurementLimits": [
@@ -60,15 +67,16 @@
     "No deterministic unattended farming or generic vision claim"
   ],
   "rawEvidence": "ignored .operator only; sanitized manifests and narrative may be committed",
-  "inference": "A bounded LLM-authored sequence may use inferred scene decisions. Each dispatch/capture stays serialized and recorded, and unreviewed outcomes remain UNKNOWN. Stop at learning, battle choice, low HP or unexpected scene. Controller must identify visual vs inferred decisions.",
+  "inference": "A bounded LLM-authored sequence may use inferred scene decisions. Contacts stay serialized and recorded; capture can be deferred to a declared review boundary. Unreviewed outcomes remain UNKNOWN. Stop at learning, battle choice, low HP or unexpected scene. Controller identifies visual versus inferred decisions.",
   "speedTrial": "Historical 2x trial completed; Fast forward is now OFF by user preference. Faster factors unqualified.",
   "executionPhase": {
-    "name": "packaged-device-provider-with-menu-pause",
+    "name": "physical-diagnostic-capture-mixed-action-blocks",
     "preregisteredBeforeNextContact": true,
     "pauseBetweenReviews": "normal emulator menu, fresh semantic witness; clock stopping still requires measurement",
     "foreground": "EmulatorActivity required for game contacts, RomListActivity refused",
     "instrumentArchive": "all packaged device source and build bytes retained locally per operation",
-    "geometrySource": "current on-device layout XML, selected profile UI witness, current SurfaceView"
+    "geometrySource": "current on-device layout XML, selected profile UI witness, current SurfaceView",
+    "capture": "ADB screencap under the hardware lease, dynamic physical video crop; not a qualified temporal sensor. Native frame omitted the player in g214; later direct witness showed the player in the same field scene. Cause and synchronized faithfulness comparison remain unknown."
   },
   "legacyControls": {
     "A": [

@@ -5,13 +5,13 @@ import {join,resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {performance} from 'node:perf_hooks';
 import {z} from 'zod';
-import {devices} from '../device/adb.js';
+import {devices,AdbReadOnlyTarget} from '../device/adb.js';
 import {hardwareIdentity} from '../device/identity.js';
-import {CompanionTarget} from '../device/companion.js';
+import {goldRequestSchema,plannedActions} from './llm-action-block.js';
 import {leasedCommand} from '../device/lease.js';
 import {hash} from '../core/identity.js';
 import {openResearchPortraitHid} from './portrait-hid.js';
-import {LlmReviewTarget} from './llm-review-target.js';
+import {LlmReviewTarget,deferredObservation} from './llm-review-target.js';
 import {parsePlan} from '../core/plan.js';
 import {execute} from '../core/runtime.js';
 import type {Observation} from '../core/port.js';
@@ -40,18 +40,19 @@ if(internal!=='--lease-child'){
    const path=join(directory,entry.name);if(entry.isDirectory())paths.push(...await packageFiles(path));else paths.push(path);
   }return paths;
  };
- for(const path of ['src/config.ts','src/device/identity.ts','src/device/lease.ts','src/device/companion.ts','dist/config.js','dist/device/identity.js','dist/device/lease.js','dist/device/companion.js','src/experiments/llm-review-target.ts','src/experiments/gold-llm-session.ts','src/experiments/myoldboy-layout.ts','src/experiments/portrait-hid.ts','dist/experiments/gold-llm-session.js','dist/experiments/llm-review-target.js','dist/experiments/myoldboy-layout.js','dist/experiments/portrait-hid.js','docs/experiments/POKEMON-GOLD-LLM-20261005.protocol.json','package-lock.json',...await packageFiles('packages/android-device')]){
+ for(const path of ['src/experiments/llm-action-block.ts','dist/experiments/llm-action-block.js','src/device/adb.ts','dist/device/adb.js','src/config.ts','src/device/identity.ts','src/device/lease.ts','src/device/companion.ts','dist/config.js','dist/device/identity.js','dist/device/lease.js','dist/device/companion.js','src/experiments/llm-review-target.ts','src/experiments/gold-llm-session.ts','src/experiments/myoldboy-layout.ts','src/experiments/portrait-hid.ts','dist/experiments/gold-llm-session.js','dist/experiments/llm-review-target.js','dist/experiments/myoldboy-layout.js','dist/experiments/portrait-hid.js','docs/experiments/POKEMON-GOLD-LLM-20261005.protocol.json','package-lock.json',...await packageFiles('packages/android-device')]){
   const bytes=await readFile(path),digest=hash(bytes);instrument[path]=digest;await mkdir(join(root,'instrument'),{recursive:true});await writeFile(join(root,'instrument',digest),bytes);
  }
- const native=new CompanionTarget(serial);
+ const sensor=new AdbReadOnlyTarget(serial);
  let layout:ReturnType<typeof myOldBoyLayout>|undefined,layoutHash:string|undefined;
  let n=0,lastCaptured:Observation|undefined;
  const capture=async(captureSignal:AbortSignal)=>{
-  const o=await native.observe(captureSignal);if(!o.image||o.facts['width']!==2400||o.facts['height']!==1080||!layout||!layoutHash)throw new Error('Native/layout geometry unavailable');
+  const o=await sensor.observe(captureSignal);if(!o.image||o.facts['width']!==1080||o.facts['height']!==2400||!layout||!layoutHash)throw new Error('Physical/layout geometry unavailable');
+  o.facts['captureBackend']='adb-diagnostic';o.facts['deviceClock']='UNKNOWN';
   o.facts['layoutSha256']=layoutHash;
   const file=`${label}-${++n}.png`;await writeFile(join(root,file),o.image,{flag:'wx'});
   const {image,...metadata}=o;await writeFile(join(root,`${file}.json`),JSON.stringify({...metadata,capturedAt:new Date().toISOString(),file},null,2),{flag:'wx'});
-  const crop=nativeCrop(layout.video,[1080,2400],[2400,1080]);
+  const crop=nativeCrop(layout.video,[1080,2400],[1080,2400]);
   await exec('sips',['-c',String(crop[3]-crop[1]),String(crop[2]-crop[0]),'--cropOffset',String(crop[1]),String(crop[0]),join(root,file),'--out',join(root,`${label}-${n}-game.png`)],{signal,timeout:3000,maxBuffer:100000});
   lastCaptured=o;return o;
  };
@@ -105,8 +106,7 @@ if(internal!=='--lease-child'){
   if(verb==='see')outcome=await capture(signal);
   else if(verb==='act'){
    if(!requestFile)throw new Error('Review file required');
-   const request=z.object({frame:z.string().regex(/^[a-z0-9-]+-\d+\.png$/),basis:z.enum(['visual','inferred']).default('visual'),scene:z.string().min(1),reasoning:z.string().min(1),action:z.enum(['A','B','Up','Down','Left','Right','Start','Select']),holdMs:z.enum(['50','75','100','150','600','1000']).optional(),repeat:z.number().int().min(1).max(8).default(1),settleMs:z.number().int().min(500).max(8000).optional(),pauseAfter:z.boolean().default(true),previousOutcome:z.enum(['PASS','FAIL','UNKNOWN']).optional(),previousEvidence:z.string().optional()}).strict().parse(JSON.parse(await readFile(requestFile,'utf8')));
-   if(request.repeat>1&&(request.action!=='A'||request.repeat*(request.settleMs??2200)>12000))throw new Error('Repeated block requires A only and bounded total wait');
+   const request=goldRequestSchema.parse(JSON.parse(await readFile(requestFile,'utf8'))),actions=plannedActions(request);
    pauseAfter=request.pauseAfter;
    const metadata=z.object({id:z.string(),capturedAt:z.string(),facts:z.record(z.string(),z.union([z.string(),z.number(),z.boolean()]))}).parse(JSON.parse(await readFile(join(root,`${request.frame}.json`),'utf8')));
    const age=Date.now()-Date.parse(metadata.capturedAt);if(age<0||age>90000)throw new Error('Frame expired; acquire and review again');
@@ -114,25 +114,34 @@ if(internal!=='--lease-child'){
    if(metadata.facts['layoutSha256']!==layoutHash)throw new Error('Review/layout mismatch; capture and review current layout first');
    if((await readdir(root)).includes(`${request.frame}.consumed`))throw new Error('Frame already consumed; review a new observation');
    const contacts=(await readdir(root)).filter(f=>f.endsWith('.contact'));
-   if(contacts.length+request.repeat>2000)throw new Error('Session contact budget exhausted');
+   if(contacts.length+actions.length>2000)throw new Error('Session contact budget exhausted');
    await writeFile(join(root,`${request.frame}.consumed`),JSON.stringify(request),{flag:'wx'});
-   const holdMs=Number(request.holdMs??'150');if(holdMs>150&&!['Up','Down','Left','Right'].includes(request.action))throw new Error('Long hold is navigation-only');
+   const initialHoldMs=actions[0]?.holdMs;if(initialHoldMs===undefined)throw new Error('Empty action block');
    if(!layout)throw new Error('Layout required');
-   const point=layout.controls[request.action],hid=await openResearchPortraitHid(serial,Object.values(layout.controls),holdMs);
+   const hid=await openResearchPortraitHid(serial,Object.values(layout.controls),initialHoldMs,actions.map(s=>s.holdMs));
    try{
     let current:Observation={id:metadata.id,receivedAtMs:performance.now()-age,clock:'host-monotonic',facts:metadata.facts,image};
     const results=[];
-    for(let i=0;i<request.repeat;i++){
-    const basis=i===0?request.basis:'inferred',contactLabel=request.repeat===1?label:`${label}-${i+1}`;
-    if(i>0)await writeFile(join(root,`${label}-${i}.png.consumed`),JSON.stringify({request,index:i,basis}),{flag:'wx'});
+    for(let i=0;i<actions.length;i++){
+    const step=actions[i];if(!step)throw new Error('Missing planned action');const point=layout.controls[step.action],holdMs=step.holdMs;
+    const basis=step.basis,contactLabel=actions.length===1?label:`${label}-${i+1}`;
+    if(i>0&&request.capture==='each')await writeFile(join(root,`${label}-${i}.png.consumed`),JSON.stringify({request,index:i,basis}),{flag:'wx'});
+    const captureThisStep=request.capture==='each'||i===actions.length-1;
+    const observationAfter= captureThisStep?capture:async(captureSignal:AbortSignal)=>{
+     captureSignal.throwIfAborted();
+     return deferredObservation(current);
+    };
     const target=new LlmReviewTarget(current,
-     {observationId:current.id,scene:i===0?request.scene:`Inferred continuation: ${request.scene}`,reasoning:request.reasoning,action:request.action,basis},capture,
-     async(x,y,ms,s)=>{await writeFile(join(root,`${contactLabel}.contact`),JSON.stringify({request,index:i,basis,point,nominalHoldMs:ms,at:new Date().toISOString()}),{flag:'wx'});await hid.contact(x,y,ms,s);await new Promise(r=>setTimeout(r,request.settleMs??(request.action==='A'?2200:500)));},guard);
-    const plan=parsePlan({schema:'operator-plan/v1',name:'One reviewed situational action',entry:'action',maxSteps:1,timeoutMs:15000,nodes:[{id:'action',kind:'tap',label:request.action,deadlineMs:14000,x:point[0],y:point[1],holdMs,before:{fact:'sceneReviewed',equals:true},after:{fact:'resultReviewed',equals:true},next:{}}]});
+     {observationId:current.id,scene:step.scene,reasoning:request.reasoning,action:step.action,basis},observationAfter,
+     async(x,y,ms,s)=>{await writeFile(join(root,`${contactLabel}.contact`),JSON.stringify({request,step,index:i,basis,point,nominalHoldMs:ms,at:new Date().toISOString()}),{flag:'wx'});await hid.contact(x,y,ms,s);await new Promise(r=>setTimeout(r,step.settleMs));},guard);
+    const plan=parsePlan({schema:'operator-plan/v1',name:'One reviewed situational action',entry:'action',maxSteps:1,timeoutMs:15000,nodes:[{id:'action',kind:'tap',label:step.action,deadlineMs:14000,x:point[0],y:point[1],holdMs,before:{fact:'sceneReviewed',equals:true},after:{fact:'resultReviewed',equals:true},next:{}}]});
     const result=await execute(plan,target,signal);
-    results.push(result);outcome=request.repeat===1?{request,plan,result}:{request,plan,results};
-    if(!result.steps[0]?.dispatched||n!==i+1||!lastCaptured)throw new Error('Repeated block stopped: dispatch or fresh capture missing');
-    current=lastCaptured;
+    results.push(result);outcome=actions.length===1?{request,plan,result}:{request,plan,results};
+    if(!result.steps[0]?.dispatched)throw new Error('Block stopped: dispatch missing');
+    if(captureThisStep){
+     if(n!==(request.capture==='each'?i+1:1)||!lastCaptured)throw new Error('Block stopped: fresh capture missing');
+     current=lastCaptured;
+    }
     }
    }finally{await hid.close();}
   }else throw new Error('Unknown verb');

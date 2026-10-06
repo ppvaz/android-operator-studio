@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {performance} from 'node:perf_hooks';
-import {LlmReviewTarget} from '../experiments/llm-review-target.js';
+import {LlmReviewTarget,deferredObservation} from '../experiments/llm-review-target.js';
 import {execute} from '../core/runtime.js';
 import {parsePlan} from '../core/plan.js';
 import type {Observation} from '../core/port.js';
@@ -23,4 +23,13 @@ test('wrong, expired, cancelled or foreground-drifted visual decision cannot dis
 });
 test('inferred continuation has explicit provenance and does not assert a newly observed scene',async()=>{
  const s=setup({basis:'inferred'}),o=await s.target.observe(new AbortController().signal);assert.equal(o.evidence?.['reviewer'],'session-LLM-inference');assert.equal(o.evidence?.['reviewIsFreshCapture'],false);
+});
+test('deferred capture preserves old frame time and completes UNKNOWN without polling a stale result',async()=>{
+ const initial:Observation={id:'old-frame',clock:'host-monotonic',receivedAtMs:performance.now(),facts:{resultReviewed:false,sceneReviewed:true},image:Buffer.from('old pixels')};
+ let reads=0,contacts=0;
+ const target=new LlmReviewTarget(initial,{observationId:initial.id,scene:'safe dialogue',reasoning:'declared block',action:'A',basis:'inferred'},async()=>{reads++;return deferredObservation(initial);},async()=>{contacts++;},async()=>{});
+ const r=await execute(plan,target),after=r.steps[0]?.observations[1];
+ assert.equal(r.verdict,'UNKNOWN');assert.equal(reads,1);assert.equal(contacts,1);
+ assert.equal(after?.id,initial.id);assert.equal(after?.receivedAtMs,initial.receivedAtMs);assert.equal(after?.image,initial.image);
+ assert.equal(after?.facts['captureDeferred'],true);assert.equal(after?.facts['resultReviewed'],undefined);assert.equal(after?.evidence?.['reviewIsFreshCapture'],false);
 });

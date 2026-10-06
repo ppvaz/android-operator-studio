@@ -1,19 +1,33 @@
 {
   "schema": "operator-pokemon-gold-checkpoint/v1",
   "sessionDate": "2026-10-05",
-  "status": "IN_PROGRESS",
+  "status": "PAUSED_BY_USER",
   "level": "DEVICE_MEASURED",
   "mission": "Prepare Slowqueen for Whitney while preserving Curse and the long-term team.",
   "result": {
     "reviewer": "agent",
-    "slowqueenLevel": 11,
+    "slowqueenLevel": 12,
     "hp": [
-      35,
-      42
+      45,
+      45
     ],
-    "confirmedOpponent": "Kim / Vulpix level 15",
-    "xpAwardObserved": 202,
-    "fullPreparationComplete": false
+    "confirmedOpponent": "Kim / Vulpix15 and Ivan / Diglett10,Zubat10,Diglett14",
+    "xpAwardObserved": {
+      "Kim": 202,
+      "IvanSlowqueen": 292
+    },
+    "fullPreparationComplete": false,
+    "currentMoves": [
+      "Tackle",
+      "Growl",
+      "Headbutt",
+      "Curse"
+    ],
+    "depositedAgain": false,
+    "lastLocation": "Route34 outside Day Care west entrance",
+    "partyFullHP": true,
+    "fastForward": "OFF",
+    "healingItemsConsumed": 0
   },
   "selectedLocalRecords": [
     {
@@ -93,6 +107,41 @@
       "sha256": "60a52eb21b956143b6e307d8f0301b059c979caef47e46635d300a41491909d6",
       "instrumentManifestSha256": "61dba4ddcb4bbc5dff0c19b81cf5eedfb5129aa07f6140345682e83923bc2cfc",
       "reviewBasis": "agent visual review and operation record; not independent blinded ground truth"
+    },
+    {
+      "file": "g195-operation.json",
+      "sha256": "70593f313ffa7faa72a7ca909af18318e320f3b48781779d639b6b27c1896530",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g196-operation.json",
+      "sha256": "f55caadbb460b1819d58bfe40a42502cff15c8af41262afa8ab6f2f5577ccf05",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g220-operation.json",
+      "sha256": "4d6dc0efe2d678e2c135ca58c937f87eed3f36a319e450fba64e408e67d49b67",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g230-operation.json",
+      "sha256": "4bdb22c63eeddd9ef0d7966f1fdcf5755f275a748b60e876f6a559b32fc17c0e",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g243-operation.json",
+      "sha256": "49d864c799ce747d4d6e79c9d37005b5b2d3463b7258348ef4e2cc9d3e0fbcec",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g245-operation.json",
+      "sha256": "1050c30ec5176f21471d23c6d3bd53c857d100d3b2b6505d06b1daaef1fdb44f",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
+    },
+    {
+      "file": "g247-operation.json",
+      "sha256": "e8384938ddc9409b2a2e64563f7ada19e0fb6b747cfa43e4146904dd8d7a2abd",
+      "reviewBasis": "session LLM visual review, nonblinded; no independent ground truth"
     }
   ],
   "earlyFailure": {
@@ -103,8 +152,9 @@
     "reservedMarkerSha256": "4cc989c536c34a551736a9828c2165b5211c24861bdf53e46ec1517c00f278cc"
   },
   "normalClose": {
-    "checkpointSha256": "3fb66434f3e6d0756f391c4dbd2bea6e9eefa6ddc46447dab1a60928452a009b",
-    "uiWitnessSha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df"
+    "checkpointSha256": "eb4ff6220066dbaf52023536a89e2ba51d5e2c56d28cedf19c01913711c868ae",
+    "uiWitnessSha256": "548cbb1717c72c9131ccdc9d867225b70fcac176404e10344bd604f0a81ee5df",
+    "method": "normal Close to ROM list; auto-resume, no save rollback"
   },
   "limits": [
     "Source disassembly and emulator auto-state were optional auxiliary oracles; pending-trainer flags were not all visually verified.",
@@ -112,5 +162,13 @@
     "Clock stopping in the review menu was not independently measured.",
     "No general navigation, full preparation, Whitney victory or production write backend qualification.",
     "Raw game media, save bytes, host paths, device serials and pairing credentials are withheld."
+  ],
+  "continuationLimitations": [
+    "Failed inferred party replacement corrected before Ivan victory.",
+    "Mixed bounded blocks and end-only capture exercised; throughput improvement not measured.",
+    "Native player omission and later ADB witness were not synchronized; cause UNKNOWN.",
+    "g223 deferred-result bug caused timeout and missing terminal report; manual menu recovery. Missing-result regression fixed; automatic pause cleanup on expired operation still limited.",
+    "One 50ms menu confirmation had no observed effect; 150ms retry opened party. This is not a measured universal minimum.",
+    "Day Care protected move queue verified, but deposit and farming circuit not executed."
   ]
 }

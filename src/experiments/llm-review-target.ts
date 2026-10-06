@@ -8,6 +8,11 @@ export interface VisualReview {
   action:string;
   basis?:'visual'|'inferred';
 }
+export function deferredObservation(initial:Observation):Observation {
+  const facts:Observation['facts']={...initial.facts,captureDeferred:true};
+  delete facts['sceneReviewed'];delete facts['resultReviewed'];
+  return {...initial,facts,evidence:{...initial.evidence,captureDeferred:true,reviewIsFreshCapture:false}};
+}
 // Review provenance is explicit. Neither the transport nor a cached review
 // supplies a verdict about the resulting scene. A controller must inspect it.
 export class LlmReviewTarget implements Target {
